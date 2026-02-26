@@ -1,0 +1,80 @@
+body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      .nav-blur{
+  backdrop-filter:saturate(180%) blur(8px);
+  background:rgba(255,255,255,.9) !important;
+}
+
+      .left-side {
+        background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .register-box {
+        width: 100%;
+        max-width: 420px;
+      }
+
+      .form-control {
+        background-color: #1c1c1c;
+        border: none;
+        color: white;
+        border-radius: 30px;
+        padding: 12px 20px;
+      }
+
+      .form-control:focus {
+        background-color: #1c1c1c;
+        color: white;
+        box-shadow: 0 0 0 2px #6f42c1;
+      }
+
+      .btn-register {
+        border-radius: 30px;
+        padding: 12px;
+        font-weight: 600;
+      }
+
+      .divider {
+        border-top: 1px solid #444;
+        margin: 25px 0;
+      }
+
+      .login-text a {
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .login-text a:hover {
+        text-decoration: underline;
+      }
+
+      .right-side {
+
+        background-image: url("../img/green_log_reg_bg.png");
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px;
+      }
+
+      .right-side h1 {
+        font-weight: 300;
+        font-size: 5em;
+        line-height: 1.1;
+        text-align: right;
+      }
+
+      .right-side .bold-text {
+        font-weight: 700;
+      }
