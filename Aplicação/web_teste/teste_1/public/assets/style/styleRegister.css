@@ -22,20 +22,31 @@ body {
         width: 100%;
         max-width: 420px;
       }
-
-      .form-control {
+      .labels-ipt{
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 100;
+      }
+      .input-class {
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
         background-color: #1c1c1c;
         border: none;
-        color: white;
+        color: rgb(0, 0, 0);
         border-radius: 30px;
         padding: 12px 20px;
       }
 
-      .form-control:focus {
+      .input-class:focus {
         background-color: #1c1c1c;
         color: white;
+        outline: none;
         box-shadow: 0 0 0 2px #6f42c1;
       }
+      
 
       .btn-register {
         border-radius: 30px;
