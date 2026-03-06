@@ -57,32 +57,46 @@
         </div>
       </div>
     </nav> -->
+  <div class="pop_up" id="id_pop_up">
+    <div class="pop_up_conteudo">
+      <img id="imagem_pop_up" src="" alt="">
+      <h3 id="mensagem_token">O seu token é: </h3>
+      <p id="valor_token"></p>
+      <span class="mensagem_guardar">Guarde-o e salve em algum lugar, pois não será enviado em outro local!</span>
+      <div class="cont_btns">
+        <a href="login.html"><button class="botao_padrao">Ir para a página de login</button></a>
+        <a href="cadastroUser.html"><button class="botao_padrao">Ir para a página de cadastro do usuário</button></a>
+      </div>
+    </div>
+  </div>
   <div class="container-fluid">
     <div class="row vh-100">
-      <div class="col-md-7  right-side flex-column  d-none justify-content-xl-between align-items-start d-md-flex">
-        <a href="index.html">
-          <button class="btn-back"><</button>
-        </a>
-        <div class="d-flex h-50  justify-content-end flex-column">
+      <div class="col-md-7 right-side d-none d-md-flex">
+        <div class="cont-btn">
+          <a href="index.html">
+            <button class="btn-back"><</button>
+          </a>
+        </div>
+        <div class="cont-passo-a-passo">
           <h3 class="text-start mb-3">Comece <br> conosco!</h3>
-          <div class="d-flex h-50 flex-row justify-content-xl-between">
+          <div class="d-flex h-50 flex-row justify-content-xl-between cont-card">
             <div
-              class="h-75 d-flex p-3 rounded-4 bg-white text-black justify-content-xl-evenly justify-content-center flex-column cards">
-              <h5 class="bg-black text-white number-text">1</h5>
+              class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
+              <h5 class="number-text text-circle-secondary">1</h5>
               <h5>Cadastre a empresa</h5>
             </div>
             <div
-              class="h-75 d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
-              <h5 class=" number-text text-circle-secondary">2</h5>
+              class="d-flex p-3 rounded-4 bg-white text-black justify-content-xl-evenly justify-content-center flex-column cards">
+              <h5 class=" bg-black text-white number-text">2</h5>
               <h5>Crie uma conta com o token</h5>
             </div>
             <div
-              class="h-75 d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
+              class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class=" number-text text-circle-secondary">3</h5>
               <h5>Configure as máquinas</h5>
             </div>
             <div
-              class="h-75 d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
+              class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class=" number-text text-circle-secondary">4</h5>
               <h5>Analise dados pela dashboard</h5>
             </div>
@@ -171,6 +185,9 @@
       var confirmacaoSenhaVar = ipt_confirmacao.value;
 
       var tokenVar = await gerarToken()
+
+      valor_token.innerHTML = tokenVar
+      
       alert(tokenVar)
 
       const jsonCadastro = {
@@ -231,12 +248,10 @@
           tokenServer: tokenVar
         }),
       })
-        .then(resposta => resposta.json())
         .then(function (resposta) {
+          console.log(resposta);
           if (resposta.ok) {
-            setTimeout(() => {
-              window.location = "login.html";
-            }, 1000);
+            id_pop_up.style.display = "flex"
           } else {
             throw resposta;
           }

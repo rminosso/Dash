@@ -1,5 +1,11 @@
 var database = require("../database/config")
-
+function verificarToken(token) {
+    var instrucaoSql = `
+        SELECT * FROM Empresa WHERE token = '${token}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 function cadastrar(
     cnpj,
     razaoSocial,
@@ -21,4 +27,5 @@ function cadastrar(
 
 module.exports = {
     cadastrar,
+    verificarToken
 };

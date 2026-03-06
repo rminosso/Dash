@@ -1,71 +1,61 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>V-OOH: Login</title>
-    <link rel="stylesheet" href="./assets/style/styleLogin.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    
-    <div class="container-fluid">
-      <div class="row vh-100">
-        <div class="col-md-7 left-side d-none justify-content-start align-items-start d-md-flex purple_bg_log_reg">
-          <a href="index.html">
-            <button class="btn-back"><</button>
-          </a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V-OOH: Login</title>
+  <link rel="stylesheet" href="./assets/style/styleLogin.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
 
-        <div class="col-md-5 right-side">
-          <div class="login-box">
-            <h3 class="mb-2 fw-bold">Sign in account</h3>
-            <p class="text-secondary mb-4">Please sign in to your account</p>
+<body>
 
-            <div class="mb-3">
-              <label class="form-label">E-mail</label>
-              <input
-                type="text"
-                id="ipt_email"
-                class="input-class"
-                placeholder="Enter your e-mail"
-              />
-            </div>
+  <div class="container-fluid">
+    <div class="row vh-100">
+      <div class="col-md-7 left-side d-none justify-content-start align-items-start d-md-flex purple_bg_log_reg">
+        <a href="index.html">
+          <button class="btn-back">
+            << /button>
+        </a>
+      </div>
 
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input
-                type="password"
-                id="ipt_senha"
-                class="input-class"
-                placeholder="Enter your password"
-              />
-            </div>
+      <div class="col-md-5 right-side">
+        <div class="login-box">
+          <h3 class="mb-2 fw-bold">Sign in account</h3>
+          <p class="text-secondary mb-4">Please sign in to your account</p>
 
-            <div class="divider"></div>
-
-            <button onclick="entrar()" class="btn btn-light w-100 btn-login">
-              Sign in
-            </button>
-
-            <p class="text-center text-secondary mt-4 signup-text">
-              Don’t have a account?
-              <a href="cadastroUser.html">Sign up</a>
-            </p>
-            <p class="text-center text-secondary mt-4 signup-text">
-              No companies registered?
-              <a href="cadastroEmpresa.html">Sign up enterprise</a>
-            </p>
+          <div class="mb-3">
+            <label class="form-label">E-mail</label>
+            <input type="text" id="ipt_email" class="input-class" placeholder="Enter your e-mail" />
           </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" id="ipt_senha" class="input-class" placeholder="Enter your password" />
+          </div>
+
+          <div class="divider"></div>
+
+          <button onclick="entrar()" class="btn btn-light w-100 btn-login">
+            Sign in
+          </button>
+
+          <p class="text-center text-secondary mt-4 signup-text">
+            Don’t have a account?
+            <a href="cadastroUser.html">Sign up</a>
+          </p>
+          <p class="text-center text-secondary mt-4 signup-text">
+            No companies registered?
+            <a href="cadastroEmpresa.html">Sign up enterprise</a>
+          </p>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
 
 <script>
@@ -84,12 +74,12 @@
       }),
     })
       .then(function (resposta) {
-        if (resposta.ok) {
-          resposta.json().then((json) => {
-            sessionStorage.EMAIL_USUARIO = json.email;
-            sessionStorage.USERNAME = json.username;
-            sessionStorage.NOME_COMPLETO = json.nome_completo;
-          });
+        if (resposta.ok && resposta.status == 200) {
+          alert("Usuário logado com sucesso!")
+          setTimeout(() => {
+            window.location = "homeDashboard.html"
+          }, 1000);
+
         } else {
           alert("Erro ao realizar login!");
         }

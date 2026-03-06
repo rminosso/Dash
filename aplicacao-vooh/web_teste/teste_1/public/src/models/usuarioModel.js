@@ -18,9 +18,9 @@ function autenticar_user(username, senha) {
 
 
 
-function cadastrar(username, email, senha, nome_completo) {
+function cadastrar(fkEmpresa, nome, email, senha) {
     var instrucaoSql = `
-        INSERT INTO Users (username, email, passcode, nome_completo) VALUES ('${username}', '${email}', '${senha}', '${nome_completo}');
+        INSERT INTO Usuario (fkEmpresa, nome, email, senha) VALUES ('${fkEmpresa}', '${nome}', '${email}', '${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

@@ -65,27 +65,23 @@
           <p class="text-secondary mb-4 text-center">Please fill in your information</p>
           <label for="ipt_username" class="labels-ipt">Username</label>
           <div class="mb-3">
-            <input type="text" id="ipt_username" class="input-class" placeholder="Enter username" />
-          </div>
-          <label for="ipt_nome_completo" class="labels-ipt">Nome completo</label>
-          <div class="mb-3">
-            <input type="text" id="ipt_nome_completo" class="input-class" placeholder="Enter full name" />
+            <input type="text" value="a" id="ipt_username" class="input-class" placeholder="Enter username" />
           </div>
           <label for="ipt_email" class="labels-ipt">E-mail</label>
           <div class="mb-3">
-            <input type="text" id="ipt_email" class="input-class" placeholder="Enter e-mail" />
+            <input type="text" value="@.com" id="ipt_email" class="input-class" placeholder="Enter e-mail" />
           </div>
           <label for="ipt_senha" class="labels-ipt">Senha</label>
           <div class="mb-3">
-            <input id="ipt_senha" type="password" class="input-class" placeholder="Enter password" />
+            <input value="Pedro.1005" id="ipt_senha" type="password" class="input-class" placeholder="Enter password" />
           </div>
           <label for="ipt_confirmacao" class="labels-ipt">Confirmação de senha</label>
           <div class="mb-3">
-            <input id="ipt_confirmacao" type="password" class="input-class" placeholder="Confirm password" />
+            <input value="Pedro.1005" id="ipt_confirmacao" type="password" class="input-class" placeholder="Confirm password" />
           </div>
           <label for="ipt_token" class="labels-ipt">Token</label>
           <div class="mb-3">
-            <input id="ipt_token" type="text" class="input-class" placeholder="Enter token enterprise" />
+            <input value="cea925c650fa977cb972726e118a6fa849eea00674a3ccb9e273fc5afe776cdf" id="ipt_token" type="text" class="input-class" placeholder="Enter token enterprise" />
           </div>
 
           <div class="divider"></div>
@@ -104,30 +100,32 @@
           </p>
         </div>
       </div>
-      <div class="col-md-7  right-side flex-column  d-none justify-content-xl-between align-items-end d-md-flex">
-        <a href="index.html">
-          <button class="btn-back"></button>
-        </a>
-        <div class="d-flex h-50  justify-content-end flex-column">
+      <div class="col-md-7  right-side d-none d-md-flex">
+        <div class="cont-btn">
+          <a href="index.html">
+            <button class="btn-back"><</button>
+          </a>
+        </div>
+        <div class=" cont-passo-a-passo">
           <h3 class="text-start mb-3">Comece <br> conosco!</h3>
-          <div class="d-flex h-50 flex-row justify-content-xl-between">
+          <div class="d-flex h-50 flex-row justify-content-xl-between cont-card">
             <div
-              class="h-75 d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
+              class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class="number-text text-circle-secondary">1</h5>
               <h5>Cadastre a empresa</h5>
             </div>
             <div
-              class="h-75 d-flex p-3 rounded-4 bg-white text-black justify-content-xl-evenly justify-content-center flex-column cards">
+              class="d-flex p-3 rounded-4 bg-white text-black justify-content-xl-evenly justify-content-center flex-column cards">
               <h5 class=" bg-black text-white number-text">2</h5>
               <h5>Crie uma conta com o token</h5>
             </div>
             <div
-              class="h-75 d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
+              class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class=" number-text text-circle-secondary">3</h5>
               <h5>Configure as máquinas</h5>
             </div>
             <div
-              class="h-75 d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
+              class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class=" number-text text-circle-secondary">4</h5>
               <h5>Analise dados pela dashboard</h5>
             </div>
@@ -138,12 +136,32 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    function cadastrar() {
-      var usernameVar = ipt_username.value;
-      var nomeCompletoVar = ipt_nome_completo.value;
+
+    async function consultaToken(token) {
+      var consulta = await fetch(`/empresa/verificar-token/${token}`)
+        .then(resposta => resposta.json())
+        .then(function (resposta) {
+          if (!resposta) {
+            console.log("Erro ao gerar token!");
+            throw resposta
+          }
+          console.log(resposta);
+          
+          return resposta[0]
+        })
+        .catch(function (error) {
+          console.log("Erro ao gerar token!");
+          return 0
+        })
+
+        return consulta
+    }
+    async function cadastrar() {
+      var nomeVar = ipt_username.value;
       var emailVar = ipt_email.value;
       var senhaVar = ipt_senha.value;
       var confirmacaoSenhaVar = ipt_confirmacao.value;
+      var tokenVar = ipt_token.value
 
       var senhaMaiuscula = senhaVar.toUpperCase();
       var incluiMaiuscula = senhaVar != senhaMaiuscula;
@@ -152,8 +170,7 @@
       var incluiMinuscula = senhaVar != senhaMinuscula;
 
       if (
-        usernameVar == "" ||
-        nomeCompletoVar == "" ||
+        nomeVar == "" ||
         emailVar == "" ||
         senhaVar == "" ||
         confirmacaoSenhaVar == ""
@@ -173,34 +190,40 @@
       } else if (!emailVar.includes("@") || !emailVar.endsWith(".com")) {
         alert("O email deve incluir '@' e finalizar com '.com'");
         return false;
+      } else {
+        var consultarToken = await consultaToken(tokenVar)
+        if (consultarToken) {
+          var fkEmpresaServer = consultarToken.idEmpresa
+          fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              nomeServer: nomeVar,
+              fkEmpresaServer: fkEmpresaServer,
+              emailServer: emailVar,
+              senhaServer: senhaVar,
+            }),
+          })
+          .then(function (resposta) {
+            if (resposta.ok && resposta.status == 200) {
+              alert("Usuário cadastrado com sucesso!")
+                setTimeout(() => {
+                  window.location = "login.html";
+                }, 1000);
+              } else {
+                throw "Erro ao realizar cadastro!";
+              }
+            })
+            .catch(function (erro) {
+              console.log(`#ERRO: ${erro}`);
+            });
+
+          return false;
+        }
       }
 
-      fetch("/usuarios/cadastrar", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          usernameServer: usernameVar,
-          nomeCompletoServer: nomeCompletoVar,
-          emailServer: emailVar,
-          senhaServer: senhaVar,
-        }),
-      })
-        .then(function (resposta) {
-          if (resposta.ok) {
-            setTimeout(() => {
-              window.location = "login.html";
-            }, 1000);
-          } else {
-            throw "Erro ao realizar cadastro!";
-          }
-        })
-        .catch(function (erro) {
-          console.log(`#ERRO: ${erro}`);
-        });
-
-      return false;
     }
   </script>
 </body>

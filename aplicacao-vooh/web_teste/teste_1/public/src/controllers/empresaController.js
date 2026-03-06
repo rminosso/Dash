@@ -5,6 +5,16 @@ function token(req, res) {
     var tokenJson = { token: crypto.randomBytes(32).toString("hex") }
     return res.json(tokenJson)
 }
+async function verificarToken(req, res){
+    var token = req.params.token    
+    var consultaToken = await empresaModel.verificarToken(token)
+
+    console.log("CONSULTA: " + consultaToken);
+    if (consultaToken) {
+        res.status(200).json(consultaToken)
+        
+    }
+}
 async function cadastrar(req, res) {
 
     var cnpj = req.body.cnpjServer
@@ -41,10 +51,13 @@ async function cadastrar(req, res) {
             token
         )
         console.log("Resultado: ", cadastroEmpresa);
-
+        if (cadastroEmpresa) {
+            return res.status(200).json({mensagem: "Empresa cadastrada com sucesso!"})   
+        }
     }
 }
 module.exports = {
     token,
-    cadastrar
+    cadastrar,
+    verificarToken
 };
