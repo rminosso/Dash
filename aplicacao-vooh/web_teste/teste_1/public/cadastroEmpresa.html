@@ -16,7 +16,7 @@
       <img id="imagem_pop_up" src="" alt="">
       <h3 id="mensagem_token">O seu token é: </h3>
       <p id="valor_token"></p>
-      <span class="mensagem_guardar">Guarde-o e salve em algum lugar, pois não será enviado em outro local!</span>
+      <span class="mensagem_guardar">Não se esqueça de guardá-lo. Este token será exibido SOMENTE UMA VEZ!</span>
       <div class="cont_btns">
         <a href="login.html"><button class="botao_padrao">Ir para a página de login</button></a>
         <a href="cadastroUser.html"><button class="botao_padrao">Ir para a página de cadastro do usuário</button></a>
@@ -37,54 +37,54 @@
             <div
               class="d-flex p-3 rounded-4 bg-white text-black justify-content-xl-evenly justify-content-center flex-column cards">
               <h5 class="number-text bg-black text-white">1</h5>
-              <h5 class="text_card">Cadastre a empresa</h5>
+              <h5 class="text_card">Cadastrar empresa</h5>
             </div>
             <div
               class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class="  text-circle-secondary number-text">2</h5>
-              <h5 class="text_card">Crie uma conta com o token</h5>
+              <h5 class="text_card">Criar conta com o token</h5>
             </div>
             <div
               class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class=" number-text text-circle-secondary">3</h5>
-              <h5 class="text_card">Configure as máquinas</h5>
+              <h5 class="text_card">Configurar máquinas</h5>
             </div>
             <div
               class="d-flex p-3 rounded-4 justify-content-xl-evenly justify-content-center flex-column second-card cards">
               <h5 class=" number-text text-circle-secondary">4</h5>
-              <h5 class="text_card">Analise dados pela dashboard</h5>
+              <h5 class="text_card">Analisar dados na dashboard</h5>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-5  left-side">
         <div class="register-box">
-          <h4 class="fw-bold text-center">Criar empresa</h4>
-          <p class="text-secondary m-0 text-center">Informe os dados da sua empresa</p>
+          <h4 class="fw-bold text-center">Cadastrar empresa</h4>
+          <p class="text-secondary m-0 text-center">Informe os dados de sua empresa</p>
           <div class="cont_inputs">
-            <label for="ipt_cnpj" class="labels-ipt">CNPJ</label>
+            <label for="ipt_cnpj" class="labels-ipt">CNPJ:</label>
             <input type="text" value="11111111111111" id="ipt_cnpj" class="input-class" maxlength="14" minlength="14"
-              placeholder="Insira seu CNPJ" />
-            <label for="ipt_razao_social" class="labels-ipt">Razão social</label>
-            <input type="text" value="11" id="ipt_razao_social" class="input-class"
-              placeholder="Insira sua Razão social" />
-            <label for="ipt_razao_social" class="labels-ipt">Telefone contato</label>
+              placeholder="Ex: 0000000000000" />
+            <label for="ipt_razao_social" class="labels-ipt">Razão social:</label>
+            <input type="text" value="V-OOH Ltda" id="ipt_razao_social" class="input-class"
+              placeholder="Ex: Empresa Ltda" />
+            <label for="ipt_razao_social" class="labels-ipt">Telefone contato:</label>
             <input type="text" value="11111111111" id="ipt_telefone_contato" maxlength="11" minlength="11"
-              class="input-class" placeholder="Insira seu telefone contato" />
-            <label for="ipt_email" class="labels-ipt">E-mail</label>
-            <input type="text" value="@.com" id="ipt_email" class="input-class" placeholder="Insira seu e-mail" />
-            <label for="ipt_cep" class="labels-ipt">CEP</label>
+              class="input-class" placeholder="Ex: 1112345678" />
+            <label for="ipt_email" class="labels-ipt">E-mail:</label>
+            <input type="text" value="@.com" id="ipt_email" class="input-class" placeholder="Ex: empresa@email.com" />
+            <label for="ipt_cep" class="labels-ipt">CEP:</label>
             <input type="text" maxlength="8" value="" id="ipt_cep" oninput="buscarEndereco()" class="input-class"
-              placeholder="Insira seu cep" />
+              placeholder="Ex: 00000000" />
             <p id="text_erro"></p>
             <div class="cont_rua_num" id="id_cont_rua_num">
               <div class="input_rua">
-                <label for="ipt_rua" class="labels-ipt">Rua</label>
+                <label for="ipt_rua" class="labels-ipt">Rua:</label>
                 <input type="text" value="" id="ipt_rua" disabled class="input-class" placeholder="" />
               </div>
               <div class="input-num">
-                <label for="ipt_numero" class="labels-ipt">Nº</label>
-                <input type="number" value="" id="ipt_numero" required class="input-class" placeholder="Insira o número" />
+                <label for="ipt_numero" class="labels-ipt">Nº:</label>
+                <input type="number" value="" id="ipt_numero" required class="input-class" placeholder="Ex: 123" />
               </div>
             </div>
           </div>
@@ -93,11 +93,11 @@
           </button>
 
           <p class="text-center text-secondary login-text">
-            Já tem uma conta?
-            <a href="login.html">Login</a>
+            Já possui conta?
+            <a href="login.html">Entrar</a>
           </p>
           <p class="text-center text-secondary login-text">
-            Não tem uma conta?
+            Já cadastrou uma empresa?
             <a href="cadastroUser.html">Cadastre-se</a>
           </p>
         </div>
