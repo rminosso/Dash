@@ -75,6 +75,7 @@
       .then(function (resposta) {
         if (resposta.ok && resposta.status == 200) {
           alert("Usuário logado com sucesso!")
+          sessionStorage.EMAIL_USUARIO = emailVar
           setTimeout(() => {
             window.location = "homeDashboard.html"
           }, 1000);
