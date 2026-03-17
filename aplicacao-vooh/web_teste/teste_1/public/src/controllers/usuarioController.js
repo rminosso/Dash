@@ -16,10 +16,14 @@ function autenticar(req, res) {
       .then(function (resultadoAutenticar) {
         if (resultadoAutenticar.length == 1) {
           console.log("TUDO CERTO")
-          return res.status(200).json({mensagem: "Login realizado com sucesso!"})
+          return res.status(200).json({
+            fkEmpresa: resultadoAutenticar[0].fkEmpresa,
+            email: resultadoAutenticar[0].email,
+            nome: resultadoAutenticar[0].nome,
+          })
         } else{
-          return res.status(400).json({erro: "Erro ao fazer login!"})
           throw new Error("Erro ao realizar o login");
+          // return res.status(400).json({erro: "Erro ao fazer login!"})
           
         }
       })

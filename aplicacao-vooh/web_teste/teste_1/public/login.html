@@ -71,16 +71,25 @@
         emailServer: emailVar,
         senhaServer: senhaVar,
       }),
-    })
+     }) 
       .then(function (resposta) {
-        if (resposta.ok && resposta.status == 200) {
-          alert("Usuário logado com sucesso!")
-          sessionStorage.EMAIL_USUARIO = JSON.stringify(JSON.email);
+        console.log("ESTOU NO THEN DO entrar()!");
+        console.log(resposta);
+        if (resposta.ok) {
+          console.log(resposta);
+          resposta.json().then((json) => {
+            // console.log(json);
+            console.log(JSON.stringify(json));
+            console.log(json.email);
+            console.log(json.nome);
+            sessionStorage.EMAIL_USUARIO = json.email;
+            sessionStorage.NOME_USUARIO = json.nome;
           setTimeout(() => {
             window.location = "homeDashboard.html"
           }, 1000);
-
-        } else {
+        });
+      }
+      else {
           alert("Erro ao realizar login!");
         }
       })
