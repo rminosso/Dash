@@ -68,17 +68,17 @@
 
   <script>
 
-        function verificarSessao() {
-            if (!sessionStorage.EMAIL_USUARIO) {
-                alert("Permissão negada!")
-                window.location = "login.html"
-            } else {
-                body_html.style.display = "block"
-            }
-        }
-        function limparStorage() {
-            sessionStorage.EMAIL_USUARIO = null
-        }
+function verificarSessao() {
+    if (!sessionStorage.EMAIL_USUARIO) {
+        alert("Permissão negada!")
+        window.location = "login.html"
+    } else {
+        body_html.style.display = "block"
+    }
+}
+function limparStorage() {
+    sessionStorage.EMAIL_USUARIO = null
+}
 async function ativarPopUp(tipo_pop_up) {
     pop_up.innerHTML = ""
     if (tipo_pop_up == "Maquina") {
@@ -110,7 +110,6 @@ async function ativarPopUp(tipo_pop_up) {
                         <option value="Memoria RAM">Memória RAM</option>
                         <option value="Disco">Disco</option>
                         <option value="GPU">GPU</option>
-                        <option value="Placa mãe">Placa mãe</option>
                         <option value="Rede">Rede</option>
                     </select>
                 </div>
@@ -222,7 +221,6 @@ async function ativarPopUp(tipo_pop_up) {
                     <option value="Memoria RAM">Memória RAM</option>
                     <option value="Disco">Disco</option>
                     <option value="GPU">GPU</option>
-                    <option value="Placa mãe">Placa mãe</option>
                     <option value="Rede">Rede</option>
                 </select>
             </div>

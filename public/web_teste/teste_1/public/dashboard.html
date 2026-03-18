@@ -72,7 +72,17 @@
     </main>
 </body>
 <script>
-const ctx = document.getElementById("myChart");
+const ctx = document.getElementById("myChart").getContext('2d');
+
+
+const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+gradient.addColorStop(0, 'rgba(125,57,235, 1)'); // Top color (opaque)
+gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');  // Bottom color (transparent)
+
+
+const gradient_01 = ctx.createLinearGradient(0, 0, 0, 300);
+gradient_01.addColorStop(0, 'rgba(198,255,51, 1)'); // Top color (opaque)
+gradient_01.addColorStop(1, 'rgba(0, 0, 0, 0)');  // Bottom color (transparent)
 
 let current = new Date();
 let hora = current.getHours();
@@ -108,8 +118,9 @@ let horario = `${hora}:${minuto}:${segundo}`;
         {
           label: "CPU (%)",
           data: [66, 66, 66, 66, 66, 66, 66, 66, 66,66, 66, 66, 66],
-          borderColor: "green",
-          backgroundColor: "green",
+        backgroundColor: gradient, 
+        borderColor: 'rgba(125,57,235,1)',
+        fill: true,
           pointRadius: 0,
           borderWidth: 2,
           tension: 0.5
@@ -117,8 +128,9 @@ let horario = `${hora}:${minuto}:${segundo}`;
         {
           label: "RAM (%)",
           data: [66, 66, 66, 66, 66, 66, 66, 66, 66,66, 66, 66, 66],
-          borderColor: "blue",
-          backgroundColor: "blue",
+          borderColor: "rgba(198,255,51,1)",
+          backgroundColor: gradient_01,
+          fill: true,
           pointRadius: 0,
           borderWidth: 2,
           tension: 0.5
