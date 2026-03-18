@@ -182,7 +182,7 @@ let horario = `${hora}:${minuto}:${segundo}`;
   }
 
     function montarGraficoPizza() {
-        var percentual_picos = 25
+        var percentual_picos = 13
         var total = 100 - percentual_picos
         const data = {
             labels: ['Máquinas', 'Total'],
@@ -196,7 +196,7 @@ let horario = `${hora}:${minuto}:${segundo}`;
             }]
         };
         const config = {
-            type: 'pie',
+            type: 'doughnut',
             data: data,
             options: {
                 responsive: true
@@ -212,7 +212,7 @@ let horario = `${hora}:${minuto}:${segundo}`;
         const data = {
             labels: ['Chamados', 'Total'],
             datasets: [{
-                data: [25, 75],
+                data: [29, 61],
                 backgroundColor: ['#6b3cff', '#E0E0E0'],
                 borderWidth: 0,
                 circumference: 180,
