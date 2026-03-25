@@ -92,6 +92,46 @@ flex: 1;}
 
 }
 
+/*HEADER*/
+
+.header-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: auto;
+  border-radius: 20px;
+  background-image: url("../img/Fundo.svg");
+  background-size: cover;
+  background-position: center;
+  margin: 3% 20px
+}
+
+.content{
+  position: relative;
+  text-align: center;
+}
+
+.content h1{
+color: var(--lemon);
+font-size: 50px;
+}
+
+.content p{
+  color: var(--white);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.content a{
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 60px 12px 60px;
+  background-color: #6D33FF;
+  border-radius: 15px;
+}
 
 
 
