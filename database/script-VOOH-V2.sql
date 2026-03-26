@@ -1,23 +1,17 @@
 CREATE DATABASE vooh;
 USE vooh;
 
-
 CREATE TABLE cadastroEmpresa (
 	idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
 	nomeResponsavel VARCHAR(50) NOT NULL,
     nomeEmpresa VARCHAR(50) DEFAULT NULL,
 	cnpj VARCHAR(14) NOT NULL UNIQUE,
     codigoAcesso VARCHAR(45),
-    senha VARCHAR(205) NOT NULL,
     dataCadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
     dataAtualizacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     statusCliente VARCHAR(10),
     CONSTRAINT chkCliente
-			CHECK (statusCliente IN ('Ativo', 'Inativo')),
-    idMatriz INT,
-		CONSTRAINT fkempresa_matriz 
-			FOREIGN KEY (idMatriz) 
-				REFERENCES cadastroEmpresa(idEmpresa)
+			CHECK (statusCliente IN ('Ativo', 'Inativo'))
 );
 
 CREATE TABLE usuario(
@@ -46,17 +40,6 @@ CREATE TABLE usuario(
 				REFERENCES usuario(idUsuario)
 );
 
-INSERT INTO cadastroEmpresa 
-(nomeResponsavel, nomeEmpresa, cnpj, codigoAcesso, senha, statusCliente, idMatriz)
-VALUES 
-('Carlos Silva', 'Tech Solutions', '12345678000199', 'ACESSO123', 'senhaEmpresa123', 'Ativo', NULL);
-
-INSERT INTO usuario
-(fkEmpresa, fkSuperior, nome, email, dataNascimento, cpf, senha, statusUsuario, tipoUsuario, documentoIdetificacao)
-VALUES
-(1, 1, 'Carlos Silva', 'carlos@techsolutions.com', '1985-06-15', '12345678901', 'senha123', 'Ativo', 'Gestor', 'RG1234567');
-
-
 CREATE TABLE contato (
 	idContato INT NOT NULL AUTO_INCREMENT,
     fkEmpresa INT NOT NULL,
@@ -71,8 +54,6 @@ CREATE TABLE contato (
 			FOREIGN KEY (fkEmpresa) 
 				REFERENCES cadastroEmpresa(idEmpresa)
 );
-
-
 
 CREATE TABLE endereco (
 	idEndereco INT PRIMARY KEY AUTO_INCREMENT,
@@ -98,7 +79,7 @@ CREATE TABLE display (
     numeroIdentificacao VARCHAR(45),
     sistemaOperacional VARCHAR(45),
     enderecoIP VARCHAR(100),
-		CONSTRAINT fkEmpresa_servidor
+		CONSTRAINT fkEmpresa_display
 			FOREIGN KEY (fkEmpresa)
 				REFERENCES cadastroEmpresa(idEmpresa)
 );
@@ -112,7 +93,7 @@ CREATE TABLE componente (
     parametro VARCHAR(45)
 );
 
-CREATE TABLE display_componentes (
+CREATE TABLE display_componente (
 	fkDisplay INT NOT NULL,
     fkEmpresa INT NOT NULL,
 	fkComponente INT NOT NULL,
