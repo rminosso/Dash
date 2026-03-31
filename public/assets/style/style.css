@@ -216,7 +216,6 @@ html {
   .beneficios-container {
     background-color: var(--deep-purple);
     padding: 60px;
-    height: 75vh;
     border-radius: 20px;
   }
 
@@ -485,7 +484,8 @@ html {
   }
 
   .button {
-    padding-top: 4vh;
+    margin-top: 2vh;
+    padding-top: 3vh;
   }
 
   .button button {
@@ -517,7 +517,7 @@ html {
     display: flex;
     width: 100%;
     min-height: 500px;
-    height: 75vh;
+    height: 80vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -592,7 +592,7 @@ html {
   .gif-container {
     background-color: var(--purple);
     padding: 60px;
-    height: 75vh;
+    height: auto;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -663,7 +663,7 @@ html {
     display: flex;
     justify-content: center;
     padding: 20px;
-    height: 75vh;
+    height: auto;
   }
 
   .contato {
