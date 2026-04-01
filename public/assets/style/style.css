@@ -798,8 +798,18 @@ html {
   .logo-footer p {
     font-size: 14px;
     line-height: 1.2;
-    margin-bottom: 15px;
+    margin-bottom: px;
     color: var(--white);
+  }
+
+  .icone-footer {
+    margin-top: 10vh;
+  }
+
+  .icone-footer p {
+    color: var(--lemon);
+    font-weight: bold;
+    font-size: 2.5vh;
   }
 
   .info-footer {
