@@ -97,14 +97,14 @@
             <span id="mensagem_erro"></span>
         </div>
 
-        <button onclick="entrar()">
-          Entrar
+        <button class="button_cadastrar" onclick="entrar()">
+          Cadastrar
         </button>
 
         <div class="rodape_box_login">
                 <span>
                     Já possui uma conta?
-                    <a href="./login.html"> Faça Login</a>
+                    <a style="color: var(--purple);" href="./login.html"> Faça Login</a>
                 </span>
           <a href="">Contatar Suporte</a>
         </div>
@@ -160,7 +160,7 @@ function entrar() {
                         window.location = "./finalizarcadastro.html";
 
                         setTimeout(function () {
-                        }, 1000); // apenas para exibir o loading
+                        }, 1000);
 
                     });
 

@@ -156,7 +156,7 @@
   width: 100%;
 }
 
-button {
+.button_finalizar {
   width: 100%;
   background-color: #6D33FF;
   color: white;
@@ -166,6 +166,15 @@ button {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+}
+
+.button_finalizar:hover {  
+    filter: brightness(1.2);
+    box-shadow: var(--lemon);
+    color: var(--black);
+    background-color: var(--lemon);
 }
 
 .rodape_box_login {
