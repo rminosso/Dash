@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V-OOH: Login</title>
+  <title>V-OOH | Login</title>
+    <link rel="icon" href="./assets/img/logo-vertical.png" />
   <link rel="stylesheet" href="./assets/style/styleLogin.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,7 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body onload="verificar()">
 
   <!-- Container_login -->
   <div class="container_login">
@@ -130,7 +131,7 @@
             <span>E-mail ou senha incorretos</span>
         </div>
 
-        <button>
+        <button onclick="entrar()">
           Entrar
         </button>
 
@@ -149,45 +150,82 @@
 </html>
 
 <script>
-  function entrar() {
-    var emailVar = ipt_email.value;
-    var senhaVar = ipt_senha.value;
-
-    fetch("/usuarios/autenticar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!");
-        console.log(resposta);
-        if (resposta.ok) {
-          console.log(resposta);
-          resposta.json().then((json) => {
-            // console.log(json);
-            console.log(JSON.stringify(json));
-            console.log(json.email);
-            console.log(json.nome);
-            sessionStorage.EMAIL_USUARIO = json.email;
-            sessionStorage.NOME_USUARIO = json.nome;
-            setTimeout(() => {
-              window.location = "homeDashboard.html"
-            }, 1000);
-          });
+    function verificar(){
+        if(sessionStorage.EMAIL_USUARIO != undefined){
+            window.location = "./homeDashboard.html";
         }
-        else {
-          alert("Erro ao realizar login!");
-        }
-      })
-      .catch(function (erro) {
-        console.log(erro);
-      });
+    }
+    
+    function entrar() {
 
-    return false;
-  }
+
+        var emailVar = email.value;
+        var senhaVar = senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            //finalizarAguardar();
+            return;
+        }
+
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+        console.log("TO AQUI");
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+
+            })
+        })
+            .then(resposta => {
+                console.log("ESTOU NO THEN DO entrar()!")
+                console.log(resposta)
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then((json) => {
+                        console.log(json);
+                        console.log("ur ur");
+
+                        console.log(JSON.stringify(json));
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.id;
+                        sessionStorage.FKEMPRESA = json.fkEmpresa;
+                        //  sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                        window.location = "./homeDashboard.html";
+
+                        setTimeout(function () {
+                            // window.location = "./cadastro_funcionario.html";
+                        }, 1000); // apenas para exibir o loading
+
+                    });
+
+                } else {
+
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        finalizarAguardar(texto);
+                    });
+                }
+
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+    }
+
+    function sumirMensagem() {
+        //  cardErro.style.display = "none"
+    }
+
 </script>
