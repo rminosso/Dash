@@ -40,36 +40,77 @@ function autenticar(req, res) {
 
 
 function cadastrar(req, res) {
-  var nome = req.body.nomeServer
-  var fkEmpresa = req.body.fkEmpresaServer
-  var email = req.body.emailServer
-  var cpf = req.body.cpfServer
-  var senha = req.body.senhaServer
+    var email = req.body.emailServer;
+    var codigo = req.body.codigoServer;
 
-  // Faça as validações dos valores
-  if (nome == undefined) {
-    res.status(400).send("Seu nome está undefined!");
-  } else if (email == undefined) {
-    res.status(400).send("Seu email está undefined!");
-  } else if (senha == undefined) {
-    res.status(400).send("Sua senha está undefined!");
-  } else if (fkEmpresa == undefined) {
-    res.status(400).send("Sua fkEmpresa está undefined!");
-  } else if (cpf == undefined) {
-    res.status(400).send("Seu cpf está undefined!");
-  } else {
-    var cadastroUsuario = usuarioModel.cadastrar(fkEmpresa, nome, email, cpf, senha)
-    console.log("TIPO DO CADASTRO USUARIO: " + typeof(cadastroUsuario));
-    
-    if (cadastroUsuario < 1) {
-      return res.status(400).json({ erro: "Erro ao cadastrar o usuário!" })
+    if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (codigo == undefined) {
+        res.status(400).send("Seu codigo está undefined!");
     } else {
-      return res.status(200).json(cadastroUsuario)
+
+        usuarioModel.cadastrar(email, codigo)
+            .then(
+                function (resultadoCadastrar) {
+                    console.log(`\nResultados encontrados: ${resultadoCadastrar.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultadoCadastrar)}`);
+
+                    if (resultadoCadastrar.length == 1) {
+                        console.log(resultadoCadastrar);
+
+                        res.json({
+                            id: resultadoCadastrar[0].idUsuario,
+                            email: resultadoCadastrar[0].email,
+                            fkEmpresa: resultadoCadastrar[0].empresaId
+                        });
+
+                    } else if (resultadoCadastrar.length == 0) {
+                        res.status(403).send("Email e/ou senha inválido(s)");
+                    } else {
+                        res.status(403).send("Mais de um usuário com o mesmo login e senha!");
+                    }
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
     }
-  }
+}
+
+function finalizarCadastro(req, res) {
+    var nome = req.body.nomeServer;
+    var senha = req.body.senhaServer;
+    var id = req.body.idServer;
+
+    if (nome == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else if (id == undefined) {
+        res.status(400).send("Seu id está undefined!");
+    } else {
+
+        usuarioModel.finalizarCadastro(nome, senha, id)
+        .then(function (resultado) {
+
+            console.log("Update realizado");
+
+            res.json({
+                status: "ok"
+            });
+
+        }).catch(function (erro) {
+            console.log(erro);
+            res.status(500).json(erro.sqlMessage);
+        });
+    }
 }
 
 module.exports = {
   autenticar,
-  cadastrar
+  cadastrar,
+  finalizarCadastro
 };

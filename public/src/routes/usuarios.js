@@ -10,4 +10,8 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+router.patch("/finalizarCadastro", function (req, res) {
+    usuarioController.finalizarCadastro(req, res);
+});
+
 module.exports = router;
