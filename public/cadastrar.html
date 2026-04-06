@@ -93,8 +93,8 @@
           </div>
         </div>
 
-        <div class="mensagem">
-            <span>Código de ativação inválido!</span>
+        <div style="display: none;" id="cardErro" class="cardErro">
+            <span id="mensagem_erro"></span>
         </div>
 
         <button onclick="entrar()">
@@ -123,7 +123,8 @@ function entrar() {
         var codigoVar = codigo.value;
 
         if (emailVar == "" || codigoVar == "") {
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+          cardErro.style.display = 'flex';  
+          mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir";
             return;
         }
 
@@ -164,7 +165,9 @@ function entrar() {
                     });
 
                 } else {
-
+                    
+                    cardErro.style.display = 'flex';  
+                    mensagem_erro.innerHTML = "Email ou código de ativação incorretos";
                     console.log("Houve um erro ao tentar realizar o login!");
 
                     resposta.text().then(texto => {

@@ -182,3 +182,14 @@ button {
   font-size: 0.9rem;
   font-weight: 500;
 }
+
+.cardErro {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  width: 100%;             
+  margin: 15px 0;          
+  color: #fa2d37;         
+  font-weight: bold;
+  font-size: 14px;
+}

@@ -127,8 +127,8 @@
           </div>
         </div>
 
-        <div class="mensagem">
-            <span>E-mail ou senha incorretos</span>
+        <div style="display: none;" id="cardErro" class="cardErro">
+            <span id="mensagem_erro">E-mail ou senha incorretos!</span>
         </div>
 
         <button onclick="entrar()">
@@ -163,8 +163,8 @@
         var senhaVar = senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            // cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            cardErro.style.display = "flex"
+            mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir";
             //finalizarAguardar();
             return;
         }
@@ -210,6 +210,9 @@
                     });
 
                 } else {
+
+                    cardErro.style.display = "flex"
+                    mensagem_erro.innerHTML = "Login ou senha inválidos";
 
                     console.log("Houve um erro ao tentar realizar o login!");
 
