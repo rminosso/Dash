@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/img/logo.png" />
+    <link rel="icon" href="assets/images/logo.png" />
     <title>V-OOH: Home Dashboard</title>
-    <link rel="stylesheet" href="./assets/style/styleHomeDashboard.css" />
+    <link rel="stylesheet" href="assets/css/styleHomeDashboard.css" />
   </head>
 
-  <!-- <body id="body_html" style="display: none;" onload="verificarSessao()"> -->
+  <!-- <body id="body_html" css="display: none;" onload="verificarSessao()"> -->
   <body id="body_html">
     <div class="cont-pop-up" id="id_cont_pop_up">
       <div class="pop-up" id="pop_up"></div>
@@ -18,7 +18,7 @@
         <a class="navbar-logo" href="./homeDashboard.html">
           <span class="logo" aria-hidden="true">
             <img
-              src="./assets/img/logo.png"
+              src="assets/images/logo.png"
               class="logo-image"
             />
           </span>
@@ -37,7 +37,7 @@
           </ul>
         </div>
         <a class="btn-home" onclick="limparStorage()" href="./login.html">
-          <img src="assets/img/icon_perfil.png" alt="" />
+          <img src="assets/images/icon_perfil.png" alt="" />
           <p>Sair</p>
         </a>
       </div>
@@ -57,11 +57,11 @@
     <main class="cont-cards">
       <div onclick="ativarPopUp(`Maquina`)" class="card-cadastrar">
         <h2>Cadastrar máquina</h2>
-        <img src="assets/img/icon-dooh.png" alt="" />
+        <img src="assets/images/icon-dooh.png" alt="" />
       </div>
       <div onclick="window.location = `dashboard.html`" class="card-dashboard">
         <h2>Dashboard</h2>
-        <img src="assets/img/icon-metrica.png" alt="" />
+        <img src="assets/images/icon-metrica.png" alt="" />
       </div>
     </main>
   </body>
