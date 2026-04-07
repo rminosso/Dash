@@ -237,6 +237,8 @@
           Entre em contato conosco e tenha uma demonstração sem compromisso da nossa plataforma.
         </p>
 
+        <canvas id="canvas"></canvas>
+
       </div>
 
       <div class="container-contact">
@@ -270,13 +272,63 @@
           <div class="submit">
             <button type="submit">ENVIAR</button>
           </div>
-      </div>
+        </div>
 
 
       </div>
     </form>
 
   </section>
+
+  <div class="info-dooh">
+    <div class="text-dooh">
+      <h1>Quer entender mais sobre DOOH?</h1>
+      <p>Preparamos uma séria de conteúdos exclusivamente para você!</p>
+    </div>
+
+    <div class="container-dooh">
+      <div class="content-dooh">
+        <div>
+          <img src="./assets/img/imagem-1-dooh.svg" alt="">
+        </div>
+
+        <div class="text-card">
+          <h5>Como o Digital Out-of-Home Está Transformando as Cidades e o Consumo</h5>
+          <p>
+            Descubra como as telas interativas estão substituindo o mobiliário urbano
+            tradicional. Neste artigo, analisamos essa tecnologia.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-dooh">
+        <div>
+          <img src="./assets/img/imagem-2-dooh.svg" alt="">
+        </div>
+        <div class="text-card">
+          <h5>Importância de monitorar dispositivos DOOH e seu impacto em campanhas de anúncios</h5>
+          <p>Você sabe o quão importante é o monitoramento, mais especificamente de DOOH? Entende de vez sobre em nosso
+            artigo.</p>
+        </div>
+      </div>
+
+      <div class="content-dooh">
+        <div>
+          <img src="./assets/img/imagem-3-dooh.svg" alt="">
+        </div>
+        <div class="text-card">
+          <h5>O futuro é com DOOH: previsões para os próximos anos da tecnologia</h5>
+          <p>O mercado de DOOH continua a crescer. Entenda as previsões para o futuro com o DOOH.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-dooh1">
+      <p>Veja mais</p>
+    </div>
+
+  </div>
 
   <!--Footer-->
   <footer class="footer">
@@ -401,5 +453,12 @@
     loop: true, // ciclo infinito 
     canvas: document.getElementById("canvas"), // diz aonde ele deve desenhar/colocar a aniamção
     src: "https://lottie.host/554c0b6a-1921-49b0-87d8-9f06018e1640/2CohfEOZNU.lottie", // link da animação no site
+  });
+
+  new DotLottie({
+    autoplay: true, // rodar assim que a pagina carregar 
+    loop: true, // ciclo infinito 
+    canvas: document.getElementById("canvas"), // diz aonde ele deve desenhar/colocar a aniamção
+    src: "https://app.lottiefiles.com/animation/90a0d67a-1068-4c7b-aa91-de7b195b0d45?from=dashboard&panel=embed", // link da animação no site
   });
 </script>

@@ -1719,6 +1719,56 @@
     /* mexe o botão 2px para cima */
   }
 
+  .info-dooh {
+    justify-items: center;
+    margin-bottom: 5%;
+  }
+
+  .text-dooh p {
+    color: var(--purple);
+    font-weight: bold;
+    align-items: center;
+    margin-left: 2%;
+  }
+
+  .container-dooh {
+    display: flex;
+  }
+
+  .content-dooh {
+    margin: 2%;
+  }
+
+  .content-dooh {
+    width: 55vh;
+    background-color: var(--deep-purple);
+    border-radius: 20px;
+  }
+
+  .text-card {
+    padding: 5%;
+  }
+
+  .content-dooh h5 {
+    color: var(--lemon);
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .content-dooh p {
+    color: var(--white);
+  }
+
+  .content-dooh img {
+    width: 100%;
+  }
+
+  .text-dooh1 {
+    justify-content: center;
+    color: var(--purple);
+    font-weight: bold;
+  }
+
   /* FOOTER */
 
   footer {
