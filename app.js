@@ -11,11 +11,11 @@ var PORTA_APP = process.env.APP_PORT;
 var HOST_APP = process.env.APP_HOST;
 
 var app = express();
-var indexRouter = require("./public/src/routes/index");
-var empresaRouter = require("./public/src/routes/empresa");
-var usuarioRouter = require("./public/src/routes/usuarios")
-var maquinaRouter = require("./public/src/routes/maquina")
-var componenteRouter = require("./public/src/routes/componente")
+var indexRouter = require("./src/routes/index");
+var empresaRouter = require("./src/routes/empresa");
+var usuarioRouter = require("./src/routes/usuarios")
+var maquinaRouter = require("./src/routes/maquina")
+var componenteRouter = require("./src/routes/componente")
 
 app.use(cors());
 app.use(express.json());
