@@ -1,10 +1,10 @@
 :root {
-    --purple: #6D33FF;
-    --deep-purple: #1E0B36;
-    --lemon: #C6FF33;
-    --black: #000000;
-    --white: #FFFFFF;
-    --ligth-purple: #331477;
+    --color-purple: #6D33FF;
+    --color-deep-purple: #1E0B36;
+    --color-lemon: #C6FF33;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-light-purple: #331477;
 }
 
 * {

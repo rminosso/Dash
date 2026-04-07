@@ -83,7 +83,7 @@
 }
 
 .caixa_login{
-  color: var(--deep-purple);
+  color: var(--color-deep-purple);
   display: flex;
   flex-direction: column;
   height: min-content;
@@ -117,7 +117,7 @@
 
 .icone_input{
   display: flex;
-  background-color: var(--white);
+  background-color: var(--color-white);
   padding: 0 5px;
   border-radius: 25px;
   align-items: center;
@@ -174,9 +174,9 @@
 
 .button_login:hover {
     filter: brightness(1.2);
-    box-shadow: var(--lemon);
-    color: var(--black);
-    background-color: var(--lemon);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
+    background-color: var(--color-lemon);
 }
 
 .rodape_box_login {
@@ -189,7 +189,7 @@
 
 .rodape_box_login a {
   text-decoration: none;
-  color: var(--deep-purple);
+  color: var(--color-deep-purple);
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.5s ease;
@@ -197,7 +197,7 @@
 
 .rodape_box_login a:hover {
     filter: brightness(1.2);
-    color: var(--purple);
+    color: var(--color-purple);
 }
 
 .cardErro {

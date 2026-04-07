@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     padding: 10px 5%;
   }
 
@@ -66,7 +66,7 @@
 
   .nav-link {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 1rem;
     position: relative;
     padding-bottom: 5px;
@@ -76,7 +76,7 @@
     content: "";
     width: 0%;
     height: 2px;
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -89,7 +89,7 @@
   }
 
   .nav-link:hover {
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .nav-right {
@@ -102,13 +102,13 @@
 
   .telefone {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 15px;
   }
 
   .linguagem {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 15px;
   }
 
@@ -117,8 +117,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--white);
-    background-color: var(--purple);
+    color: var(--color-white);
+    background-color: var(--color-purple);
     padding: 12px 60px;
     border-radius: 20px;
     font-weight: bold;
@@ -127,10 +127,10 @@
 
   .button-login:hover {
     filter: brightness(1.2);
-    box-shadow: var(--lemon);
-    color: var(--black);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
     transform: translateY(-2px);
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
     /* mexe o botão 2px para cima */
   }
 
@@ -193,20 +193,20 @@
   .content h1 {
     margin: 0;
     margin-left: 5vh;
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: clamp(2.5rem, 4.5vw, 4.5rem)
   }
 
   .content p {
     margin: 0;
     margin-bottom: 2vh;
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
     font-size: 1.8rem
   }
 
   .button-login {
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
     text-decoration: none;
     padding: 12px 60px 12px 60px;
@@ -229,7 +229,7 @@
   }
 
   .beneficios-container {
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     padding: 60px;
     border-radius: 20px;
   }
@@ -243,13 +243,13 @@
 
 
   .beneficios-header h1 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: 3.5vh;
     text-align: center;
   }
 
   .beneficios-header p {
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
     font-size: 2.5vh;
   }
@@ -263,7 +263,7 @@
 
 
   .beneficios-info {
-    background-color: var(--white);
+    background-color: var(--color-white);
     border-radius: 20px;
     padding: 10px 20px;
     flex: 1;
@@ -271,7 +271,7 @@
   }
 
   .beneficios-info:hover {
-    box-shadow: 5px 5px 0px var(--lemon);
+    box-shadow: 5px 5px 0px var(--color-lemon);
   }
 
   .beneficios-info img {
@@ -279,7 +279,7 @@
   }
 
   .beneficios-info h2 {
-    color: var(--purple);
+    color: var(--color-purple);
     font-size: 3vh;
   }
 
@@ -305,7 +305,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
   }
 
   .empresas-parceiras {
@@ -351,7 +351,7 @@
   }
 
   .Peso {
-    color: var(--purple);
+    color: var(--color-purple);
   }
 
   /*FORRESTER*/
@@ -363,7 +363,7 @@
   }
 
   .forrester-container {
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,7 +375,7 @@
   }
 
   .forrester-info {
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .forrester-info p {
@@ -387,7 +387,7 @@
   }
 
   .forrester-info span {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-weight: bold;
   }
 
@@ -427,7 +427,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5vw;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
   }
 
   .container-info {
@@ -443,12 +443,12 @@
   }
 
   .container-info h1 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: 3vh;
   }
 
   .container-info p {
-    color: var(--white);
+    color: var(--color-white);
     font-size: 2vh;
   }
 
@@ -482,7 +482,7 @@
   }
 
   .text-slide {
-    background-color: var(--white);
+    background-color: var(--color-white);
     box-sizing: border-box;
     padding: 4vh 2vw;
     height: 30vh;
@@ -494,7 +494,7 @@
   }
 
   .text-slide h1 {
-    color: var(--purple);
+    color: var(--color-purple);
     font-size: 2.7vh;
     margin-bottom: 2vh;
     margin-top: 0;
@@ -558,7 +558,7 @@
   }
 
   .pitch-container {
-    color: var(--white);
+    color: var(--color-white);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -579,8 +579,8 @@
   }
 
   .pitch-container button {
-    color: var(--white);
-    background-color: var(--purple);
+    color: var(--color-white);
+    background-color: var(--color-purple);
     border-radius: 20px;
     border: none;
     font-size: 1rem;
@@ -601,10 +601,10 @@
 
   .pitch-container button:hover {
     filter: brightness(1.2);
-    box-shadow: var(--lemon);
-    color: var(--black);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
     transform: translateY(-2px);
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
     /* mexe o botão 2px para cima */
   }
 
@@ -619,7 +619,7 @@
   }
 
   .gif-container {
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     padding: 60px;
     height: auto;
     border-radius: 20px;
@@ -637,7 +637,7 @@
     margin-bottom: 3vh;
     font-size: 4vh;
     line-height: 1.2;
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .gif-text h4 {
@@ -645,7 +645,7 @@
     font-size: 3.5vh;
     margin-bottom: 3vh;
     line-height: 1.1;
-    color: var(--lemon);
+    color: var(--color-lemon);
   }
 
   .button-gif {
@@ -653,22 +653,22 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--deep-purple);
-    background-color: var(--lemon);
+    color: var(--color-deep-purple);
+    background-color: var(--color-lemon);
     height: 6vh;
     width: 25vh;
     border-radius: 40px;
     font-weight: bold;
     transition: all 0.3s ease;
-    border: var(--lemon);
+    border: var(--color-lemon);
   }
 
   .button-gif:hover {
     filter: brightness(1.2);
-    box-shadow: var(--lemon);
-    color: var(--black);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
     transform: translateY(-2px);
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
     /* mexe o botão 2px para cima */
   }
 
@@ -681,13 +681,13 @@
 
   .container-contato {
     border-radius: 20px;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     margin-bottom: 5%;
   }
 
   .container-contato {
     border-radius: 20px;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     margin-bottom: 5%;
     display: flex;
     justify-content: center;
@@ -713,19 +713,19 @@
   .texto-contato h1 {
     font-size: 3.7vh;
     line-height: 1.1;
-    color: var(--lemon);
+    color: var(--color-lemon);
     margin-bottom: 20px;
   }
 
   .texto-contato p {
-    color: var(--white);
+    color: var(--color-white);
     font-size: 2.7vh;
     font-weight: bold;
   }
 
   .container-contact {
     flex: 1.5;
-    background-color: var(--ligth-purple);
+    background-color: var(--color-light-purple);
     padding: 20px;
     border-radius: 20px;
     display: flex;
@@ -737,7 +737,7 @@
   }
 
   .container-contact label {
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
     font-size: 2vh;
   }
@@ -760,21 +760,21 @@
   }
 
   .checkbox-item p {
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .checkbox-item input {
     width: 1.5vh;
     height: 1.5vh;
-    accent-color: var(--lemon);
+    accent-color: var(--color-lemon);
     align-items: center;
   }
 
   .submit button {
     width: 100%;
     padding: 10px;
-    background-color: var(--lemon);
-    color: var(--deep-purple);
+    background-color: var(--color-lemon);
+    color: var(--color-deep-purple);
     border: none;
     border-radius: 10px;
     font-weight: bold;
@@ -785,19 +785,19 @@
 
   .submit button:hover {
     filter: brightness(1.2);
-    color: var(--lemon);
+    color: var(--color-lemon);
     transform: translateY(-2px);
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     /* mexe o botão 2px para cima */
   }
 
   /* FOOTER */
 
   footer {
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     padding: 60px 5%;
     border-radius: 40px 40px 0 0;
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .container-footer {
@@ -824,7 +824,7 @@
     font-size: 14px;
     line-height: 1.2;
     margin-bottom: px;
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .icone-footer {
@@ -832,7 +832,7 @@
   }
 
   .icone-footer p {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-weight: bold;
     font-size: 2.5vh;
   }
@@ -853,20 +853,20 @@
   }
 
   .bloco-info h3 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: 18px;
     margin-bottom: 10px;
   }
 
   .bloco-info a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 14px;
     transition: color 0.3s;
   }
 
   .bloco-info a:hover {
-    color: var(--lemon);
+    color: var(--color-lemon);
   }
 
   .info-e-newsletter {
@@ -891,13 +891,13 @@
   }
 
   .newsletter-footer h4 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     margin-bottom: 15px;
   }
 
   .input-group {
     display: flex;
-    background-color: var(--white);
+    background-color: var(--color-white);
     border-radius: 50px;
     padding: 5px;
     align-items: center;
@@ -916,8 +916,8 @@
   }
 
   .input-group button {
-    background-color: var(--lemon);
-    color: var(--deep-purple);
+    background-color: var(--color-lemon);
+    color: var(--color-deep-purple);
     border: none;
     height: 100%;
     padding: 0 40px;
@@ -930,8 +930,8 @@
 
   .input-group button:hover {
     transform: scale(1.05);
-    background-color: var(--purple);
-    color: var(--lemon);
+    background-color: var(--color-purple);
+    color: var(--color-lemon);
   }
 
   .info-direitos {
@@ -946,7 +946,7 @@
 
   .info-direitos p {
     font-size: 12px;
-    color: var(--white);
+    color: var(--color-white);
     margin: 0;
   }
 }
@@ -957,7 +957,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     padding: 10px 5%;
   }
 
@@ -1003,7 +1003,7 @@
 
   .nav-link {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 1rem;
     position: relative;
     padding-bottom: 5px;
@@ -1013,7 +1013,7 @@
     content: "";
     width: 0%;
     height: 2px;
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -1026,7 +1026,7 @@
   }
 
   .nav-link:hover {
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .nav-right {
@@ -1039,13 +1039,13 @@
 
   .telefone {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 15px;
   }
 
   .linguagem {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 15px;
   }
 
@@ -1054,8 +1054,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--white);
-    background-color: var(--purple);
+    color: var(--color-white);
+    background-color: var(--color-purple);
     padding: 12px 60px;
     border-radius: 20px;
     font-weight: bold;
@@ -1064,10 +1064,10 @@
 
   .button-login:hover {
     filter: brightness(1.2);
-    box-shadow: var(--lemon);
-    color: var(--black);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
     transform: translateY(-2px);
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
     /* mexe o botão 2px para cima */
   }
 
@@ -1131,20 +1131,20 @@
   .content h1 {
     margin: 0;
     margin-left: 5vh;
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: clamp(2.5rem, 4.5vw, 4.5rem)
   }
 
   .content p {
     margin: 0;
     margin-bottom: 2vh;
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
     font-size: 1.8rem
   }
 
   .button-login {
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
     text-decoration: none;
     padding: 12px 60px 12px 60px;
@@ -1167,7 +1167,7 @@
   }
 
   .beneficios-container {
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     padding: 60px;
     border-radius: 20px;
   }
@@ -1181,13 +1181,13 @@
 
 
   .beneficios-header h1 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: 5vh;
     text-align: center;
   }
 
   .beneficios-header p {
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
     font-size: 3vh;
   }
@@ -1201,7 +1201,7 @@
 
 
   .beneficios-info {
-    background-color: var(--white);
+    background-color: var(--color-white);
     border-radius: 20px;
     padding: 20px 30px;
     flex: 1;
@@ -1209,7 +1209,7 @@
   }
 
   .beneficios-info:hover {
-    box-shadow: 5px 5px 0px var(--lemon);
+    box-shadow: 5px 5px 0px var(--color-lemon);
   }
 
   .beneficios-info img {
@@ -1217,7 +1217,7 @@
   }
 
   .beneficios-info h2 {
-    color: var(--purple);
+    color: var(--color-purple);
   }
 
   /*PARCERIAS*/
@@ -1238,7 +1238,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
   }
 
   .empresas-parceiras {
@@ -1284,7 +1284,7 @@
   }
 
   .Peso {
-    color: var(--purple);
+    color: var(--color-purple);
   }
 
   /*FORRESTER*/
@@ -1296,7 +1296,7 @@
   }
 
   .forrester-container {
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1308,7 +1308,7 @@
   }
 
   .forrester-info {
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .forrester-info p {
@@ -1320,7 +1320,7 @@
   }
 
   .forrester-info span {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-weight: bold;
   }
 
@@ -1360,7 +1360,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5vw;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
   }
 
   .container-info {
@@ -1375,12 +1375,12 @@
   }
 
   .container-info h1 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: 6vh;
   }
 
   .container-info p {
-    color: var(--white);
+    color: var(--color-white);
     font-size: 3vh;
   }
 
@@ -1414,7 +1414,7 @@
   }
 
   .text-slide {
-    background-color: var(--white);
+    background-color: var(--color-white);
     box-sizing: border-box;
     padding: 4vh 2vw;
     height: 35vh;
@@ -1426,7 +1426,7 @@
   }
 
   .text-slide h1 {
-    color: var(--purple);
+    color: var(--color-purple);
     font-size: 4vh;
     margin-bottom: 2vh;
     margin-top: 0;
@@ -1490,7 +1490,7 @@
   }
 
   .pitch-container {
-    color: var(--white);
+    color: var(--color-white);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1511,8 +1511,8 @@
   }
 
   .pitch-container button {
-    color: var(--white);
-    background-color: var(--purple);
+    color: var(--color-white);
+    background-color: var(--color-purple);
     border-radius: 20px;
     border: none;
     font-size: 1rem;
@@ -1533,10 +1533,10 @@
 
   .pitch-container button:hover {
     filter: brightness(1.2);
-    box-shadow: var(--lemon);
-    color: var(--black);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
     transform: translateY(-2px);
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
     /* mexe o botão 2px para cima */
   }
 
@@ -1551,7 +1551,7 @@
   }
 
   .gif-container {
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     padding: 60px;
     height: auto;
     border-radius: 20px;
@@ -1569,7 +1569,7 @@
     margin-bottom: 3vh;
     font-size: 7vh;
     line-height: 1.2;
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .gif-text h4 {
@@ -1577,7 +1577,7 @@
     font-size: 6vh;
     margin-bottom: 3vh;
     line-height: 1.1;
-    color: var(--lemon);
+    color: var(--color-lemon);
   }
 
   .button-gif {
@@ -1585,22 +1585,22 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--deep-purple);
-    background-color: var(--lemon);
+    color: var(--color-deep-purple);
+    background-color: var(--color-lemon);
     height: 8vh;
     width: 30vh;
     border-radius: 40px;
     font-weight: bold;
     transition: all 0.3s ease;
-    border: var(--lemon);
+    border: var(--color-lemon);
   }
 
   .button-gif:hover {
     filter: brightness(1.2);
-    box-shadow: var(--lemon);
-    color: var(--black);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
     transform: translateY(-2px);
-    background-color: var(--lemon);
+    background-color: var(--color-lemon);
     /* mexe o botão 2px para cima */
   }
 
@@ -1613,13 +1613,13 @@
 
   .container-contato {
     border-radius: 20px;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     margin-bottom: 5%;
   }
 
   .container-contato {
     border-radius: 20px;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     margin-bottom: 5%;
     display: flex;
     justify-content: center;
@@ -1645,19 +1645,19 @@
   .texto-contato h1 {
     font-size: 3rem;
     line-height: 1.1;
-    color: var(--lemon);
+    color: var(--color-lemon);
     margin-bottom: 20px;
   }
 
   .texto-contato p {
-    color: var(--white);
+    color: var(--color-white);
     font-size: 1.9rem;
     font-weight: bold;
   }
 
   .container-contact {
     flex: 0.8;
-    background-color: var(--ligth-purple);
+    background-color: var(--color-light-purple);
     padding: 40px;
     border-radius: 20px;
     display: flex;
@@ -1669,7 +1669,7 @@
   }
 
   .container-contact label {
-    color: var(--white);
+    color: var(--color-white);
     font-weight: bold;
   }
 
@@ -1693,15 +1693,15 @@
   .checkbox-item input {
     width: 3vh;
     height: 3vh;
-    accent-color: var(--lemon);
+    accent-color: var(--color-lemon);
     align-items: center;
   }
 
   .submit button {
     width: 100%;
     padding: 15px;
-    background-color: var(--lemon);
-    color: var(--deep-purple);
+    background-color: var(--color-lemon);
+    color: var(--color-deep-purple);
     border: none;
     border-radius: 10px;
     font-weight: bold;
@@ -1713,9 +1713,9 @@
 
   .submit button:hover {
     filter: brightness(1.2);
-    color: var(--lemon);
+    color: var(--color-lemon);
     transform: translateY(-2px);
-    background-color: var(--purple);
+    background-color: var(--color-purple);
     /* mexe o botão 2px para cima */
   }
 
@@ -1725,7 +1725,7 @@
   }
 
   .text-dooh p {
-    color: var(--purple);
+    color: var(--color-purple);
     font-weight: bold;
     align-items: center;
     margin-left: 2%;
@@ -1741,7 +1741,7 @@
 
   .content-dooh {
     width: 55vh;
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     border-radius: 20px;
   }
 
@@ -1750,13 +1750,13 @@
   }
 
   .content-dooh h5 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: 1.2rem;
     margin: 10px 0;
   }
 
   .content-dooh p {
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .content-dooh img {
@@ -1765,17 +1765,17 @@
 
   .text-dooh1 {
     justify-content: center;
-    color: var(--purple);
+    color: var(--color-purple);
     font-weight: bold;
   }
 
   /* FOOTER */
 
   footer {
-    background-color: var(--deep-purple);
+    background-color: var(--color-deep-purple);
     padding: 60px 5%;
     border-radius: 40px 40px 0 0;
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .container-footer {
@@ -1802,7 +1802,7 @@
     font-size: 14px;
     line-height: 1.2;
     margin-bottom: px;
-    color: var(--white);
+    color: var(--color-white);
   }
 
   .icone-footer {
@@ -1810,7 +1810,7 @@
   }
 
   .icone-footer p {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-weight: bold;
     font-size: 2.5vh;
   }
@@ -1831,20 +1831,20 @@
   }
 
   .bloco-info h3 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     font-size: 18px;
     margin-bottom: 10px;
   }
 
   .bloco-info a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--color-white);
     font-size: 14px;
     transition: color 0.3s;
   }
 
   .bloco-info a:hover {
-    color: var(--lemon);
+    color: var(--color-lemon);
   }
 
   .info-e-newsletter {
@@ -1869,13 +1869,13 @@
   }
 
   .newsletter-footer h4 {
-    color: var(--lemon);
+    color: var(--color-lemon);
     margin-bottom: 15px;
   }
 
   .input-group {
     display: flex;
-    background-color: var(--white);
+    background-color: var(--color-white);
     border-radius: 50px;
     padding: 5px;
     align-items: center;
@@ -1894,8 +1894,8 @@
   }
 
   .input-group button {
-    background-color: var(--lemon);
-    color: var(--deep-purple);
+    background-color: var(--color-lemon);
+    color: var(--color-deep-purple);
     border: none;
     height: 100%;
     padding: 0 40px;
@@ -1908,8 +1908,8 @@
 
   .input-group button:hover {
     transform: scale(1.05);
-    background-color: var(--purple);
-    color: var(--lemon);
+    background-color: var(--color-purple);
+    color: var(--color-lemon);
   }
 
   .info-direitos {
@@ -1924,7 +1924,7 @@
 
   .info-direitos p {
     font-size: 12px;
-    color: var(--white);
+    color: var(--color-white);
     margin: 0;
   }
 }
