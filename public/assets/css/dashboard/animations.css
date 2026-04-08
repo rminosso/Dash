@@ -1,0 +1,9 @@
+@keyframes growth {
+    from { width: 8vw; }
+    to { width: 18vw; }
+}
+
+@keyframes reduce {
+    from { width: 18vw; }
+    to { width: 8vw; }
+}

@@ -1,4 +1,5 @@
 @import url('../default.css');
+@import url('animations.css');
 
 /* Mobile <= 480px */
 @media screen and (max-width: 480px) {}
@@ -11,7 +12,127 @@
 
 /* Desktop >= 1024px */
 @media screen and (min-width: 1024px) {
+
+    .icon {
+        position: absolute;
+        left: calc(18vw - 11.5vw);
+        width: 45px;
+        height: 45px;
+    }
+
+    .sidebar.grow {
+        animation: growth 0.5s ease forwards;
+    }
+
+    .sidebar.reduce {
+        animation: reduce 0.5s ease forwards;
+    }
+
+    .invert {
+        rotate: -180deg;
+        left: 17.5vw;
+    }
+
     aside {
-        display: none;
+        background-color: var(--color-panel);
+        width: 8vw;
+        padding: 2% 1.5%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    aside .container-top .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    aside .logo svg {
+        width: 85%;
+        padding: 0 5%;
+        margin-bottom: 15%;
+    }
+
+    .active {
+        background-color: var(--color-purple);
+    }
+
+    ul li {
+        list-style: none;
+        display: flex;
+        justify-content: left;
+        margin: 5px 0;
+    }
+
+    ul li a svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    ul li a {
+        display: flex;
+        justify-content: left;
+        align-content: center;
+        padding: 10px;
+        width: 100%;
+        transition: 180ms ease-in-out;
+        border-radius: 18px;
+        color: var(--color-white);
+        text-decoration: none;
+    }
+
+    ul li a span {
+        margin: 2px 8px;
+    }
+
+    ul li a:hover {
+        background-color: var(--color-light-purple);
+    }
+
+    .container-profile {
+        background-color: var(--color-light-purple);
+        padding: 5px;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        border-radius: 16px;
+    }
+
+    .container-profile .info {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .container-profile .image-profile {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 5px 0;
+    }
+
+    .container-profile .info img {
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .container-profile .info .role {
+        color: var(--color-white);
+    }
+
+    .container-profile .info .name {
+        color: var(--color-lemon);
+    }
+
+    .version {
+        margin-top: 5%;
+        color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
     }
 }

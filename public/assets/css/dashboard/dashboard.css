@@ -12,5 +12,26 @@
 
 /* Desktop >= 1024px */
 @media screen and (min-width: 1024px) {
+    body {
+        display: flex;
+    }
 
+    .body {
+        width: calc(100% - 18vw);
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    .body .container {
+        padding: 3.5%;
+    }
+
+    .body .container .title {
+        font-weight: bold;
+    }
+
+    .body .container .title a {
+        text-decoration: none;
+        color: var(--color-purple);
+    }
 }
