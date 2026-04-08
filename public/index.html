@@ -12,29 +12,29 @@
 <body>
   <nav class="navbar">
     <div class="logo-nav">
-      <img src="assets/images/Logo.svg" alt="">
+      <img src="assets/images/Logo.svg" alt="Logo">
     </div>
-    <div class="nav">
+
+    <button class="hamburger" aria-label="Abrir menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <div class="nav-menu">
       <ul class="list">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Funcionalidades</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Monitoramento</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Relatórios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Contato</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Funcionalidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Monitoramento</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Relatórios</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Contato</a></li>
       </ul>
+
+      <div class="nav-right">
+        <a class="telefone" href="#">Vendas (11) 4002-8922</a>
+        <a class="linguagem" href="#">Portugues - Brasil</a>
+      </div>
+      <a class="button-login1" href="./login.html">Contratar</a>
     </div>
-    <div class="nav-right">
-      <a class="telefone" href="#">Vendas (11) 4002-8922</a>
-      <a class="linguagem" href="#">Portugues - Brasil</a>
-    </div>
-    <a class="button-login" href="./login.html">Contratar</a>
   </nav>
 
   <div class="header-content">
@@ -440,6 +440,13 @@
     const slideTrocar = -slideIndex * 100;
     slides.style.transform = `translateX(${slideTrocar}%)`;
   }
+
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
 </script>
 
 <!-- Script para importar o gif -->
