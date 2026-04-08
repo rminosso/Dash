@@ -17,9 +17,10 @@ function autenticar(req, res) {
         if (resultadoAutenticar.length == 1) {
           console.log("TUDO CERTO")
           return res.status(200).json({
-            fkEmpresa: resultadoAutenticar[0].fkEmpresa,
+            fkEmpresa: resultadoAutenticar[0].empresaId,
             email: resultadoAutenticar[0].email,
             nome: resultadoAutenticar[0].nome,
+            id: resultadoAutenticar[0].idUsuario
           })
         } else{
           throw new Error("Erro ao realizar o login");
