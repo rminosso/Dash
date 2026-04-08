@@ -13,45 +13,92 @@
 /* Desktop >= 1024px */
 @media screen and (min-width: 1024px) {
 
-    .icon {
-        position: absolute;
-        left: calc(18vw - 11.5vw);
-        width: 45px;
-        height: 45px;
-    }
-
-    .sidebar.grow {
-        animation: growth 0.5s ease forwards;
-    }
-
-    .sidebar.reduce {
-        animation: reduce 0.5s ease forwards;
-    }
-
-    .invert {
-        rotate: -180deg;
-        left: 17.5vw;
-    }
-
     aside {
         background-color: var(--color-panel);
-        width: 8vw;
+        width: 18vw;
         padding: 2% 1.5%;
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition: width 0.3s ease;
     }
 
-    aside .container-top .logo {
+    aside .box-logo .icon svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    aside.reduced {
+        width: 8vw;
+    }
+
+    aside.reduced span {
+        display: none;
+    }
+
+    aside.reduced a {
+        width: min-content;
+    }
+
+    aside.reduced .container-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside.reduced .tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min-content;
+    }
+
+    aside.reduced .safe-area {
+        margin: 0;
+    }
+
+    aside .safe-area {
+        margin-left: 20px;
+    }
+
+    aside .safe-area .icon {
         display: flex;
         justify-content: center;
+        align-items: center;
+        transition: 800ms ease-in-out;
+        transform: rotate(-180deg);
     }
 
-    aside .logo svg {
-        width: 85%;
-        padding: 0 5%;
+    aside.reduced .safe-area .icon {
+        transform: rotate(0deg);
+    }
+
+    aside .box-logo {
         margin-bottom: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    aside .box-logo .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    aside.reduced .box-logo .logo {
+        margin: 0;
+    }
+
+    aside.reduced .box-logo {
+        display: inline-block;
+    }
+
+    aside.reduced .safe-area {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
     }
 
     .active {
@@ -90,6 +137,10 @@
         background-color: var(--color-light-purple);
     }
 
+    .safe-area {
+        position: relative;
+    }
+
     .container-profile {
         background-color: var(--color-light-purple);
         padding: 5px;
@@ -99,6 +150,11 @@
         border-radius: 16px;
     }
 
+    aside.reduced .tabs li a {
+        display: flex;
+        justify-content: center;
+    }
+
     .container-profile .info {
         display: flex;
         justify-content: center;
@@ -106,6 +162,7 @@
         flex-direction: column;
         text-align: left;
         font-weight: bold;
+        font-size: 1rem;
     }
 
     .container-profile .image-profile {
@@ -115,13 +172,13 @@
         padding: 5px 0;
     }
 
-    .container-profile .info img {
-        width: 100%;
-        margin-top: 2px;
+    .container-profile .image-profile img {
+        width: 45px;
     }
 
     .container-profile .info .role {
         color: var(--color-white);
+        font-weight: normal;
     }
 
     .container-profile .info .name {

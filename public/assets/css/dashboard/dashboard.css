@@ -20,6 +20,7 @@
         width: calc(100% - 18vw);
         height: 100vh;
         overflow-y: auto;
+        display: flex;
     }
 
     .body .container {

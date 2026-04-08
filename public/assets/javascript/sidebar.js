@@ -1,14 +1,7 @@
 const button = document.querySelector('.icon');
 const sidebar = document.querySelector('.sidebar');
+const logo = document.getElementById('logo');
 
 button.addEventListener('click', () => {
-    button.classList.toggle('invert');
-
-    if (sidebar.classList.contains('grow')) {
-        sidebar.classList.remove('grow');
-        sidebar.classList.add('reduce');
-    } else {
-        sidebar.classList.remove('reduce');
-        sidebar.classList.add('grow');
-    }
+    sidebar.classList.toggle('reduced');
 });
