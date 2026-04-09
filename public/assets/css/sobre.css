@@ -1,0 +1,208 @@
+/* Sidebar styles */
+@import url('default.css');
+
+/* Mobile <= 480px */
+@media screen and (max-width: 480px) {}
+
+/* Mobile >= 480px */
+@media screen and (min-width: 480px) {}
+
+/* Tablet >= 768px */
+@media screen and (min-width: 768px) {}
+
+/* Desktop >= 1024px */
+@media screen and (min-width: 1024px) {
+
+    /* Navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 4%;
+        background-color: var(--color-deep-purple);
+        color: var(--color-white);
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    nav .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .logo s {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .logo a svg {
+        padding: 5px;
+    }
+
+    nav .links {
+        display: flex;
+    }
+
+    nav .links li {
+        list-style: none;
+    }
+
+    nav .links li a {
+        color: var(--color-white);
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+    nav .links li a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 5px;
+        text-decoration-color: var(--color-purple);
+    }
+
+    nav .actions {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .actions ul {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .actions ul li {
+        list-style: none;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    nav .actions ul li select {
+        padding: 5px;
+        background-color: var(--color-deep-purple);
+        border: none;
+        color: var(--color-white);
+        outline: none;
+    }
+
+    .cta a {
+        margin: 0 5px;
+        padding: 10px 45px;
+        color: var(--color-white);
+        text-decoration: none;
+        background-color: var(--color-purple);
+        border-radius: 25px;
+        transition: 180ms ease-in-out;
+        font-weight: bold;
+    }
+
+    .cta a:hover {
+        background-color: var(--color-lemon);
+        color: var(--color-deep-purple);
+    }
+
+    nav .actions ul li a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+
+    /* Header */
+    .header-content {
+        padding: 5%;
+    }
+
+    .header-content .image {
+        background-image: url("../images/team.avif");
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 25px;
+        height: 85vh;
+        margin-top: 1%;
+        width: 100%;
+    }
+
+    .header-content .overlay {
+        position: absolute;
+        height: 85vh;
+        margin-top: 1%;
+        background-color: #2C0B3670;
+        width: 90%;
+        border-radius: 25px;
+    }
+
+    /* Main */
+    main .team {
+        padding: 2% 5% 5% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main .team .title {
+        text-align: center;
+        padding: 0 8%;
+        margin-bottom: 5%;
+    }
+
+    main .team .title span {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 2%;
+        color: var(--color-purple);
+    }
+
+    main .team .title h2 {
+        font-size: 3rem;
+    }
+
+    main .team .team-cards {
+        background-color: var(--color-deep-purple);
+        padding: 5%;
+        border-radius: 25px;
+    }
+
+    main .team .team-cards .card {
+        background-color: var(--color-white);
+        width: 25vw;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    main .team .team-cards .card .name {
+        font-weight: bold;
+        color: var(--color-deep-purple);
+    }
+
+    main .team .team-cards .card .role {
+        font-weight: bold;
+        color: var(--color-purple);
+    }
+
+    main .team .card .image-profile {
+        position: relative;
+        top: -15%;
+    }
+
+    main .team .card .image-profile img {
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    main .team .team-cards .card .social {
+        justify-content: center;
+    }
+
+    main .team .team-cards .card .social a {
+        text-decoration: none;
+        margin: 0 5px;
+        transition: 180ms ease-in-out;
+    }
+
+    main .team .team-cards .card .social a:hover > svg {
+        background: var(--color-deep-purple);
+    }
+}
