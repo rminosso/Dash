@@ -20,7 +20,8 @@ function autenticar(req, res) {
             fkEmpresa: resultadoAutenticar[0].empresaId,
             email: resultadoAutenticar[0].email,
             nome: resultadoAutenticar[0].nome,
-            id: resultadoAutenticar[0].idUsuario
+            id: resultadoAutenticar[0].idUsuario,
+            tipo: resultadoAutenticar[0].tipoUsuario
           })
         } else{
           throw new Error("Erro ao realizar o login");
@@ -110,8 +111,51 @@ function finalizarCadastro(req, res) {
     }
 }
 
+function cadastrarFuncionario(req, res) {
+    var fkEmpresa = req.body.fkEmpresa;
+    var idUsuario = req.body.idSuperiorVar;
+    var nome = req.body.nome;
+    var email = req.body.email;
+    var dataNascimento = req.body.dataNascimento;
+    var cpf = req.body.cpf;
+    var senha = req.body.senha;
+    var rg = req.body.rg
+
+
+    if (nome == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (dataNascimento == undefined) {
+        res.status(400).send("Sua data de nascimento está undefined!");
+    } else if (cpf == undefined) {
+        res.status(400).send("Seu cpf está undefined!");
+    } else if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else if (rg == undefined) {
+        res.status(400).send("Seu rg está undefined!");
+    } else {
+        usuarioModel.cadastrarFuncionario(fkEmpresa, idUsuario, nome, email, dataNascimento, cpf, senha, rg)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
   autenticar,
   cadastrar,
-  finalizarCadastro
+  finalizarCadastro,
+  cadastrarFuncionario
 };

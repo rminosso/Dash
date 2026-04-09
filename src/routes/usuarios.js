@@ -14,4 +14,8 @@ router.patch("/finalizarCadastro", function (req, res) {
     usuarioController.finalizarCadastro(req, res);
 });
 
+router.post("/cadastrarFuncionario", function (req, res) {
+    usuarioController.cadastrarFuncionario(req, res);
+});
+
 module.exports = router;
