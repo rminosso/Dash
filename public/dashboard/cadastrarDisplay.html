@@ -23,10 +23,10 @@
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 
     <!--Title-->
-    <title>VOOH | Cadastrar Displays</title>
+    <title>VOOH | Displays</title>
 </head>
 
-<body onload="verificar()">
+<body>
     <!--Sidebar-->
     <aside class="sidebar">
         <div class="container-top">
@@ -343,7 +343,8 @@
             <div class="input-dialog">
                 <div class="conjunto">
                     <p>CEP *</p>
-                    <input placeholder="12345678" maxlength="8" type="text" name="" id="input_cep">
+                    <input placeholder="12345678" maxlength="8" type="text" name="" id="input_cep"
+                        onblur="consultaCEP()">
                 </div>
                 <div class="conjunto">
                     <p>Logradouro *</p>
@@ -358,7 +359,7 @@
                 </div>
 
                 <div class="conjunto">
-                    <p>Complemento *</p>
+                    <p>Complemento</p>
                     <input placeholder="Bl: 10 Ap: 14" type="text" name="" id="input_complemento">
                 </div>
             </div>
@@ -507,6 +508,7 @@
 
     function cadastrarComp() {
 
+
         var cpu = input_cpu.checked;
         var ram = input_memoriaRam.checked;
         var disco = input_armazenamento.checked;
@@ -579,7 +581,7 @@
 
 
         if (compVar == '') {
-            compVar = 'null';
+            compVar = 'Sem complemento';
         }
 
         if (cepVar == '' || logVar == '' || numVar == '' ||
@@ -638,4 +640,51 @@
         }
 
     }
+
+    function consultaCEP() {
+        let cep = document.getElementById('input_cep').value;
+        cep = cep.replace(/\D/g, '');
+
+        if (cep !== "") {
+            var url = `https://viacep.com.br/ws/${cep}/json/`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.erro) {
+                        document.getElementById('input_logradouro').value = data.logradouro;
+                        document.getElementById('input_bairro').value = data.bairro;
+                        document.getElementById('input_cidade').value = data.localidade;
+                        document.getElementById('input_uf').value = data.uf;
+
+                        // Aplica o readOnly para impedir a edição manual
+                        document.getElementById('input_logradouro').readOnly = true;
+                        document.getElementById('input_bairro').readOnly = true;
+                        document.getElementById('input_cidade').readOnly = true;
+                        document.getElementById('input_uf').readOnly = true;
+                    } else {
+                        alert("CEP não encontrado.");
+                        limpaFormulario();
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao consultar CEP:', error);
+                    alert("Erro ao buscar o CEP. Tente novamente.");
+                });
+        }
+    }
+
+    function limpaFormulario() {
+
+        document.getElementById('input_logradouro').value = "";
+        document.getElementById('input_bairro').value = "";
+        document.getElementById('input_cidade').value = "";
+        document.getElementById('input_uf').value = "AC";
+
+        document.getElementById('input_logradouro').readOnly = false;
+        document.getElementById('input_bairro').readOnly = false;
+        document.getElementById('input_cidade').readOnly = false;
+        document.getElementById('input_uf').disabled = false;
+    }
+
 </script>
