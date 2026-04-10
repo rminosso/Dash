@@ -162,7 +162,7 @@
 
                 <!--Usuários-->
                 <li>
-                    <a  href="./cadastrarUsuario.html" title="Usuários">
+                    <a href="./cadastrarUsuario.html" title="Usuários">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path
@@ -232,7 +232,7 @@
                 Filtrar e Ordenar
             </button>
 
-            <button class="button-purple" onclick="document.getElementById('meuDialogo').showModal()">
+            <button class="button-purple" onclick="validarModal()">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
                         <path
@@ -287,7 +287,7 @@
             </div>
         </dialog>
 
-         <dialog id="dialogComp">
+        <dialog id="dialogComp">
             <div class="info-dialog">
                 <div class="info-tela">
                     <svg width="35" height="35" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -304,19 +304,19 @@
 
             <div class="input-dialog">
                 <div class="checkbox-container">
-                        <label class="checkbox-item">
-                            <input type="checkbox" id="input_cpu">
-                            <i>Processador (CPU)</i>
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" id="input_memoriaRam">
-                            <i>Memória RAM</i>
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" id="input_armazenamento">
-                            <i>Armazenamento (HDD/SSD)</i>
-                        </label>
-                    </div>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="input_cpu">
+                        <i>Processador (CPU)</i>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="input_memoriaRam">
+                        <i>Memória RAM</i>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="input_armazenamento">
+                        <i>Armazenamento (HDD/SSD)</i>
+                    </label>
+                </div>
             </div>
 
             <div class="buttons">
@@ -325,7 +325,7 @@
             </div>
         </dialog>
 
-         <dialog id="dialogEnd">
+        <dialog id="dialogEnd">
             <div class="info-dialog">
                 <div class="info-tela">
                     <svg width="35" height="35" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -350,7 +350,7 @@
                     <input placeholder="Av loreto" type="text" name="" id="input_logradouro">
                 </div>
             </div>
-         
+
             <div class="input-dialog">
                 <div class="conjunto">
                     <p>Numero *</p>
@@ -363,47 +363,47 @@
                 </div>
             </div>
 
-             <div class="input-dialog">
+            <div class="input-dialog">
                 <div class="conjunto">
                     <p>Bairro *</p>
-                    <input placeholder="Jardins"  type="text" name="" id="input_bairro">
+                    <input placeholder="Jardins" type="text" name="" id="input_bairro">
                 </div>
                 <div class="conjunto">
                     <p>Cidade *</p>
                     <input placeholder="São Paulo" type="text" name="" id="input_cidade">
                 </div>
             </div>
-             <div class="input-dialog">
+            <div class="input-dialog">
                 <div class="conjunto">
                     <p>UF *</p>
                     <select name="" id="input_uf">
-                        <option >AC</option>
-                        <option >AL</option>
-                        <option >AP</option>
-                        <option >AM</option>
-                        <option >BA</option>
-                        <option >CE</option>
-                        <option >DF</option>
-                        <option >ES</option>
-                        <option >GO</option>
-                        <option >MA</option>
-                        <option >MT</option>
-                        <option >MS</option>
-                        <option >MG</option>
-                        <option >PA</option>
-                        <option >PB</option>
-                        <option >PR</option>
-                        <option >PE</option>
-                        <option >PI</option>
-                        <option >RJ</option>
-                        <option >RN</option>
-                        <option >RS</option>
-                        <option >RO</option>
-                        <option >RR</option>
-                        <option >SC</option>
-                        <option >SP</option>
-                        <option >SE</option>
-                        <option >TO</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
                     </select>
                 </div>
             </div>
@@ -423,7 +423,7 @@
 </html>
 
 <script>
-    
+
     // function verificar(){
     //     if(sessionStorage.TIPO_USUARIO != 'Gestor'){
     //         alert("Seu usuário não tem permissão para acessar essas página!")
@@ -431,6 +431,14 @@
     //     }
     // }
 
+    function validarModal() {
+
+        if (sessionStorage.TIPO_USUARIO != 'Gestor') {
+            alert('Seu usuário não tem permissão para acessar essa página!')
+        } else {
+            document.getElementById('meuDialogo').showModal()
+        }
+    }
 
     usuarionome.innerHTML = sessionStorage.NOME_USUARIO
     usuariocargo.innerHTML = sessionStorage.TIPO_USUARIO
@@ -497,25 +505,25 @@
 
     }
 
-    function cadastrarComp(){
+    function cadastrarComp() {
 
-    var cpu = input_cpu.checked;
-    var ram = input_memoriaRam.checked;
-    var disco = input_armazenamento.checked;
+        var cpu = input_cpu.checked;
+        var ram = input_memoriaRam.checked;
+        var disco = input_armazenamento.checked;
 
-    var componentes = [];
+        var componentes = [];
 
-    if(cpu){
-        componentes.push(1);
-    }
-    if(ram){
-        componentes.push(2);
-    }
-    if(disco){
-        componentes.push(3);
-    }
+        if (cpu) {
+            componentes.push(1);
+        }
+        if (ram) {
+            componentes.push(2);
+        }
+        if (disco) {
+            componentes.push(3);
+        }
 
-     fetch("/display/cadastrarComp", {
+        fetch("/display/cadastrarComp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -523,43 +531,43 @@
             body: JSON.stringify({
                 Componentes: componentes,
                 fkEmpresa: sessionStorage.FKEMPRESA,
-                fkServidor: sessionStorage.ID_SERVIDOR 
+                fkServidor: sessionStorage.ID_SERVIDOR
             })
         })
-        .then(resposta => {
-            console.log("ESTOU NO THEN DO entrar()!")
-            console.log(resposta)
-            if (resposta.ok) {
-                console.log(resposta);
+            .then(resposta => {
+                console.log("ESTOU NO THEN DO entrar()!")
+                console.log(resposta)
+                if (resposta.ok) {
+                    console.log(resposta);
 
-                resposta.json().then((json) => {
-                    console.log(json);
+                    resposta.json().then((json) => {
+                        console.log(json);
 
-                    console.log(JSON.stringify(json));
-                    setTimeout(function () {
-                        alert("Componentes cadastrados com sucesso")
-                        document.getElementById('dialogComp').close();
-                        document.getElementById('dialogEnd').showModal()
-                    }, 1000); // apenas para exibir o loading
+                        console.log(JSON.stringify(json));
+                        setTimeout(function () {
+                            alert("Componentes cadastrados com sucesso")
+                            document.getElementById('dialogComp').close();
+                            document.getElementById('dialogEnd').showModal()
+                        }, 1000); // apenas para exibir o loading
 
-                });
+                    });
 
-            } else {
+                } else {
 
-                console.log("Houve um erro ao tentar realizar o cadastro dos componentes!");
+                    console.log("Houve um erro ao tentar realizar o cadastro dos componentes!");
 
-                resposta.text().then(texto => {
-                    console.error(texto);
-                   // finalizarAguardar(texto);
-                });
-            }
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        // finalizarAguardar(texto);
+                    });
+                }
 
-        }).catch(function (erro) {
-            console.log(erro);
-        })
+            }).catch(function (erro) {
+                console.log(erro);
+            })
     }
 
-    function cadastrarEnd(){
+    function cadastrarEnd() {
 
         cepVar = input_cep.value;
         logVar = input_logradouro.value;
@@ -570,12 +578,12 @@
         ufVar = input_uf.value;
 
 
-        if(compVar == ''){
+        if (compVar == '') {
             compVar = 'null';
         }
 
         if (cepVar == '' || logVar == '' || numVar == '' ||
-            bairroVar == '' || cidadeVar == '' || ufVar == '' ) {
+            bairroVar == '' || cidadeVar == '' || ufVar == '') {
             alert("Preencha todos os campos para prosseguir")
 
         } else {
