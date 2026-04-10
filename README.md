@@ -1,88 +1,33 @@
-# 💻 V-OOH
-<img width="1436" height="687" alt="GIT_HEAD" src="https://github.com/user-attachments/assets/7a302c8f-b995-4d28-bc57-6d802bd75140" />
+# VOOH - Sistema de Monitoramento de Dispositivos DOOH
 
-Bem-vindo ao repositório do projeto **V-OOH**, desenvolvido para entrega do Projeto de encerramento do segundo semestre da **São Paulo Tech School**.
-Este projeto tem como objetivo criar um sistema de monitoramento de hardware para empresas de publicidades e propagandas em Display Digital Out Of Home (DOOH)
+Este repositório conta com um projeto de visualização e monitoramento de dados de dispositivos DOOH (Digital Out Of Home), como projeto acadêmico do 2º semestre do Curso de Ciência da Computação da São Paulo Tech School - SPTECH [@BandTec](https://github.com/BandTec).
 
----
+## Tecnologias
 
-## 🌐 Tecnologias Utilizadas
+Este projeto usa como base tecnologias web, sendo:
 
-- **HTML5**
-- **CSS3**
-- **Bootstrap5**
-- **JavaScript**
-- **Chart.js**
-- **MySQL**
-- **Java**
-- **Slack**
-- **Python**
-- **PSutil**
+### Frontend
 
----
+- HTML, CSS e JavaScript
 
-## 🛠️ Ferramentas Utilizadas
+### Backend
 
-- **Git & GitHub**
-- **Amazon EC2**
-- **Visual Studio Code**
-- **IntelliJ IDEA**
-- **MySQL Workbench 8.0 CE**
+- NodeJS
 
----
+## Instalação
 
-## 📦 Como executar o projeto
+Para realizar a instalação deste projeto, é necessário possuir o **git** instalado na máquina, bem como o NodeJS e executar os seguintes comandos:
 
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/KKadooca-SPTECH/V-OOH
+```
+git clone https://github.com/V-OOH/v-ooh
+cd v-ooh
+npm install
 ```
 
-2. Entre no diretório:
+Para executar este projeto, é necessário incluir credenciais do banco de dados no `.env`.
 
-```bash
-cd V-OOH
+Para executar:
+
 ```
-
-3. Instale os pacotes:
-
-```bash
-npm i
-```
-
-4. Execute o projeto:
-
-```bash
 npm start
 ```
-
----
-
-## 👨‍💻 Autores
-
-### Erick Vieiro
-- **📘 SPTech School**
-- **🔗 GitHub:** https://github.com/ErickSPT
-
-### Kauan Kadooca
-- **📘 SPTech School**
-- **🔗 GitHub:** https://github.com/KKadooca-SPTECH
-
-### Leticia Pinheiro
-- **📘 SPTech School**
-- **🔗 GitHub:** https://github.com/LeticiaPinheirooo/
-
-### Marci Hiromi
-- **📘 SPTech School**
-- **🔗 GitHub:** https://github.com/Mahiryo
-
-### Pedro Augusto
-- **📘 SPTech School**
-- **🔗 GitHub:** https://github.com/pedro-augusto-lemos-rodrigues
-  
-### Pedro de Oliveira
-- **📘 SPTech School**
-- **🔗 GitHub:** https://github.com/PedroHenriqueCCOK
-
----
