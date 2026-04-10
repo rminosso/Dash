@@ -4,14 +4,14 @@ export async function enviar() {
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "marleysantos439@gmail.com",
-            pass: "ercx yxjh imkn mumh", // Use "App Passwords" do Gmail
+            user: process.env.GMAIL_EMAIL,
+            pass: process.env.GMAIL_PASSWORD
         },
     });
 
     let mailOptions = {
-        from: '"Marley" <marleysantos439@gmail.com>',
-        to: "renan.msilva@sptech.school",
+        from: '"Nome" <email@email>',
+        to: "",
         subject: "Teste",
         text: "Olá teste",
         html: "<b>Olá</b>",
