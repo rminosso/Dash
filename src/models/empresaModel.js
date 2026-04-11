@@ -1,33 +1,28 @@
-var database = require("../database/config")
-function verificarToken(token) {
+var database = require("../database/config");
+
+function cadastrar(nome, responsavel, cnpj) {
     var instrucaoSql = `
-        SELECT * FROM empresa WHERE token = '${token}';
+        INSERT INTO cadastroEmpresa (nomeResponsavel, nomeEmpresa, cnpj, statusCliente) 
+        VALUES ('${responsavel}', '${nome}', '${cnpj}', 'Ativo');
     `;
+    
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
-function cadastrar(
-    cnpj,
-    razaoSocial,
-    telefoneContato,
-    email,
-    token,
-    cep,
-    numero
-) {
+function cadastrarEnd(fkEmpresa, cep, logradouro, numero, complemento, bairro, cidade, uf) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", fkEmpresa, cep , logradouro, numero, complemento, bairro, cidade, uf);
+
     var instrucaoSql = `
-        INSERT INTO empresa (cnpj, razaoSocial, contato, email, token, cep, numero)
-        VALUES (
-            '${cnpj}','${razaoSocial}','${telefoneContato}', '${email}', '${token}', '${cep}', '${numero}'
-        );
+    INSERT INTO endereco (fkEmpresa, cep, logradouro, numero, complemento, bairro, cidade, uf
+    ) VALUES ('${fkEmpresa}','${cep}','${logradouro}','${numero}','${complemento}','${bairro}','${cidade}','${uf}');
+
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
-
 
 module.exports = {
     cadastrar,
-    verificarToken
+    cadastrarEnd
 };

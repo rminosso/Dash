@@ -24,9 +24,7 @@ function autenticar(req, res) {
             tipo: resultadoAutenticar[0].tipoUsuario
           })
         } else{
-          throw new Error("Erro ao realizar o login");
-          // return res.status(400).json({erro: "Erro ao fazer login!"})
-          
+          throw new Error("Erro ao realizar o login");    
         }
       })
       .catch(function (erro) {

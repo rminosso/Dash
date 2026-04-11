@@ -1,63 +1,69 @@
-const crypto = require("crypto");
 var empresaModel = require("../models/empresaModel");
 
-function token(req, res) {
-    var tokenJson = { token: crypto.randomBytes(32).toString("hex") }
-    return res.json(tokenJson)
-}
-async function verificarToken(req, res){
-    var token = req.params.token    
-    var consultaToken = await empresaModel.verificarToken(token)
-
-    console.log("Consulta: " + consultaToken);
-    if (consultaToken) {
-        return res.status(200).json(consultaToken)
-    }
-}
 async function cadastrar(req, res) {
+    var nome = req.body.nome;
+    var responsavel = req.body.res;
+    var cnpj = req.body.cnpj;
 
-    var cnpj = req.body.cnpjServer
-    var razaoSocial = req.body.razaoSocialServer
-    var telefoneContato = req.body.telefoneContatoServer
-    var email = req.body.emailServer
-    var cep = req.body.cepServer
-    var numero = req.body.numeroServer
-    var token = req.body.tokenServer
-    
-    if (!cnpj) {
-        return res.status(400).json({ erro: "O campo cnpj está undefined!" })
-    } else if (!razaoSocial) {
-        return res.status(400).json({ erro: "O campo razaoSocial está undefined!" })
-    }
-    else if (!telefoneContato) {
-        return res.status(400).json({ erro: "O campo telefoneContato está undefined!" })
-    }
-    else if (!email) {
-        return res.status(400).json({ erro: "O campo email está undefined!" })
-    }   else if (!token) {
-        return res.status(400).json({ erro: "O campo token está undefined!" })
-    } else if (!cep) {
-        return res.status(400).json({ erro: "O campo cep está undefined!" })
-    } else if (!numero) {
-        return res.status(400).json({ erro: "O campo numero está undefined!" })
+    if (cnpj == undefined) {
+        return res.status(400).json({ erro: "O campo CNPJ está vazio!" });
+    } else if (responsavel == undefined) {
+        return res.status(400).json({ erro: "O campo Responsável está vazio!" });
+    } else if (nome == undefined) {
+        return res.status(400).json({ erro: "O campo Nome da Empresa está vazio!" });
     } else {
-        const cadastroEmpresa = await empresaModel.cadastrar(
-            cnpj,
-            razaoSocial,
-            telefoneContato,
-            email,
-            token,
-            cep,
-            numero
-        )
-        console.log("Resultado: ", cadastroEmpresa);
-        if (cadastroEmpresa) {
-            return res.status(200).json({mensagem: "Empresa cadastrada com sucesso!"})   
-        }
+        empresaModel.cadastrar(nome, responsavel, cnpj)
+            .then(function (resultado) {
+                console.log("Cadastro realizado com sucesso no banco!");
+                res.status(201).json(resultado);
+            })
+            .catch(function (erro) {
+                console.log(erro);
+                res.status(500).json(erro.sqlMessage);
+            });
     }
 }
+
+function cadastrarEnd(req, res) {
+    var fkEmpresa = req.body.fkEmpresa;
+    var cep = req.body.cep;
+    var logradouro = req.body.logradouro;
+    var numero = req.body.numero;
+    var complemento = req.body.complemento;
+    var bairro = req.body.bairro;
+    var cidade = req.body.cidade;
+    var uf = req.body.uf
+
+    if (cep == undefined) {
+        res.status(400).send("Seu Cep está undefined!");
+    } else if (fkEmpresa == undefined) {
+        res.status(400).send("Sua fkEmpresa está undefined!");
+    } else if (logradouro == undefined) {
+        res.status(400).send("Seu Logradouro está undefined!");
+    } else if (numero == undefined) {
+        res.status(400).send("Seu Numero está undefined!");
+    } else if (complemento == undefined) {
+        res.status(400).send("Seu Complemento está undefined!");
+    } else if (bairro == undefined) {
+        res.status(400).send("Seu Bairro está undefined!");
+    } else if (cidade == undefined) {
+        res.status(400).send("Sua Cidade está undefined!");
+    } else if (uf == undefined) {
+        res.status(400).send("Seu UF está undefined!");
+    } else {
+        empresaModel.cadastrarEnd(fkEmpresa, cep, logradouro, numero, complemento, bairro, cidade, uf)
+            .then(function (resultado) {
+                console.log("Endereço cadastrado com sucesso!");
+                res.status(201).json(resultado);
+            })
+            .catch(function (erro) {
+                console.log(erro);
+                res.status(500).json(erro.sqlMessage);
+            });
+    }
+}
+
 module.exports = {
-    token,
     cadastrar,
-    verificarToken
+    cadastrarEnd
 };
