@@ -16,7 +16,7 @@ const empresaRouter = require("./src/routes/empresa");
 const usuarioRouter = require("./src/routes/usuarios");
 const maquinaRouter = require("./src/routes/maquina");
 const componenteRouter = require("./src/routes/componente");
-const displayRouter = require("./src/routes/display")
+const displayRouter = require("./src/routes/display");
 const uploadRouter = require("./src/routes/upload");
 
 app.use(cors());
@@ -30,7 +30,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/maquina", maquinaRouter);
 app.use("/componente", componenteRouter);
 app.use("/display", displayRouter);
-app.use("/uploads", uploadsRouter);
+app.use("/uploads", uploadRouter);
 
 app.listen(PORTA_APP, function () {
  console.log(
