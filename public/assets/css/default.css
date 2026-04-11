@@ -38,6 +38,10 @@ html {
     scrollbar-width: thin;
 }
 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
 ::selection {
     background-color: var(--color-lemon);
     color: var(--color-deep-purple);
