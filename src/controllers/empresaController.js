@@ -63,7 +63,36 @@ function cadastrarEnd(req, res) {
     }
 }
 
+
+function cadastrarContato(req, res) {
+    var celular = req.body.celular;
+    var fixo = req.body.fixo;
+    var email = req.body.email;
+    var fkEmpresa = req.body.fkEmpresa;
+    
+    if (celular == undefined) {
+        return res.status(400).json({ erro: "O campo Telefone Celular está vazio!" });
+    } else if (fixo == undefined) {
+        return res.status(400).json({ erro: "O campo Telefone Fixo está vazio!" });
+    } else if (email == undefined) {
+        return res.status(400).json({ erro: "O campo Email está vazio!" });
+    } else if (fkEmpresa == undefined) {
+        return res.status(400).json({ erro: "O campo fkEmpresa está vazio!" });
+    } else {
+        empresaModel.cadastrarContato(celular, fixo, email, fkEmpresa)
+            .then(function (resultado) {
+                console.log("Cadastro realizado com sucesso no banco!");
+                res.status(201).json(resultado);
+            })
+            .catch(function (erro) {
+                console.log(erro);
+                res.status(500).json(erro.sqlMessage);
+            });
+    }
+}
+
 module.exports = {
     cadastrar,
-    cadastrarEnd
+    cadastrarEnd,
+    cadastrarContato
 };
