@@ -11,4 +11,8 @@ router.post("/cadastrarEnd", function (req, res) {
     empresaController.cadastrarEnd(req, res);
 });
 
+router.post("/cadastrarContato", function (req, res) {
+    empresaController.cadastrarContato(req, res);
+});
+
 module.exports = router;
