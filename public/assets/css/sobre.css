@@ -79,6 +79,7 @@
         color: var(--color-lemon);
         font-weight: bold;
         margin: 10px 0;
+
     }
 
     header .header-content .overlay .sidea h1 {
@@ -379,6 +380,7 @@
         position: relative;
         width: 100%;
         padding: 5%;
+        margin: 5% 0;
     }
 
     header .header-content .overlay {
@@ -677,7 +679,8 @@
     }
 
     nav .menu-mobile {
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
     nav .menu-mobile .line {
@@ -706,6 +709,7 @@
         position: relative;
         width: 100%;
         padding: 5%;
+        margin: 5% 0;
     }
 
     header .header-content .overlay {
@@ -784,21 +788,23 @@
 
     main .team-cards {
         background-color: var(--color-deep-purple);
-        display: flex;
+        display: grid;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
         margin: 2% 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
     }
 
     main .team-cards .card {
         background-color: var(--color-white);
         border-radius: 25px;
-        width: 80vw;
+        width: 35vw;
         margin: 5% 0;
         padding: 5%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column
     }
 
     main .team-cards .card .name {
