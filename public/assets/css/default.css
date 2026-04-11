@@ -6,6 +6,7 @@
     --color-white: #FFFFFF;
     --color-light-purple: #331477;
     --color-panel: #0E051A;
+    --color-success: #009966;
 }
 
 * {
@@ -34,7 +35,7 @@ body {
 html {
     scroll-behavior: smooth;
     scrollbar-color: var(--color-lemon) var(--color-deep-purple);
-    scrollbar-width: 5px;
+    scrollbar-width: thin;
 }
 
 ::selection {

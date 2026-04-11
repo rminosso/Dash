@@ -17,6 +17,7 @@ const usuarioRouter = require("./src/routes/usuarios");
 const maquinaRouter = require("./src/routes/maquina");
 const componenteRouter = require("./src/routes/componente");
 const displayRouter = require("./src/routes/display")
+const uploadRouter = require("./src/routes/upload");
 
 app.use(cors());
 app.use(express.json());
@@ -29,6 +30,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/maquina", maquinaRouter);
 app.use("/componente", componenteRouter);
 app.use("/display", displayRouter);
+app.use("/uploads", uploadsRouter);
 
 app.listen(PORTA_APP, function () {
  console.log(
