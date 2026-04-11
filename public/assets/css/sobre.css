@@ -1,7 +1,7 @@
 /* Sidebar styles */
 @import url('default.css');
 
-/* Mobile <= 480px */
+
 @media screen and (max-width: 480px) {
     nav {
         background-color: var(--color-deep-purple);
@@ -334,8 +334,7 @@
 
 }
 
-/* Mobile >= 480px */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
     nav {
         background-color: var(--color-deep-purple);
         display: flex;
@@ -664,8 +663,7 @@
     }
 }
 
-/* Tablet >= 768px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px){
     nav {
         background-color: var(--color-deep-purple);
         display: flex;
@@ -761,6 +759,7 @@
     header .header-content .overlay .sideb p {
         width: fit-content;
     }
+
 
     /* Main */
     main .team {
@@ -1041,7 +1040,6 @@
     }
 }
 
-/* Desktop >= 1024px */
 @media screen and (min-width: 1024px) {
 
     /* Navbar */
