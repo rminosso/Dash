@@ -1,4 +1,5 @@
 var empresaModel = require("../models/empresaModel");
+var emailAPI = require("../email");
 
 async function cadastrar(req, res) {
     var nome = req.body.nome;
@@ -79,10 +80,18 @@ function cadastrarContato(req, res) {
     } else if (fkEmpresa == undefined) {
         return res.status(400).json({ erro: "O campo fkEmpresa está vazio!" });
     } else {
+        console.log("Body recebido:", req.body)
         empresaModel.cadastrarContato(celular, fixo, email, fkEmpresa)
             .then(function (resultado) {
                 console.log("Cadastro realizado com sucesso no banco!");
+
+                emailAPI.enviar(fkEmpresa)
+                    .then(() => console.log("Email enviado com sucesso!"))
+                    .catch(err => console.error("Erro ao enviar email:", err));
+
                 res.status(201).json(resultado);
+
+                
             })
             .catch(function (erro) {
                 console.log(erro);

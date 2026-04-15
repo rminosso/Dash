@@ -2,48 +2,48 @@ const nodemailer = require("nodemailer");
 const mysql = require('mysql2/promise');
 
 
-async function enviar(id) {
+async function enviar(fkEmpresa) {
+    console.log("FK recebido:", fkEmpresa);
 
     const connection = await mysql.createConnection({
-        host: process.env.dev.DB_HOST,
-        database: process.env.dev.DB_DATABASE,
-        user: process.env.dev.DB_USER,
-        password: process.env.dev.DB_PASSWORD,
-        port: process.env.dev.DB_PORT
+        host: process.env.DB_HOST,
+        database: process.env.DB_DATABASE,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT
     });
 
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: process.env.dev.GMAIL_EMAIL,
-            pass: process.env.dev.GMAIL_PASSWORD
+            user: process.env.GMAIL_EMAIL,
+            pass: process.env.GMAIL_PASSWORD
         },
     });
 
-    try{ const [rows] = await conection.execute(
-        `select nome, email, codigoAcesso 
-        From usuario join cadastroEmpresa on fkEmpresa = idUsuario WHERE idEmpresa = ?`,
-        [id]);
+    try{ const [rows] = await connection.execute(
+        `select email FROM contato WHERE fkEmpresa = ?`,
+        [fkEmpresa]);
 
         if (rows.length === 0) {
             console.log("Usuário não encontrado.");
             return;
         }
     
-        var nomeGestor = rows[0].nome;
+        //var nomeGestor = rows[0].nome;
         var emailGestor = rows[0].email;
-        var codigoAcesso = rows[0].codigoAcesso;
+        //var codigoAcesso = rows[0].codigoAcesso;
 
     
 
     let mailOptions = {
         from: `"Vooh" <${process.env.GMAIL_EMAIL}>`,
-        to: 'guilherme.ssouza@sptech.school',
+        to: `<${emailGestor}>`,
         subject: "Valide seu acesso na plataforma",
         text: "Olá teste",
         html: `<div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; line-height: 1.6;">
     
-    <h2 style="color: #0056b3;">Olá ${nomeGestor}! Seja bem-vindo(a) à VOOH!</h2>
+    <h2 style="color: #0056b3;">Olá GESTOR! Seja bem-vindo(a) à VOOH!</h2>
     
     <p>Ficamos felizes em ter você conosco. Sua conta já foi configurada e está pronta para uso.</p>
     
@@ -51,7 +51,7 @@ async function enviar(id) {
 
     <p style="margin-bottom: 5px;"><strong>Código de Ativação:</strong></p>
     <div style="background-color: #eef2f7; padding: 25px; text-align: center; border-radius: 10px; font-size: 26px; font-weight: bold; color: #0056b3; border: 1px dashed #0056b3; margin: 10px 0 25px;">
-        ${codigoAcesso}
+        <b>12345564TRE</b>
     </div>
 
     <p><strong>Passo a passo para começar:</strong></p>
@@ -80,7 +80,7 @@ async function enviar(id) {
 
         attachments: [{
         filename: 'vooh-email.png',
-        path: './assets/images/vooh-email.png',
+        path: __dirname + '/../public/assets/images/vooh-email.png',
         cid: 'logo'
     }]
     };

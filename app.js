@@ -1,7 +1,7 @@
 const ambiente_processo = 'desenvolvimento';
 const caminho_env = ambiente_processo === 'producao' ? '.env' : '.env.dev';
 
-require("dotenv").config({ path: caminho_env });
+require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
@@ -16,8 +16,7 @@ const empresaRouter = require("./src/routes/empresa");
 const usuarioRouter = require("./src/routes/usuarios");
 const maquinaRouter = require("./src/routes/maquina");
 const componenteRouter = require("./src/routes/componente");
-const displayRouter = require("./src/routes/display");
-const uploadRouter = require("./src/routes/upload");
+const displayRouter = require("./src/routes/display")
 
 app.use(cors());
 app.use(express.json());
@@ -30,7 +29,8 @@ app.use("/usuarios", usuarioRouter);
 app.use("/maquina", maquinaRouter);
 app.use("/componente", componenteRouter);
 app.use("/display", displayRouter);
-app.use("/uploads", uploadRouter);
+
+
 
 app.listen(PORTA_APP, function () {
  console.log(

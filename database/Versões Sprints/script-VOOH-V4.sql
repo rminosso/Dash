@@ -1,6 +1,7 @@
 CREATE DATABASE vooh;
 USE vooh;
 
+
 CREATE TABLE cadastroEmpresa (
 	idcadastroEmpresa INT PRIMARY KEY AUTO_INCREMENT,
 	nomeResponsavel VARCHAR(50) NOT NULL,
@@ -142,3 +143,57 @@ CREATE TABLE servidor_componentes (
 select * from usuario;
 select * from cadastroEmpresa;
 SELECT * from endereco;
+
+-- Empresa
+INSERT INTO cadastroEmpresa 
+(nomeResponsavel, nomeEmpresa, cnpj, statusCliente)
+VALUES 
+('Ana Souza', 'Digital Corp', '98765432000188', 'Ativo');
+
+-- Contato da empresa
+INSERT INTO contato 
+(fkEmpresa, telefoneFixo, telefoneCelular, email)
+VALUES 
+(2, '011133334444', '011999998888', 'contato@digitalcorp.com');
+
+-- Endereço da empresa
+INSERT INTO endereco 
+(fkEmpresa, fkServidor, cep, logradouro, numero, complemento, bairro, cidade, uf)
+VALUES 
+(2, NULL, '01310100', 'Avenida Paulista', 1000, 'Sala 42', 'Bela Vista', 'São Paulo', 'SP');
+
+-- Servidor
+INSERT INTO servidor 
+(fkEmpresa, nome, numeroIdentificacao, sistemaOperacional, enderecoIP)
+VALUES 
+(2, 'Servidor Principal', 'SRV-001', 'Ubuntu 22.04', '192.168.1.10');
+
+-- Componentes do servidor
+INSERT INTO servidor_componentes 
+(fkServidor, fkEmpresa, fkComponente, limite_min, limite_max)
+VALUES 
+(2, 2, 1, 10, 90),  -- CPU
+(2, 2, 2, 20, 85),  -- RAM
+(2, 2, 3, 5, 80);   -- Disco
+
+-- Gestor (necessário antes por causa do fkSuperior)
+INSERT INTO usuario
+(fkEmpresa, codigoAcesso, fkSuperior, nome, email, dataNascimento, cpf, senha, statusUsuario, tipoUsuario, documentoIdetificacao)
+VALUES
+(2, 'GEST001', 1, 'Ana Souza', 'ana@digitalcorp.com', '1990-03-20', '98765432100', 'senha123', 'Ativo', 'Gestor', 'RG9876543');
+
+
+
+-- Usuário Suporte
+INSERT INTO usuario
+(fkEmpresa, codigoAcesso, fkSuperior, nome, email, dataNascimento, cpf, senha, statusUsuario, tipoUsuario, documentoIdetificacao)
+VALUES
+(2, 'SUP001', 2, 'Pedro Lima', 'pedro@digitalcorp.com', '1995-08-10', '11122233344', 'senha456', 'Ativo', 'Suporte', 'RG1122334');
+
+SELECT idUsuario, nome, email, fkEmpresa as empresaId, tipoUsuario FROM usuario WHERE email = 'pedro@digitalcorp.com' AND senha = 'senha456';
+    
+    
+select * from contato;
+select * from usuario;
+
+truncate table contato;
