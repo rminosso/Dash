@@ -15,6 +15,66 @@
         top: 0;
     }
 
+    nav .menu {
+        background-color: var(--color-deep-purple);
+        position: absolute;
+        right: 0;
+        top: 100%;
+        padding: 5%;
+        width: 60%;
+        z-index: 100;
+        height: 100vh;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+    nav .menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .menu ul li {
+        list-style: none;
+        margin: 5% 0;
+    }
+
+    nav .menu ul li a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+
+    nav .menu select {
+        background-color: var(--color-deep-purple);
+        color: var(--color-white);
+        border: none;
+    }
+
+    nav .menu .lg {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .menu .lg svg {
+        margin: 0px 5px;
+    }
+
+    nav .cta-login {
+        padding: 20px 0;
+    }
+
+    nav .cta-login a {
+        background-color: var(--color-purple);
+        color: var(--color-white);
+        padding: 10px 50px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+
     nav .menu-mobile {
         background-color: var(--color-deep-purple);
         display: flex;
@@ -348,6 +408,61 @@
         top: 0;
     }
 
+    nav .menu {
+        background-color: var(--color-deep-purple);
+        position: absolute;
+        right: 0;
+        top: 100%;
+        padding: 5%;
+        width: 60%;
+        z-index: 100;
+        height: 100vh;
+    }
+
+    nav .menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .menu ul li {
+        list-style: none;
+        margin: 5% 0;
+    }
+
+    nav .menu ul li a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+
+    nav .menu select {
+        background-color: var(--color-deep-purple);
+        color: var(--color-white);
+        border: none;
+    }
+
+    nav .menu .lg {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .menu .lg svg {
+        margin: 0px 5px;
+    }
+
+    nav .cta-login {
+        padding: 20px 0;
+    }
+
+    nav .cta-login a {
+        background-color: var(--color-purple);
+        color: var(--color-white);
+        padding: 10px 50px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+
     nav .menu-mobile {
         background-color: var(--color-deep-purple);
         display: flex;
@@ -676,6 +791,61 @@
         width: 100%;
         z-index: 100;
         top: 0;
+    }
+
+    nav .menu {
+        background-color: var(--color-deep-purple);
+        position: absolute;
+        right: 0;
+        top: 100%;
+        padding: 5%;
+        width: 60%;
+        z-index: 100;
+        height: 100vh;
+    }
+
+    nav .menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .menu ul li {
+        list-style: none;
+        margin: 5% 0;
+    }
+
+    nav .menu ul li a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+
+    nav .menu select {
+        background-color: var(--color-deep-purple);
+        color: var(--color-white);
+        border: none;
+    }
+
+    nav .menu .lg {
+        display: flex;
+        align-items: center;
+    }
+
+    nav .menu .lg svg {
+        margin: 0px 5px;
+    }
+
+    nav .cta-login {
+        padding: 20px 0;
+    }
+
+    nav .cta-login a {
+        background-color: var(--color-purple);
+        color: var(--color-white);
+        padding: 10px 50px;
+        border-radius: 25px;
+        font-weight: bold;
     }
 
     nav .menu-mobile {
@@ -1058,6 +1228,10 @@
         position: fixed;
         width: 100%;
         z-index: 100;
+    }
+
+    nav .menu {
+        display: none;
     }
 
     nav .menu-mobile {
