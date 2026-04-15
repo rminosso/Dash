@@ -1,3 +1,4 @@
+// const { cadastrarGestor } = require("../controllers/usuarioController");
 var database = require("../database/config")
 
 function autenticar(email, senha) {
@@ -8,7 +9,6 @@ function autenticar(email, senha) {
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
-
 
 function cadastrar(email, codigo) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, codigo)
@@ -38,10 +38,21 @@ function cadastrarFuncionario(fkEmpresa, idSuperior ,nome,email,dataNascimento,c
     return database.executar(instrucaoSql);
 }
 
+function cadastrarGestor(fkEmpresa, emailUser, dtNasc, cpf, rg){
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", fkEmpresa, emailUser, dtNasc, cpf);
+
+    var instrucaoSql = `
+    INSERT INTO usuario(fkEmpresa, email, dataNascimento, cpf, statusUsuario, tipoUsuario, documentoIdetificacao) VALUES ('${fkEmpresa}','${emailUser}','${dtNasc}','${cpf}','Ativo','Gestor','${rg}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 
 module.exports = {
     autenticar,
     cadastrar,
     finalizarCadastro,
-    cadastrarFuncionario
+    cadastrarFuncionario,
+    cadastrarGestor
 };

@@ -408,9 +408,6 @@
     align-items: center;
     flex-direction: row;
     padding: 40px 50px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
   }
 
   .forrester-info {
@@ -1468,8 +1465,6 @@
     align-items: center;
     flex-direction: row;
     padding: 40px 50px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 
   }
 
@@ -2228,7 +2223,7 @@
   .nav-link {
     text-decoration: none;
     color: var(--color-white);
-    font-size: 1rem;
+    font-size: 0.95rem;
     position: relative;
     padding-bottom: 5px;
   }
@@ -2526,9 +2521,7 @@
     align-items: center;
     flex-direction: row;
     padding: 50px 50px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
+    margin-bottom: 60px;
   }
 
   .forrester-info {
@@ -3222,14 +3215,14 @@
   .nav-right {
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    padding: 0 40px;      
+    gap: 30px;  
+    padding-left: 65px;    
     margin-left: auto;
-    margin-right: 40px;
+    margin-right: 10px;
   }
 
   .logo-nav img {
-    height: 35px;
+    height: 30px;
     width: auto;
   }
 
@@ -3497,9 +3490,6 @@
     align-items: center;
     flex-direction: row;
     padding: 50px 90px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
   }
 
   .forrester-info {

@@ -18,4 +18,8 @@ router.post("/cadastrarFuncionario", function (req, res) {
     usuarioController.cadastrarFuncionario(req, res);
 });
 
+router.post("/cadastrarGestor", function (req, res) {
+    usuarioController.cadastrarGestor(req, res);
+});
+
 module.exports = router;

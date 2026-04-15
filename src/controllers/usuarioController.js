@@ -151,9 +151,45 @@ function cadastrarFuncionario(req, res) {
     }
 }
 
+function cadastrarGestor(req, res) {
+    var fkEmpresa = req.body.fkEmpresa;
+    var emailUser = req.body.emailUser;
+    var dtNasc = req.body.dtNasc;
+    var cpf = req.body.cpf;
+    var rg = req.body.rg;
+
+    if (fkEmpresa == undefined) {
+        res.status(400).send("A fkEmpresa está undefined!");
+    } else if (emailUser == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (dtNasc == undefined) {
+        res.status(400).send("Sua data de nascimento está undefined!");
+    } else if (cpf == undefined) {
+        res.status(400).send("Seu cpf está undefined!");
+    } else if (rg == undefined) {
+        res.status(400).send("Seu rg está undefined!");
+    } else {
+
+        usuarioModel.cadastrarGestor(fkEmpresa, emailUser, dtNasc, cpf, rg)
+            .then(
+                function (resultado) {
+                        res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao realizar o cadastro do gestor! Erro: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+
 module.exports = {
   autenticar,
   cadastrar,
   finalizarCadastro,
-  cadastrarFuncionario
+  cadastrarFuncionario,
+  cadastrarGestor
 };

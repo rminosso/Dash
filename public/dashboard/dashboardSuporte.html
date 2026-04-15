@@ -338,6 +338,49 @@
             </div>
         </dialog>
 
+         <dialog id="dialogUser">
+            <div class="info-dialog">
+                <div class="info-tela">
+                    <svg width="35" height="35" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="M2.5 17.5L0 17.5C0 17.5 0 16.25 0 16.25C0 13.9202 1.59346 11.9625 3.75 11.4075M6.25 7.28662C4.79351 6.77187 3.75 5.38278 3.75 3.75001C3.75 2.11723 4.79351 0.728182 6.25 0.213394M25 17.5L27.5 17.5C27.5 17.5 27.5 16.25 27.5 16.25C27.5 13.9202 25.9065 11.9625 23.75 11.4075M21.25 0.213394C22.7065 0.728182 23.75 2.11723 23.75 3.75001C23.75 5.38278 22.7065 6.77187 21.25 7.28662M16.25 11.25C19.0114 11.25 21.25 13.4886 21.25 16.25C21.25 16.25 21.25 17.5 21.25 17.5L6.25 17.5C6.25 17.5 6.25 16.25 6.25 16.25C6.25 13.4886 8.48857 11.25 11.25 11.25C11.25 11.25 16.25 11.25 16.25 11.25ZM17.5 3.75C17.5 5.82106 15.8211 7.5 13.75 7.5C11.6789 7.5 10 5.82106 10 3.75C10 1.67894 11.6789 0 13.75 0C15.8211 0 17.5 1.67894 17.5 3.75Z"
+                                fill="none" stroke-width="2" stroke="#FFFFFF" stroke-linecap="round"
+                                stroke-linejoin="round" transform="translate(1.25 6.25)" />
+                        </g>
+                    </svg>
+                    <p>Cadastrar Gestor</p>
+                </div>
+            </div>
+
+            <div class="input-dialog">
+                <div class="conjunto">
+                    <p>Email *</p>
+                    <input placeholder="valete@vooh.com" type="text" name="" id="input_email_user">
+                </div>
+                <div class="conjunto">
+                    <p>Data de Nascimento *</p>
+                    <input type="date" name="" id="input_dtNasc">
+                </div>
+            </div>
+           
+            <div class="input-dialog">
+                <div class="conjunto">
+                    <p>CPF *</p>
+                    <input placeholder="452.952.472-52" type="text" name="" id="input_cpf">
+                </div>
+                 <div class="conjunto">
+                    <p>Documento de Identificação *</p>
+                    <input placeholder="389.498.007-4" type="text" name="" id="input_rg">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="button-purple" onclick="cadastrarGestor()">Cadastrar</button>
+                <button class="button-white" onclick="document.getElementById('dialogUser').close()">Cancelar</button>
+            </div>
+        </dialog>
+
 
     </div>
 
@@ -400,7 +443,6 @@
     }
 
     function cadastrarEnd() {
-
         cepVar = input_cep.value;
         logVar = input_logradouro.value;
         numVar = input_numero.value;
@@ -549,6 +591,7 @@
                     
 
                     document.getElementById('dialogCont').close();
+                    document.getElementById('dialogUser').showModal();
                 });
             } else {
                 resposta.text().then(texto => {
@@ -562,5 +605,61 @@
         });
     }
 
+    function cadastrarGestor(){
+        var emailUserVar = input_email_user.value;
+        var dtNascVar = input_dtNasc.value;
+        var cpfVar = input_cpf.value;
+        var rgVar = input_rg.value;
+
+         if (emailUserVar == '' || dtNascVar == '' || cpfVar == '' || rgVar == '') {
+            alert("Preencha todos os campos para prosseguir")
+
+        } else {
+            fetch("/usuarios/cadastrarGestor", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    fkEmpresa: sessionStorage.FKEMPRESA,
+                    emailUser: emailUserVar,
+                    dtNasc: dtNascVar,
+                    cpf: cpfVar,
+                    rg: rgVar
+                })
+
+            })
+                .then(resposta => {
+                    console.log("ESTOU NO THEN DO cadastrarFuncionario()!")
+                    console.log(resposta)
+                    if (resposta.ok) {
+
+                        resposta.json().then((json) => {
+                            console.log(json);
+
+                            console.log(JSON.stringify(json));
+
+
+                            setTimeout(function () {
+                                alert("Cadastro realizado com sucesso!")
+                                document.getElementById('dialogUser').close();
+                            }, 1000);
+
+                        });
+
+                    } else {
+                        console.log("Houve um erro ao realizar o cadastro!");
+
+                        resposta.text().then(texto => {
+                            console.error(texto);
+                        });
+                    }
+                }).catch(function (erro) {
+                    console.log(erro);
+                })
+
+        }
+
+    }
 
 </script>
