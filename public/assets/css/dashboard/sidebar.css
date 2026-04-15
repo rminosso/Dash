@@ -144,7 +144,7 @@
         background-color: var(--color-light-purple);
         padding: 5px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-content: center;
         border-radius: 16px;
     }
@@ -173,6 +173,7 @@
 
     .container-profile .image-profile img {
         width: 45px;
+        border-radius: 500px;
     }
 
     .container-profile .info .role {

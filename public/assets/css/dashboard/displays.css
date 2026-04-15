@@ -6,10 +6,10 @@
 @media screen and (max-width: 480px) {}
 
 /* Mobile >= 480px */
-@media screen and (min-width: 480px) {}
+@media screen and (min-width: 480px) and (max-width: 767px) {}
 
 /* Tablet >= 768px */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
 
 /* Desktop >= 1024px */
 @media screen and (min-width: 1024px) {
@@ -26,7 +26,7 @@
     }
 
     .body .container {
-        padding: 3.5%;
+        padding: 2% 3.5%;
     }
 
     .body .container .title {
@@ -36,6 +36,80 @@
     .body .container .title a {
         text-decoration: none;
         color: var(--color-purple);
+    }
+
+    .body .container .kpis {
+        display: flex;
+    }
+
+    .body .container .kpis .card {
+        width: 20vw;
+        margin: 2% 2% 0 0;
+        border-radius: 25px;
+        background-color: var(--color-white);
+        padding: 25px;
+        height: fit-content;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+        display: flex;
+        align-items: center;
+    }
+
+    .body .container .kpis .card:nth-child(2) .ii {
+        background-color: var(--color-success);
+    }
+
+    .body .container .kpis .card:nth-child(2) .number {
+        color: var(--color-success);
+    }
+
+    .body .container .kpis .card:nth-child(3) .ii {
+        background-color: var(--color-danger);
+    }
+
+    .body .container .kpis .card:nth-child(3) .number {
+        color: var(--color-danger);
+    }
+
+    .body .container .kpis .card:nth-child(4) .ii {
+        background-color: var(--color-amber);
+    }
+
+    .body .container .kpis .card:nth-child(4) .number {
+        color: var(--color-amber);
+    }
+
+    .body .container .kpis .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .body .container .kpis .icon .i {
+        display: flex;
+        align-items: center;
+    }
+
+    .body .container .kpis .icon .ii {
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        border-radius: 10px;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        background-color: var(--color-purple);
+    }
+
+    .body  .container .kpis .number {
+        font-size: 3rem;
+        color: var(--color-deep-purple);
+        font-weight: bold;
+    }
+
+    .body  .container .kpis .desc {
+        font-size: 1rem;
+        color: var(--color-deep-purple);
+        font-weight: bold;
+        padding: 5px 0;
     }
 
     .container-pesquisa {
