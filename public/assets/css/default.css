@@ -9,6 +9,8 @@
     --color-success: #009966;
     --color-danger: #FA2D37;
     --color-amber: #FF9B00;
+    --color-gray: #757575;
+    --color-light-gray: #F5F5F5;
 }
 
 * {

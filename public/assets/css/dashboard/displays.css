@@ -31,6 +31,7 @@
 
     .body .container .title {
         font-weight: bold;
+        background-color: var(--color-white);
     }
 
     .body .container .title a {
@@ -113,6 +114,9 @@
     }
 
     .container-pesquisa {
+        position: sticky;
+        background-color: var(--color-white);
+        top: 1px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -344,7 +348,23 @@
         height: 10px;
         border-radius: 20px;
         margin: 0 5px;
-        background-color: var(--color-success);
+        background-color: #016630;
+    }
+
+    .g-status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        background-color: #7CF2A9;
+        border-radius: 20px;
+        color: #016630;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    .mac {
+        color: var(--color-gray) ;
     }
 
     .container-table {
@@ -366,12 +386,57 @@
         flex-wrap: nowrap;
     }
 
+    .container-table th {
+        color: var(--color-deep-purple);
+        background-color: var(--color-light-gray);
+        padding: 10px;
+    }
+
+    .container-table th:nth-child(1) {
+        border-radius: 25px 0 0 0;
+        padding-left: 15px;
+    }
+
+    tr, td, th {
+        padding: 10px;
+    }
+
+    .container-table th:nth-child(7) {
+        border-radius: 0 25px 0 0;
+    }
+
     .container-table tr {
         text-align: left;
+        color: var(--color-deep-purple);
+    }
+
+    .container-table td {
+        vertical-align: middle;
+    }
+
+    .container-table tr:nth-child(1) {
+        position: sticky;
+        top: 90px;
+    }
+
+    .container-table .id-display {
+        font-weight: bold;
+        color: var(--color-purple);
     }
 
     table {
+        border-collapse: collapse;
         width: 100%;
+    }
+
+    .info-data {
+        display: flex;
+        justify-content: center;
+        padding: 2%;
+    }
+
+    .info-data span {
+        color: var(--color-deep-purple);
     }
 
 }
