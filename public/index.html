@@ -228,59 +228,50 @@
     </div>
   </div>
 
-  <section class="container-contato" id="container-contato">
-
+<div class="background-wrapper">
+  <section class="container-contato">
     <form id="contact_form" class="contato">
-      <div class="texto-contato">
-
-        <h1>Não fique aí parado...</h1>
-
-        <p class="paragraph">
-          Entre em contato conosco e tenha uma demonstração sem compromisso da nossa plataforma.
-        </p>
-
-        <canvas id="canvas1" style="display: block;"></canvas>
-
+      
+      <div class="texto-contato-novo">
+        <div class="overlay-texto">
+          <p>Entre em contato agora conosco e tenha uma demonstração sem compromisso.</p>
+        </div>
       </div>
 
       <div class="container-contact">
-
         <div class="input-box">
           <label for="input_nome">Seu nome</label>
           <input type="text" placeholder="Como podemos te chamar?" id="input_nome" required>
         </div>
 
         <div class="input-box">
-          <label for="input_email">Empresa</label>
-          <input type="email" placeholder="Nome da sua empresa" id="input_email" required>
+          <label for="input_empresa">Empresa</label>
+          <input type="text" placeholder="Nome da sua empresa" id="input_empresa" required>
         </div>
 
         <div class="input-box">
-          <label for="telefone_conato">Telefone de Contato</label>
+          <label for="input_telefone">Telefone de contato</label>
           <input type="text" placeholder="+55 (00) 00000-0000" id="input_telefone" required>
         </div>
 
         <div class="input-box">
-          <label for="payload">E-mail</label>
-          <textarea rows="5" id="payload" placeholder="nomeempresa@gmail.com" required></textarea>
+          <label for="input_email">E-mail</label>
+          <input type="email" placeholder="empresa@email.com" id="input_email" required>
         </div>
 
         <div class="checkbox-container">
-          <div class="checkbox-item">
-            <input type="checkbox" id="input_cpu">
-            <p>Concordo com os Termos e Condições.</p>
-          </div>
-
-          <div class="submit">
-            <button type="submit">ENVIAR</button>
-          </div>
+          <input type="checkbox" id="termos">
+          <label for="termos">Concordo com os <span>Termos e Condições.</span></label>
         </div>
 
-
+        <div class="submit">
+          <button type="submit">Enviar</button>
+        </div>
       </div>
-    </form>
 
+    </form>
   </section>
+</div>
 
   <div class="info-dooh">
     <div class="text-dooh">

@@ -1,6 +1,7 @@
 @import url(default.css);
 
 @media screen and (max-width: 480px) {
+
   .header-content .container,
   .beneficios-container,
   .diagrama-container,
@@ -715,7 +716,7 @@
 
   /* PRIMEIRO CONTATO */
 
- .container-contato {
+  .container-contato {
     border-radius: 20px;
     background-color: var(--color-deep-purple);
     margin-bottom: 5%;
@@ -1054,10 +1055,11 @@
     font-size: 10px;
     color: var(--color-white);
     margin: 0;
-  } 
+  }
 }
 
 @media screen and (min-width: 480px) {
+
   .header-content .container,
   .beneficios-container,
   .diagrama-container,
@@ -1773,7 +1775,7 @@
 
   /* PRIMEIRO CONTATO */
 
- .container-contato {
+  .container-contato {
     border-radius: 20px;
     background-color: var(--color-deep-purple);
     margin-bottom: 5%;
@@ -2112,7 +2114,7 @@
     font-size: 10px;
     color: var(--color-white);
     margin: 0;
-  } 
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2829,7 +2831,7 @@
 
   /* PRIMEIRO CONTATO */
 
- .container-contato {
+  .container-contato {
     border-radius: 20px;
     background-color: var(--color-deep-purple);
     margin-bottom: 5%;
@@ -3156,7 +3158,7 @@
     font-size: 10px;
     color: var(--color-white);
     margin: 0;
-  } 
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -3196,7 +3198,7 @@
     box-shadow: none;
     padding-top: 0;
     flex-direction: row;
-    flex: 1;              
+    flex: 1;
     align-items: center;
     justify-content: space-between;
     margin-left: 20px;
@@ -3215,8 +3217,8 @@
   .nav-right {
     display: flex;
     flex-direction: row;
-    gap: 30px;  
-    padding-left: 65px;    
+    gap: 30px;
+    padding-left: 65px;
     margin-left: auto;
     margin-right: 10px;
   }
@@ -3226,27 +3228,30 @@
     width: auto;
   }
 
-  .telefone, .linguagem {
+  .telefone,
+  .linguagem {
     white-space: nowrap !important;
     text-decoration: none;
     color: var(--color-white);
   }
 
-  .button-login, .button-login1 {
+  .button-login,
+  .button-login1 {
     display: flex !important;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: var(--color-white);
     background-color: #6D33FF;
-    padding: 12px 60px; 
+    padding: 12px 60px;
     border-radius: 15px;
     font-weight: bold;
     white-space: nowrap;
     transition: all 0.3s ease;
   }
 
-  .button-login:hover, .button-login1:hover {
+  .button-login:hover,
+  .button-login1:hover {
     background-color: var(--color-lemon);
     color: var(--color-black);
     transform: translateY(-2px);
@@ -3796,73 +3801,133 @@
 
   /* PRIMEIRO CONTATO */
 
-  .container-contato {
-    border-radius: 20px;
-    background-color: var(--color-deep-purple);
-    margin-bottom: 5%;
-  }
-
-  .container-contato {
-    border-radius: 20px;
-    background-color: var(--color-deep-purple);
-    margin-bottom: 5%;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    height: auto;
-  }
-
   .contato {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    background-color: var(--color-white);
+    border-radius: 30px;
+    overflow: hidden;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.background-wrapper {
+    background-color: var(--color-deep-purple);
+    padding: 20px 0;
+    padding-bottom: 1px;
     width: 100%;
-    max-width: 1440px;
-  }
+    height: 80%;
+}
 
-  .contato canvas {
-    display: block !important;
-    width: 400px;
-    height: 400px;
-  }
-
-  .texto-contato {
+  .texto-contato-novo {
     flex: 1;
-    text-align: left;
-    margin-left: 20px;
-    margin-top: 20px;
+    background: linear-gradient(rgba(43, 11, 84, 0.6), rgba(43, 11, 84, 0.6)),
+    url('../assets/images/homem-no-pc.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px 40px;
   }
 
-  .texto-contato h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
+  .overlay-texto p {
     color: var(--color-lemon);
-    margin-bottom: 20px;
-  }
-
-  .texto-contato p {
-    color: var(--color-white);
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
   }
 
+  /* Lado do Formulário */
   .container-contact {
-    flex: 0.8;
-    background-color: var(--color-light-purple);
-    padding: 40px;
-    border-radius: 20px;
+    flex: 1;
+    background-color: var(--color-white);
+    padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin: 20px;
-    margin-right: 50px;
-    max-width: 450px;
   }
 
-  .container-contact label {
-    color: var(--color-white);
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .input-box label {
+    font-size: 0.85rem;
     font-weight: bold;
+    color: var(--color-deep-purple);
+  }
+
+  /* Inputs Estilo Pílula */
+  .input-box input {
+    display: block;
+    width: 100%;
+    background-color: #f4f4f4 !important; 
+    border: 1px solid #e0e0e0 !important; 
+    border-radius: 50px !important;      
+    padding: 15px 25px ;        
+    font-size: 14px;
+    color: var(--color-black);          
+    outline: none;
+}
+
+.input-box input::placeholder {
+    color: #999; 
+}
+
+.input-box input:focus {
+    border-color: var(--color-purple) !important;
+    background-color: #ffffff !important;
+}
+
+.container-contact {
+    flex: 1;
+    background-color: var(--color-white) !important;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  /* Checkbox */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .checkbox-container label {
+    font-size: 0.8rem;
+    color: var(--color-deep-purple);
+  }
+
+  .checkbox-container span {
+    color: var(--color-deep-purple);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* Botão */
+  .submit button {
+    width: 100%;
+    background-color: var(--color-purple) !important;
+    color: var(--color-white);
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .submit button:hover {
+    background-color: var(--color-lemon) !important;
+    color: var(--color-deep-purple) !important;
+    transform: scale(1.02);
   }
 
   .input-box input,
