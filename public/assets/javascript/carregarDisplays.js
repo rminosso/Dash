@@ -1,25 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const lista = document.getElementById("lista_displays");
+  const referencia = document.getElementById("primeiro_item");
 
-    const lista = document.getElementById('lista_displays');
-    const referencia = document.getElementById('primeiro_item');
+  let html = "";
 
-    let html = ""
+  for (let i = 0; i <= 50; i++) {
 
-    for (let i = 0; i <= 50; i++) {
-        html += `
-        <tr>
-        <td class="id-display">D123</td>
-        <td>192.168.171.13</td>
-        <td class="mac">00:19:B9:FB:E2:58</td>
-        <td>São Paulo - Metrô/Linha 4</td>
-        <td class="status-container">
-
-        <div class="g-status">
-        <div class="status"></div>
-        <span>Online</span>
-        </div>
-
-        </td>
+    html += `
+        <tr id="d-1" onclick='abrirDashboard(1)'>
+            <td class="id-display">D${i + 1}</td>
+            <td>192.168.171.13</td>
+            <td class="mac">00:19:B9:FB:E2:58</td>
+            <td>São Paulo - Metrô/Linha 4</td>
+            <td class="status-container">
+                <div class="g-status">
+                    <div class="status"></div>
+                    <span>Online</span>
+                </div>
+            </td>
         <td>100%</td>
         <td>
         <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,14 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
         </td>
         </tr>
         `;
-    }
+  }
 
-    const template = document.createElement('template');
+  const template = document.createElement("template");
 
-    template.innerHTML = html;
+  template.innerHTML = html;
 
-    referencia.after(template.content);
-
-
-})
+  referencia.after(template.content);
+});
 
