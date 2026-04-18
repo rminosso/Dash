@@ -4,6 +4,7 @@
 # Ignorar o .env.dev
 .env.dev
 
+
 # Ignorar o node_modules/
 node_modules
 
