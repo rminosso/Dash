@@ -86,6 +86,25 @@ CREATE TABLE servidor (
 );
 select * from servidor;
 
+CREATE TABLE display (
+    idDisplay INT NOT NULL AUTO_INCREMENT,
+    fkEmpresa INT NOT NULL,
+    nome VARCHAR(45) NOT NULL,
+    numeroIdentificacao VARCHAR(45) NOT NULL,
+    sistemaOperacional VARCHAR(45),
+    enderecoIP VARCHAR(45) NOT NULL,
+    mac_addres VARCHAR(45) NOT NULL,
+    statusDisplay VARCHAR(20) DEFAULT 'online',
+
+    CONSTRAINT pk_display
+        PRIMARY KEY (idDisplay),
+
+    CONSTRAINT fk_display_empresa
+        FOREIGN KEY (fkEmpresa)
+            REFERENCES cadastroEmpresa(idcadastroEmpresa)
+
+);
+
 
 CREATE TABLE endereco (
 	idEndereco INT PRIMARY KEY AUTO_INCREMENT,

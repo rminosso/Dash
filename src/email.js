@@ -40,7 +40,7 @@ async function enviar(fkEmpresa) {
         from: `"Vooh" <${process.env.GMAIL_EMAIL}>`,
         to: `<${emailGestor}>`,
         subject: "Valide seu acesso na plataforma",
-        text: "Olá teste",
+        text: "",
         html: `<div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; line-height: 1.6;">
     
     <h2 style="color: #0056b3;">Olá GESTOR! Seja bem-vindo(a) à VOOH!</h2>
