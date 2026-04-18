@@ -144,6 +144,11 @@
     padding: 5px 5%;
   }
 
+  #drop-icon {
+    width: fit-content;
+    cursor: pointer;
+  }
+
   .input-pesquisa input {
     border-radius: 0;
     width: 100%;
@@ -591,8 +596,63 @@
     border-radius: 25px;
   }
 
-  #dashboard .drop-visualizacao {
+  .container-table .drop-visualizacao {
+    position: absolute;
+    top: 100%;
+    right: 3%;
+    padding: 16px;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    width: fit-content;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+  }
+
+  .contaner-table .drop-visualizacao span {
+    color: var(--color-deep-purple);
+    margin: 10px 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #map {
+    height: 80vh;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-divider);
+  }
+
+  .opcao-visuzalizacao {
     border: 1px solid red;
-    padding: 20px;
+  }
+
+  .drop-visualizacao .icon-v {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    margin: 10px 0;
+  }
+
+  .drop-visualizacao .icon-v .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray);
+    padding: 8px;
+    border-radius: 10px;
+    margin: 0 10px;
+    color: var(--color-white);
+  }
+
+  .drop-visualizacao .icon-v .btn.active {
+    background-color: var(--color-purple);
+  }
+
+  .drop-visualizacao .icon-v .btn span {
+    margin: 0 5px;
   }
 }
