@@ -73,7 +73,6 @@
     list-style: none;
     padding: 0;
     width: 100%;
-    margin-right: 30%;
   }
 
   .nav-right {
@@ -83,7 +82,6 @@
     gap: 10px;
     margin-right: 0;
     padding: 10px 0;
-    margin-right: 30%;
   }
 
   .logo-nav {
@@ -157,7 +155,6 @@
     font-weight: bold;
     transition: all 0.3s ease;
     font-size: 1rem;
-    margin-right: 30%;
   }
 
   .button-login1:hover {
@@ -227,7 +224,6 @@
 
   .content h1 {
     margin: 0;
-    margin-left: 5vh;
     color: var(--color-lemon);
     font-size: clamp(2rem, 4.5vw, 4.5rem)
   }
@@ -290,7 +286,7 @@
     color: var(--color-white);
     font-weight: bold;
     font-size: 2.5vh;
-    margin-left: 60px;
+    text-align: center;
   }
 
   .beneficios-cards {
@@ -339,6 +335,7 @@
   .parcerias h1 {
     font-size: 4vh;
     padding: 30px 50px;
+    text-align: center;
   }
 
   .parcerias-container {
@@ -407,7 +404,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     padding: 40px 50px;
   }
 
@@ -416,11 +413,14 @@
   }
 
   .forrester-info p {
-    font-size: 2.3vh
+    font-size: 2.3vh;
+    text-align: center;
   }
 
   .forrester-info h1 {
     font-size: 4vh;
+    text-align: center;
+    margin-bottom: 5%;
   }
 
   .forrester-info span {
@@ -432,12 +432,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
-
+    margin-top: 5%;
   }
 
   .logoForrester img {
-    width: 20vh;
+    width: 30vh;
+    align-self: center;
   }
 
   /*DIAGRAMA*/
@@ -462,26 +462,30 @@
   /* CARROSSEL */
   .container-carrossel {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 5vw;
     background-color: var(--color-deep-purple);
   }
 
   .container-info {
-    padding: 4vh;
     font-weight: bold;
-    width: 40%;
-    padding-top: 12vh;
+    align-self: center;
+    text-align: center;
+    width: 90%;
+    padding-top: 10%;
   }
 
   .container-info img {
     width: auto;
-    height: 3vh;
+    height: 5vh;
+    margin-bottom: 5%;
   }
 
   .container-info h1 {
     color: var(--color-lemon);
     font-size: 2.5vh;
+    margin-bottom: 3%;
   }
 
   .container-info p {
@@ -497,8 +501,8 @@
   }
 
   .content-carrossel {
-    padding-top: 12vh;
-    max-width: 50%;
+    padding-top: 10%;
+    max-width: 80%;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -519,6 +523,7 @@
   }
 
   .text-slide {
+    display: flex;
     background-color: var(--color-white);
     box-sizing: border-box;
     padding: 4vh 2vw;
@@ -536,21 +541,26 @@
     margin-bottom: 2vh;
     margin-top: 0;
     font-weight: bold;
+    text-align: center;
   }
 
   .text-slide p {
     font-size: 2vh;
     line-height: 1.6;
     margin: 0;
+    text-align: center;
   }
 
   .slide .text-slide {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .button {
-    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
     padding-top: 3vh;
   }
 
@@ -667,6 +677,9 @@
 
   .gif-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .gif-text h3 {
@@ -675,6 +688,7 @@
     font-size: 3vh;
     line-height: 1.2;
     color: var(--color-white);
+    text-align: center;
   }
 
   .gif-text h4 {
@@ -683,6 +697,7 @@
     margin-bottom: 3vh;
     line-height: 1.1;
     color: var(--color-lemon);
+    text-align: center;
   }
 
   .button-gif {
@@ -710,8 +725,9 @@
   }
 
   .gif-Insights canvas {
-    width: 200px;
-    height: 200px;
+    display: none;
+    height: 60%;
+    width: 60%;
   }
 
   /* PRIMEIRO CONTATO */
@@ -852,13 +868,13 @@
   }
 
   .text-dooh {
+    text-align: center;
     align-items: center;
-    margin-left: 3%;
   }
 
   .text-dooh h1 {
     font-size: 1.5rem;
-    margin-left: 5%;
+    margin-top: 5%;
   }
 
   .text-dooh p {
@@ -866,11 +882,13 @@
     font-weight: bold;
     align-items: center;
     font-size: 0.9rem;
+    margin-top: 2%;
   }
 
   .content-dooh {
     display: flex;
-    width: 50vh;
+    width: 90%;
+    justify-self: center;
     background-color: var(--color-deep-purple);
     border-radius: 20px;
     margin: 2%;
@@ -886,10 +904,12 @@
     color: var(--color-lemon);
     font-size: 1rem;
     margin: 7px 0;
+    text-align: center;
   }
 
   .content-dooh p {
     color: var(--color-white);
+    text-align: center;
   }
 
   .content-dooh img {
@@ -910,6 +930,7 @@
 
   footer {
     display: flex;
+    text-align: center;
     background-color: var(--color-deep-purple);
     padding: 20px 5%;
     padding-top: 5%;
@@ -935,11 +956,12 @@
 
   .logo-footer img {
     height: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
 
   .logo-footer p {
-    font-size: 15px;
+    font-size: 0.9rem;
     line-height: 1.2;
     margin-bottom: px;
     color: var(--color-white);
@@ -1037,11 +1059,12 @@
     color: var(--color-deep-purple);
     border: none;
     height: 100%;
-    padding: 0 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 40px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     white-space: nowrap;
     transition: all 0.3s ease;
   }
@@ -1143,7 +1166,6 @@
     list-style: none;
     padding: 0;
     width: 100%;
-    margin-right: 30%;
   }
 
   .nav-right {
@@ -1151,9 +1173,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-right: 0;
     padding: 10px 0;
-    margin-right: 30%;
   }
 
   .logo-nav {
@@ -1942,7 +1962,8 @@
 
   .content-dooh {
     display: flex;
-    width: 60vh;
+    justify-self: center;
+    width: 90%;
     background-color: var(--color-deep-purple);
     border-radius: 20px;
     margin: 2%;
@@ -2215,7 +2236,6 @@
     list-style: none;
     padding: 0;
     width: 100%;
-    margin-right: 30%;
   }
 
   .nav-right {
@@ -2225,7 +2245,6 @@
     gap: 10px;
     margin-right: 0;
     padding: 10px 0;
-    margin-right: 30%;
   }
 
   .logo-nav {
@@ -2299,7 +2318,7 @@
     font-weight: bold;
     transition: all 0.3s ease;
     font-size: 1rem;
-    margin-right: 30%;
+    margin-right: 0;
   }
 
   .button-login1:hover {
@@ -2369,7 +2388,6 @@
 
   .content h1 {
     margin: 0;
-    margin-left: 5vh;
     color: var(--color-lemon);
     font-size: clamp(2.5rem, 4.5vw, 4.5rem)
   }
@@ -2430,6 +2448,8 @@
     color: var(--color-white);
     font-weight: bold;
     font-size: 2.5vh;
+    margin-left: 0;
+    text-align: center;
   }
 
   .beneficios-cards {
@@ -2444,7 +2464,9 @@
   .beneficios-info {
     background-color: var(--color-white);
     border-radius: 20px;
-    padding: 10px 20px;
+    width: 30%;
+    height: 25vh;
+    padding: 20px 15px;
     flex: 1;
     transition: all 0.3s ease-in-out;
   }
@@ -2459,11 +2481,11 @@
 
   .beneficios-info h2 {
     color: var(--color-purple);
-    font-size: 3vh;
+    font-size: 1.2rem;
   }
 
   .beneficios-info p {
-    font-size: 2vh;
+    font-size: 1rem;
   }
 
   /*PARCERIAS*/
@@ -2953,7 +2975,7 @@
     width: 100%;
     padding: 15px;
     background-color: var(--color-lemon);
-    color: var(--color-deep-purple);
+    color: var(--color-white);
     border: none;
     border-radius: 10px;
     font-weight: bold;
@@ -2989,7 +3011,7 @@
   }
 
   .content-dooh {
-    width: 32vh;
+    width: 50%;
     background-color: var(--color-deep-purple);
     border-radius: 20px;
     margin: 2%;
@@ -3008,15 +3030,16 @@
 
   .content-dooh p {
     color: var(--color-white);
+    font-size: 0.8rem;
   }
 
   .content-dooh img {
     width: 100%;
   }
 
-  .text-dooh1 {
+  .text-dooh {
     justify-content: center;
-    color: var(--color-purple);
+    margin-top: 5%;
     font-weight: bold;
   }
 
@@ -3157,7 +3180,7 @@
     border-radius: 40px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     white-space: nowrap;
     transition: all 0.3s ease;
   }
@@ -3520,6 +3543,7 @@
     align-items: center;
     flex-direction: row;
     padding: 50px 90px;
+    height: 70vh;
   }
 
   .forrester-info {
@@ -3576,10 +3600,11 @@
     justify-content: center;
     margin-bottom: 5vw;
     background-color: var(--color-deep-purple);
+    height: 75vh;
   }
 
   .container-info {
-    padding: 8vh;
+    padding: 12vh;
     font-weight: bold;
     width: 40%;
   }
@@ -3985,9 +4010,9 @@
     width: 100%;
     padding: 15px;
     background-color: var(--color-lemon);
-    color: var(--color-deep-purple);
+    color: var(--color-white);
     border: none;
-    border-radius: 10px;
+    border-radius: 40px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
@@ -4025,7 +4050,7 @@
   }
 
   .content-dooh {
-    width: 55vh;
+    width: 90%;
     background-color: var(--color-deep-purple);
     border-radius: 20px;
   }
@@ -4036,22 +4061,34 @@
 
   .content-dooh h5 {
     color: var(--color-lemon);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 10px 0;
   }
 
   .content-dooh p {
     color: var(--color-white);
+    font-size: 0.9rem;
   }
 
   .content-dooh img {
     width: 100%;
   }
 
-  .text-dooh1 {
+  .text-dooh {
     justify-content: center;
-    color: var(--color-purple);
+    text-align: center;
     font-weight: bold;
+    margin-left: 0;
+  }
+
+  .text-dooh h1 {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  .text-dooh p {
+    font-size: 1.2rem;
+    margin-left: 0;
   }
 
   .content-dooh:hover {
