@@ -32,7 +32,7 @@
   }
 
   .caixa_login {
-    width: 70%;
+    width: 90%;
     background-color: #ffffff99;
     backdrop-filter: blur(20px);
     border-radius: 25px;
@@ -260,7 +260,7 @@
   }
 
   .caixa_login {
-    width: 70%;
+    width: 90%;
     background-color: #ffffff99;
     backdrop-filter: blur(20px);
     border-radius: 25px;
@@ -488,7 +488,7 @@
   }
 
   .caixa_login {
-    width: 70%;
+    width: 90%;
     background-color: #ffffff99;
     backdrop-filter: blur(20px);
     border-radius: 25px;
@@ -710,7 +710,7 @@
     justify-content: center;
     position: absolute;
     width: 100%;
-    top: 7%;
+    top: 5%;
     color: white;
     padding: 0% 5% 0% 5%;
     margin-right: 20%;
@@ -885,7 +885,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-    margin-bottom: 10px;
     font-weight: bold;
   }
 
