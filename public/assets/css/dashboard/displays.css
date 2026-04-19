@@ -677,7 +677,7 @@
   }
 
   .g-status {
-    ]display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 10px;
