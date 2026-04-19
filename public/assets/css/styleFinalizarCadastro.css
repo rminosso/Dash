@@ -1,227 +1,916 @@
 @import url('default.css');
 
-.background {
-  content: '';
-  background-image: url('../images/background_login.png');
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-}
 
-.overlay {
-  content: '';
-  width: 100%;
-  height: 100vh;
-  background-color: #1e0b3695;
-  position: absolute;
-  top: 0;
-}
+@media screen and (max-width: 480px) {
+   .background {
+    content: '';
+    background-image: url('../images/background_login.png');
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
 
-.container_conteudo {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  top: 7%;
-  color: white;
-  padding: 0% 5% 0% 5%;
-  margin-right: 20%;
-}
+  .overlay {
+    content: '';
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1e0b3695;
+    position: absolute;
+    top: 0;
+  }
 
-.caixa_login {
-  width: 40%;
-  background-color: #ffffff99;
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  padding: 2%;
-  height: 90%;
-}
+  .container_conteudo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 7%;
+    color: white;
+    padding: 0% 5% 0% 5%;
+    margin-right: 20%;
+  }
 
-.texto{
-  height: 95%;
-  width: 50%;
-}
+  .caixa_login {
+    width: 70%;
+    background-color: #ffffff99;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 4%;
+  }
 
-.container_conteudo .texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
+  .texto {
+    height: 95%;
+    width: 50%;
+  }
 
-.texto_superior{
-  padding-left: 10%;
+  .container_conteudo .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
-}
+  .texto_superior {
+    padding-left: 10%;
 
-.texto_superior h1{
-  font-size: 3.3rem;
-  padding-right: 5%;
-}
+  }
+
+  .texto_superior h1 {
+    font-size: 3.3rem;
+    padding-right: 5%;
+  }
 
 
-.texto_superior_teste{
-  font-size: 1.5rem;
-  padding-left: 10%;
-  margin-top: 5% ;
-  font-weight: 500;
-}
+  .texto_superior_teste {
+    font-size: 1.5rem;
+    padding-left: 10%;
+    margin-top: 5%;
+    font-weight: 500;
+  }
 
-.logo_inferior{
-  top: -35%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 10%;
-  padding-top: 70%;
-  position: relative;
-}
+  .logo_inferior {
+    top: -35%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 70%;
+    position: relative;
+  }
 
-.logo_inferior span{
-  font-size: 1.65rem;
-}
+  .logo_inferior span {
+    font-size: 1.65rem;
+  }
 
-.caixa_login{
-  color: var(--color-deep-purple);
-  display: flex;
-  flex-direction: column;
-  height: min-content;
-}
+  .caixa_login {
+    color: var(--color-deep-purple);
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+  }
 
-.mensagem{
-  display: flex;
-  color: #fa2d37;
-  font-size: 12px;
-  justify-content: center;
-  font-weight: bold;
-  align-items: center;
-  margin: 30px 0;
-}
+  .mensagem {
+    display: flex;
+    color: #fa2d37;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    margin: 30px 0;
+  }
 
-.titulo_login h1, .subtitulo_login h3 {
-  text-align: center;
-  margin-bottom: 10px;
-}
+  .titulo_login h1,
+  .subtitulo_login h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-.titulo_login h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-}
+  .titulo_login h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
 
-.subtitulo_login h3 {
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-bottom: 30px;
-}
+  .subtitulo_login h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
 
-.icone_input{
-  display: flex;
-  background-color: var(--color-white);
-  padding: 0 5px;
-  border-radius: 25px;
-  align-items: center;
-  padding-left: 15px;
-}
+  .icone_input {
+    display: flex;
+    background-color: var(--color-white);
+    padding: 0 5px;
+    border-radius: 25px;
+    align-items: center;
+    padding-left: 15px;
+  }
 
-.icone_input{
-  border: 2px solid transparent;
-  transition: 0.3s;
-}
+  .icone_input {
+    border: 2px solid transparent;
+    transition: 0.3s;
+  }
 
-.icone_input:focus-within {
-  border: 2px solid #6D33FF;
-  box-shadow: 0 0 8px #6d33ff6b;
-}
+  .icone_input:focus-within {
+    border: 2px solid #6D33FF;
+    box-shadow: 0 0 8px #6d33ff6b;
+  }
 
-.input_container label{
-  font-weight: bold;
-  margin: 10px 0;
-  display: block;
-}
+  .input_container label {
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+  }
 
-.input_container{
-  margin: 2px 0;
-}
+  .input_container {
+    margin: 2px 0;
+  }
 
-.icone_input input{
-  display: flex;
-  border: none;
-  width: 100%;
-  padding: 16px;
-  height: max-content;
-  outline: none;
-  border-radius: 25px;
-}
+  .icone_input input {
+    display: flex;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    height: max-content;
+    outline: none;
+    border-radius: 25px;
+  }
 
-.inputs{
-  width: 100%;
-}
+  .inputs {
+    width: 100%;
+  }
 
-.button_finalizar {
-  width: 100%;
-  background-color: #6D33FF;
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.5s ease;
-}
+  .button_finalizar {
+    width: 100%;
+    background-color: #6D33FF;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+  }
 
-.button_finalizar:hover {  
+  .button_finalizar:hover {
     filter: brightness(1.2);
     box-shadow: var(--color-lemon);
     color: var(--color-black);
     background-color: var(--color-lemon);
+  }
+
+  .rodape_box_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 25px;
+  }
+
+  .rodape_box_login a {
+    text-decoration: none;
+    color: var(--color-deep-purple);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .validacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .validacao p {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: 5px 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .check {
+    display: flex;
+    padding-right: 5px;
+  }
+
+  .cardErro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+    color: #fa2d37;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
-.rodape_box_login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 25px;
-  gap: 25px;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+   .background {
+    content: '';
+    background-image: url('../images/background_login.png');
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .overlay {
+    content: '';
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1e0b3695;
+    position: absolute;
+    top: 0;
+  }
+
+  .container_conteudo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 7%;
+    color: white;
+    padding: 0% 5% 0% 5%;
+    margin-right: 20%;
+  }
+
+  .caixa_login {
+    width: 70%;
+    background-color: #ffffff99;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 5%;
+  }
+
+  .texto {
+    height: 95%;
+    width: 50%;
+  }
+
+  .container_conteudo .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .texto_superior {
+    padding-left: 10%;
+
+  }
+
+  .texto_superior h1 {
+    font-size: 3.3rem;
+    padding-right: 5%;
+  }
+
+
+  .texto_superior_teste {
+    font-size: 1.5rem;
+    padding-left: 10%;
+    margin-top: 5%;
+    font-weight: 500;
+  }
+
+  .logo_inferior {
+    top: -35%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 70%;
+    position: relative;
+  }
+
+  .logo_inferior span {
+    font-size: 1.65rem;
+  }
+
+  .caixa_login {
+    color: var(--color-deep-purple);
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+  }
+
+  .mensagem {
+    display: flex;
+    color: #fa2d37;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .titulo_login h1,
+  .subtitulo_login h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .titulo_login h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+
+  .subtitulo_login h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .icone_input {
+    display: flex;
+    background-color: var(--color-white);
+    padding: 0 5px;
+    border-radius: 25px;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  .icone_input {
+    border: 2px solid transparent;
+    transition: 0.3s;
+  }
+
+  .icone_input:focus-within {
+    border: 2px solid #6D33FF;
+    box-shadow: 0 0 8px #6d33ff6b;
+  }
+
+  .input_container label {
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+  }
+
+  .input_container {
+    margin: 2px 0;
+  }
+
+  .icone_input input {
+    display: flex;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    height: max-content;
+    outline: none;
+    border-radius: 25px;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  .button_finalizar {
+    width: 100%;
+    background-color: #6D33FF;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+  }
+
+  .button_finalizar:hover {
+    filter: brightness(1.2);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
+    background-color: var(--color-lemon);
+  }
+
+  .rodape_box_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 25px;
+  }
+
+  .rodape_box_login a {
+    text-decoration: none;
+    color: var(--color-deep-purple);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .validacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .validacao p {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: 5px 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .check {
+    display: flex;
+    padding-right: 5px;
+  }
+
+  .cardErro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+    color: #fa2d37;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
-.rodape_box_login a {
-  text-decoration: none;
-  color: var(--color-deep-purple);
-  font-size: 0.9rem;
-  font-weight: 500;
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+   .background {
+    content: '';
+    background-image: url('../images/background_login.png');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .overlay {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-color: #1e0b3695;
+    position: absolute;
+    top: 0;
+  }
+
+  .container_conteudo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 7%;
+    color: white;
+    padding: 0% 5% 0% 5%;
+    margin-right: 20%;
+  }
+
+  .caixa_login {
+    width: 70%;
+    background-color: #ffffff99;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 5%;
+  }
+
+  .texto {
+    height: 95%;
+    width: 50%;
+  }
+
+  .container_conteudo .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .texto_superior {
+    padding-left: 10%;
+
+  }
+
+  .texto_superior h1 {
+    font-size: 3.3rem;
+    padding-right: 5%;
+  }
+
+
+  .texto_superior_teste {
+    font-size: 1.5rem;
+    padding-left: 10%;
+    margin-top: 5%;
+    font-weight: 500;
+  }
+
+  .logo_inferior {
+    top: -35%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 70%;
+    position: relative;
+  }
+
+  .logo_inferior span {
+    font-size: 1.65rem;
+  }
+
+  .caixa_login {
+    color: var(--color-deep-purple);
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+  }
+
+  .mensagem {
+    display: flex;
+    color: #fa2d37;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .titulo_login h1,
+  .subtitulo_login h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .titulo_login h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+
+  .subtitulo_login h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .icone_input {
+    display: flex;
+    background-color: var(--color-white);
+    padding: 0 5px;
+    border-radius: 25px;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  .icone_input {
+    border: 2px solid transparent;
+    transition: 0.3s;
+  }
+
+  .icone_input:focus-within {
+    border: 2px solid #6D33FF;
+    box-shadow: 0 0 8px #6d33ff6b;
+  }
+
+  .input_container label {
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+  }
+
+  .input_container {
+    margin: 2px 0;
+  }
+
+  .icone_input input {
+    display: flex;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    height: max-content;
+    outline: none;
+    border-radius: 25px;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  .button_finalizar {
+    width: 100%;
+    background-color: #6D33FF;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+  }
+
+  .button_finalizar:hover {
+    filter: brightness(1.2);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
+    background-color: var(--color-lemon);
+  }
+
+  .rodape_box_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 25px;
+  }
+
+  .rodape_box_login a {
+    text-decoration: none;
+    color: var(--color-deep-purple);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .validacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .validacao p {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: 5px 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .check {
+    display: flex;
+    padding-right: 5px;
+  }
+
+  .cardErro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+    color: #fa2d37;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
-.validacao {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
 
-.validacao p {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  margin: 5px 0;
-  width: 100%;
-  justify-content: center;
-}
+@media screen and (min-width: 1024px) {
+  .background {
+    content: '';
+    background-image: url('../images/background_login.png');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
 
-.check {
-  display: flex;
-  padding-right: 5px;
-}
+  .overlay {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-color: #1e0b3695;
+    position: absolute;
+    top: 0;
+  }
 
-.cardErro {
-  display: flex;
-  justify-content: center; 
-  align-items: center;     
-  width: 100%;             
-  margin: 15px 0;          
-  color: #fa2d37;         
-  font-weight: bold;
-  font-size: 14px;
+  .container_conteudo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 7%;
+    color: white;
+    padding: 0% 5% 0% 5%;
+    margin-right: 20%;
+  }
+
+  .caixa_login {
+    width: 40%;
+    background-color: #ffffff99;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 2%;
+    height: 90%;
+  }
+
+  .texto {
+    height: 95%;
+    width: 50%;
+  }
+
+  .container_conteudo .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .texto_superior {
+    padding-left: 10%;
+
+  }
+
+  .texto_superior h1 {
+    font-size: 3.3rem;
+    padding-right: 5%;
+  }
+
+
+  .texto_superior_teste {
+    font-size: 1.5rem;
+    padding-left: 10%;
+    margin-top: 5%;
+    font-weight: 500;
+  }
+
+  .logo_inferior {
+    top: -35%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 70%;
+    position: relative;
+  }
+
+  .logo_inferior span {
+    font-size: 1.65rem;
+  }
+
+  .caixa_login {
+    color: var(--color-deep-purple);
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+  }
+
+  .mensagem {
+    display: flex;
+    color: #fa2d37;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .titulo_login h1,
+  .subtitulo_login h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .titulo_login h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+
+  .subtitulo_login h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .icone_input {
+    display: flex;
+    background-color: var(--color-white);
+    padding: 0 5px;
+    border-radius: 25px;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  .icone_input {
+    border: 2px solid transparent;
+    transition: 0.3s;
+  }
+
+  .icone_input:focus-within {
+    border: 2px solid #6D33FF;
+    box-shadow: 0 0 8px #6d33ff6b;
+  }
+
+  .input_container label {
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+  }
+
+  .input_container {
+    margin: 2px 0;
+  }
+
+  .icone_input input {
+    display: flex;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    height: max-content;
+    outline: none;
+    border-radius: 25px;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  .button_finalizar {
+    width: 100%;
+    background-color: #6D33FF;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+  }
+
+  .button_finalizar:hover {
+    filter: brightness(1.2);
+    box-shadow: var(--color-lemon);
+    color: var(--color-black);
+    background-color: var(--color-lemon);
+  }
+
+  .rodape_box_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 25px;
+  }
+
+  .rodape_box_login a {
+    text-decoration: none;
+    color: var(--color-deep-purple);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .validacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .validacao p {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: 5px 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .check {
+    display: flex;
+    padding-right: 5px;
+  }
+
+  .cardErro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+    color: #fa2d37;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
