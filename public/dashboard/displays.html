@@ -491,12 +491,12 @@
           Cancelar
         </button>
         <button class="button-purple" onclick="cadastrarDisplay()">
-          Cadastrar
+          Proximo
         </button>
       </div>
     </dialog>
 
-    <dialog id="dialogComp">
+    <!-- <dialog id="dialogComp">
       <div class="info-dialog">
         <div class="info-tela">
           <svg width="35" height="35" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -536,7 +536,7 @@
           Cadastrar
         </button>
       </div>
-    </dialog>
+    </dialog> -->
 
     <dialog id="dialogEnd">
       <div class="info-dialog">
@@ -1150,7 +1150,8 @@
               setTimeout(function () {
                 alert("Cadastro realizado com sucesso!");
                 document.getElementById("meuDialogo").close();
-                document.getElementById("dialogComp").showModal();
+                document.getElementById("dialogEnd").showModal();
+                cadastrarComp();
               }, 1000);
             });
           } else {
@@ -1168,21 +1169,7 @@
   }
 
   function cadastrarComp() {
-    var cpu = input_cpu.checked;
-    var ram = input_memoriaRam.checked;
-    var disco = input_armazenamento.checked;
-
-    var componentes = [];
-
-    if (cpu) {
-      componentes.push(1);
-    }
-    if (ram) {
-      componentes.push(2);
-    }
-    if (disco) {
-      componentes.push(3);
-    }
+    var componentes = [1,2,3];
 
     fetch("/display/cadastrarComp", {
       method: "POST",
@@ -1194,7 +1181,7 @@
         fkEmpresa: sessionStorage.FKEMPRESA,
         fkServidor: sessionStorage.ID_SERVIDOR,
       }),
-    })
+    })  
       .then((resposta) => {
         console.log("ESTOU NO THEN DO entrar()!");
         console.log(resposta);
@@ -1206,7 +1193,6 @@
 
             console.log(JSON.stringify(json));
             setTimeout(function () {
-              alert("Componentes cadastrados com sucesso");
               document.getElementById("dialogComp").close();
               document.getElementById("dialogEnd").showModal();
             }, 1000); // apenas para exibir o loading
@@ -1279,7 +1265,7 @@
               sessionStorage.ID_SERVIDOR = json.insertId;
 
               setTimeout(function () {
-                alert("Cadastro realizado com sucesso!");
+                alert("Display cadastrado com sucesso")
                 document.getElementById("dialogEnd").close();
               }, 1000);
             });
