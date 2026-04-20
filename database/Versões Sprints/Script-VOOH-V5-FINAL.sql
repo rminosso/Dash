@@ -74,17 +74,21 @@ CREATE TABLE contato (
 );
 
 CREATE TABLE grupo (
-	idGrupo INT PRIMARY KEY,
+	idGrupo INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45),
     descricao VARCHAR(45)
 );
+
+INSERT INTO grupo (idGrupo,nome,descricao) VALUES (
+ 1,"Laranja","Displays localizados na zona sul"
+ );
 
 CREATE TABLE display (
 	idDisplay INT NOT NULL AUTO_INCREMENT,
     fkEmpresa INT NOT NULL,
 		CONSTRAINT chave_compostaServidor
 			PRIMARY KEY(idDisplay, fkEmpresa),
-	fkGrupo INT,
+	fkGrupo INT NOT NULL,
 	nome VARCHAR(45),
     numeroIdentificacao VARCHAR(45),
     sistemaOperacional VARCHAR(45),
@@ -201,9 +205,25 @@ INSERT INTO usuario
 VALUES
 (2, 'SUP001', 2, 'Pedro Lima', 'pedro@digitalcorp.com', '1995-08-10', '11122233344', 'senha456', 'Ativo', 'Suporte', 'RG1122334');
 
+-- Display associado a grupo
+INSERT INTO display 
+(fkEmpresa, fkGrupo, nome, numeroIdentificacao, sistemaOperacional, enderecoIP)
+VALUES 
+(2, 1,'Servidor Principal Laranja', 'SRV-002', 'Ubuntu 23.04', '192.168.1.10');
+
 SELECT idUsuario, nome, email, fkEmpresa as empresaId, tipoUsuario FROM usuario WHERE email = 'pedro@digitalcorp.com' AND senha = 'senha456';
-    
+
+SELECT 
+d.idDisplay,
+e.nomeEmpresa,
+g.nome AS nomeGrupo,
+g.descricao AS descricaoGrupo
+FROM grupo AS g
+	JOIN display AS d ON g.idGrupo = d.fkGrupo
+		JOIN cadastroEmpresa AS e ON d.fkEmpresa = e.idcadastroEmpresa;
+
 select*from cadastroEmpresa;
 select * from contato;
 select * from usuario;
+select * from display_componentes;
 select * from display;
