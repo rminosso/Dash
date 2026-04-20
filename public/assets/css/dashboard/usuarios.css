@@ -548,7 +548,7 @@
   }
 
   .body .cards .icon {
-    background-color: var(--color-purple);
+    background-color: var(--color-deep-purple);
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -570,7 +570,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 2%;
+    margin-left: 5%;
     width: 100%;
   }
 
