@@ -9,7 +9,7 @@
     <meta name="author" content="VOOH" />
 
     <!--Stylesheet-->
-    <link rel="stylesheet" href="../assets/css/dashboard/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard/configuracoes.css" />
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -349,6 +349,135 @@
         <!--Title-->
         <div class="title">
           <span>Painel de monitoramento / <a href="#">Configurações</a> </span>
+        </div>
+
+        <div class="profile-container">
+          <div class="profile-pic">
+            <img src="../assets/images/perfil.png" />
+            <span class="name-pic">Foto de perfil</span>
+            <button type="button" id="update-foto">
+              <span>Atualizar</span>
+            </button>
+          </div>
+
+          <!--Informações do perfil-->
+          <div class="info-perfil">
+            <div class="name-profile">
+              <span class="title">Nome completo</span>
+              <span class="content">Elicia Prietro</span>
+            </div>
+
+            <div class="name-profile">
+              <span class="title">Data de nascimento</span>
+              <span class="content">18/05/2000</span>
+            </div>
+
+            <div class="name-profile">
+              <span class="title">E-mail</span>
+              <span class="content">elicia.prieto@email.com</span>
+            </div>
+
+            <div class="name-profile">
+              <span class="title">CPF/Documento de identificação</span>
+              <span class="content">000.000.000-00</span>
+            </div>
+
+            <div class="update">
+              <span> Última atualização: 22 de março de 2026 às 17:45 </span>
+            </div>
+
+            <div class="buto">
+              <button type="button">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M14.8301 4.67367C14.8301 4.67367 4.89264 14.6111 4.89264 14.6111C3.90305 15.6007 0.965524 16.059 0.309274 15.4028C-0.346976 14.7465 0.100941 11.809 1.09052 10.8194C1.09052 10.8194 11.0385 0.871553 11.0385 0.871553C11.2838 0.603907 11.5808 0.388761 11.9116 0.239074C12.2423 0.0893863 12.6 0.00824034 12.9631 0.000594497C13.326 -0.00704098 13.6868 0.0589384 14.0236 0.194574C14.3603 0.330209 14.6662 0.532709 14.9225 0.789792C15.1789 1.04688 15.3806 1.35323 15.5152 1.69038C15.6499 2.02753 15.715 2.38847 15.7064 2.75144C15.6977 3.11441 15.6156 3.4719 15.465 3.80226C15.3144 4.13263 15.0985 4.42907 14.8301 4.67367C14.8301 4.67367 14.8301 4.67367 14.8301 4.67367Z"
+                      fill="none"
+                      stroke-width="2"
+                      stroke="#FFFFFF"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      transform="translate(7.336 1.993)"
+                    />
+                    <path
+                      d="M9.375 0C9.375 0 4.16667 0 4.16667 0C3.06159 0 2.00185 0.438979 1.22045 1.22039C0.439052 2.00179 0 3.06159 0 4.16667C0 4.16667 0 14.5833 0 14.5833C0 15.6884 0.439052 16.7482 1.22045 17.5296C2.00185 18.311 3.06159 18.75 4.16667 18.75C4.16667 18.75 15.625 18.75 15.625 18.75C17.9271 18.75 18.75 16.875 18.75 14.5833C18.75 14.5833 18.75 9.375 18.75 9.375"
+                      fill="none"
+                      stroke-width="2"
+                      stroke="#FFFFFF"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      transform="translate(2.083 4.167)"
+                    />
+                  </g>
+                </svg>
+                <span>Editar dados</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="empresa-container">
+          <h2>Empresa</h2>
+
+          <div class="container-empresa">
+            <div class="top">
+              <div class="data">
+                <div class="info">
+                  <span class="t">Nome da empresa</span>
+                  <span class="i">Empresa Nome Completo</span>
+                </div>
+
+                <div class="info">
+                  <span class="t">CNPJ</span>
+                  <span class="i">00.000.000/0001-00</span>
+                </div>
+              </div>
+
+              <div class="btn">
+                <button type="button" id="update-empresa">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g>
+                      <path
+                        d="M14.8301 4.67367C14.8301 4.67367 4.89264 14.6111 4.89264 14.6111C3.90305 15.6007 0.965524 16.059 0.309274 15.4028C-0.346976 14.7465 0.100941 11.809 1.09052 10.8194C1.09052 10.8194 11.0385 0.871553 11.0385 0.871553C11.2838 0.603907 11.5808 0.388761 11.9116 0.239074C12.2423 0.0893863 12.6 0.00824034 12.9631 0.000594497C13.326 -0.00704098 13.6868 0.0589384 14.0236 0.194574C14.3603 0.330209 14.6662 0.532709 14.9225 0.789792C15.1789 1.04688 15.3806 1.35323 15.5152 1.69038C15.6499 2.02753 15.715 2.38847 15.7064 2.75144C15.6977 3.11441 15.6156 3.4719 15.465 3.80226C15.3144 4.13263 15.0985 4.42907 14.8301 4.67367C14.8301 4.67367 14.8301 4.67367 14.8301 4.67367Z"
+                        fill="none"
+                        stroke-width="2"
+                        stroke="#FFFFFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        transform="translate(7.336 1.993)"
+                      />
+                      <path
+                        d="M9.375 0C9.375 0 4.16667 0 4.16667 0C3.06159 0 2.00185 0.438979 1.22045 1.22039C0.439052 2.00179 0 3.06159 0 4.16667C0 4.16667 0 14.5833 0 14.5833C0 15.6884 0.439052 16.7482 1.22045 17.5296C2.00185 18.311 3.06159 18.75 4.16667 18.75C4.16667 18.75 15.625 18.75 15.625 18.75C17.9271 18.75 18.75 16.875 18.75 14.5833C18.75 14.5833 18.75 9.375 18.75 9.375"
+                        fill="none"
+                        stroke-width="2"
+                        stroke="#FFFFFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        transform="translate(2.083 4.167)"
+                      />
+                    </g>
+                  </svg>
+                  <span>Editar Informações</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="divisor"></div>
+
+            <div>A</div>
+          </div>
         </div>
       </div>
     </div>

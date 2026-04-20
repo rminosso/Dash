@@ -1,0 +1,233 @@
+/* Sidebar styles */
+@import url("sidebar.css");
+
+/* Mobile <= 480px */
+@media screen and (max-width: 480px) {
+}
+
+/* Mobile >= 480px */
+@media screen and (min-width: 480px) {
+}
+
+/* Tablet >= 768px */
+@media screen and (min-width: 768px) {
+}
+
+/* Desktop >= 1024px */
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  .body {
+    width: calc(100% - 8vw);
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+  }
+
+  .body .container {
+    padding: 3.5%;
+    width: 100%;
+  }
+
+  .body .container .title {
+    font-weight: bold;
+  }
+
+  .body .container .title a {
+    text-decoration: none;
+    color: var(--color-purple);
+  }
+
+  .body .container .profile-container {
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2%;
+  }
+
+  .body .container .profile-pic {
+    padding: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    border-radius: 16px;
+    width: 18vw;
+  }
+
+  .body .container .profile-pic img {
+    border-radius: 200px;
+    width: 150px;
+  }
+
+  .body .container .profile-container .profile-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .body .container .profile-container .profile-pic .name-pic {
+    margin: 5px 0;
+  }
+
+  .body .container .profile-container .profile-pic button {
+    padding: 10px 20px;
+    background-color: var(--color-purple);
+    border: none;
+    border-radius: 25px;
+    margin: 5px 0;
+  }
+
+  .body .container .profile-container .profile-pic button span {
+    color: var(--color-white);
+  }
+
+  .body .container .profile-container .info-perfil {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  .body .container .profile-container .info-perfil {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    top: 2%;
+  }
+
+  .body .container .info-perfil .name-profile {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .body .container .info-perfil .name-profile .title {
+    color: var(--color-purple);
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  .body .container .update {
+    display: flex;
+    align-items: center;
+  }
+
+  .body .container .update span {
+    width: 100%;
+    text-wrap: nowrap;
+  }
+
+  .body .container .buto {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .body .container .buto button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 35px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--color-purple);
+  }
+
+  .body .container .buto button span {
+    margin: 0 5px;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  .body .container .content {
+    color: var(--color-gray);
+  }
+
+  .body .container .profile-container .info-perfil .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .body .container .empresa-container {
+    margin-top: 5%;
+  }
+
+  .body .container .empresa-container h2 {
+    color: var(--color-purple);
+  }
+
+  .body .container .container-empresa {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    padding: 3.5%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .body .container .container-empresa .info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+  }
+
+  .body .container .t,
+  .body .container .i {
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+  }
+
+  .body .container .container-empresa .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .divisor {
+    background-color: var(--color-divider);
+    height: 1px;
+    width: 100%;
+    content: "";
+    margin: 2% 0;
+  }
+
+  .body .container .container-empresa .top .data {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .body .container .container-empresa .info .t {
+    font-weight: bold;
+    margin: 10px 0;
+    color: var(--color-purple);
+  }
+
+  .body .container .container-empresa .info .i {
+    color: var(--color-gray);
+    font-weight: normal;
+  }
+
+  .body .container .container-empresa .btn {
+    display: flex;
+    height: fit-content;
+  }
+
+  .body .container .container-empresa .btn button {
+    display: flex;
+    height: fit-content;
+    text-wrap: nowrap;
+    background-color: var(--color-purple);
+    border-radius: 200px;
+    padding: 10px 20px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+  }
+
+  .body .container .container-empresa .btn button span {
+    margin: 0 5px;
+    color: var(--color-white);
+  }
+}
