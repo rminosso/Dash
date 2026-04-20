@@ -54,7 +54,7 @@
     padding: 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
     border-radius: 16px;
-    width: 18vw;
+    width: 20vw;
   }
 
   .body .container .profile-pic img {
@@ -94,7 +94,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    top: 2%;
+    width: 100%;
   }
 
   .body .container .info-perfil .name-profile {
@@ -117,6 +117,7 @@
   .body .container .update span {
     width: 100%;
     text-wrap: nowrap;
+    color: var(--color-deep-purple);
   }
 
   .body .container .buto {
@@ -229,5 +230,38 @@
   .body .container .container-empresa .btn button span {
     margin: 0 5px;
     color: var(--color-white);
+  }
+
+  .body .container .container-empresa .sec .mini-title {
+    color: var(--color-deep-purple);
+    font-weight: bold;
+  }
+
+  .body .container .sec .data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 2%;
+  }
+
+  .body .container .sec .data .info {
+    margin-top: 2%;
+  }
+
+  .body .container .sec .data .title-m {
+    color: var(--color-purple);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .body .container .container-empresa .sec .data .title-end span {
+    color: var(--color-deep-purple);
+    font-weight: bold;
+  }
+
+  .body .container .container-empresa .sec .data .info {
+    display: flex;
+    flex-direction: column;
   }
 }
