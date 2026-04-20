@@ -2,10 +2,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const lista = document.getElementById("lista_displays");
   const referencia = document.getElementById("primeiro_item");
 
+  // Busca todos os displays cadastrados
+  fetch("/maquina/buscar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      idEmpresa: sessionStorage.FKEMPRESA,
+    }),
+  })
+    .then((resposta) => resposta.text())
+    .then((data) => {
+      console.log(data);
+    });
+
   let html = "";
 
-  for (let i = 0; i <= 50; i++) {
+  // Aqui depois dá para fazer um foreach()
 
+  for (let i = 0; i <= 50; i++) {
     html += `
         <tr id="d-1" onclick='abrirDashboard(1)'>
             <td class="id-display">D${i + 1}</td>
@@ -49,4 +65,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   referencia.after(template.content);
 });
-
