@@ -3,19 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const referencia = document.getElementById("primeiro_item");
 
   // Busca todos os displays cadastrados
-  fetch("/maquina/buscar", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      idEmpresa: sessionStorage.FKEMPRESA,
-    }),
-  })
-    .then((resposta) => resposta.text())
-    .then((data) => {
-      console.log(data);
-    });
+  // fetch("/maquina/buscar", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //     idEmpresa: sessionStorage.FKEMPRESA,
+  //   }),
+  // })
+  //   .then((resposta) => resposta.text())
+  //   .then((data) => {
+  //     console.log(data);
+  //   });
 
   let html = "";
 

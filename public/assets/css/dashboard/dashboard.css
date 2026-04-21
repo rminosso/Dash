@@ -1,293 +1,191 @@
 /* Sidebar styles */
-@import url('sidebar.css');
+@import url("sidebar.css");
 
 /* Mobile <= 480px */
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+}
 
 /* Mobile >= 480px */
-@media screen and (min-width: 480px) {}
+@media screen and (min-width: 480px) {
+}
 
 /* Tablet >= 768px */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+}
 
 /* Desktop >= 1024px */
 @media screen and (min-width: 1024px) {
-    body {
-        display: flex;
-    }
+  body {
+    display: flex;
+  }
 
-    .body {
-        width: calc(100% - 18vw);
-        height: 100vh;
-        overflow-y: auto;
-        display: flex;
-    }
+  .body {
+    width: calc(100% - 8vw);
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .body .container {
-        padding: 3.5%;
-    }
+  .body .container {
+    padding: 2% 3.5%;
+  }
 
-    .body .container .title {
-        font-weight: bold;
-    }
+  .body .container .title {
+    font-weight: bold;
+    background-color: var(--color-white);
+  }
 
-    .body .container .title a {
-        text-decoration: none;
-        color: var(--color-purple);
-    }
+  .body .container .title a {
+    text-decoration: none;
+    color: var(--color-purple);
+  }
 
-    /* Sidebar styles */
-    @import url("../default.css");
-    @import url("sidebar.css");
+  .body .container .kpis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 100%;
+    align-items: center;
+  }
 
-    /* Mobile <= 480px */
-    @media screen and (max-width: 480px) {}
+  .body .container .kpis .card {
+    width: 18vw;
+    margin: 2% 2% 0 0;
+    border-radius: 25px;
+    background-color: var(--color-white);
+    padding: 25px;
+    height: fit-content;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    display: flex;
+    align-items: center;
+  }
 
-    /* Mobile >= 480px */
-    @media screen and (min-width: 480px) and (max-width: 767px) {}
+  .body .container .kpis .card:nth-child(1) .ii {
+    background-color: var(--color-success);
+  }
 
-    /* Tablet >= 768px */
-    @media screen and (min-width: 768px) and (max-width: 1023px) {}
+  .body .container .kpis .card:nth-child(1) .number {
+    color: var(--color-success);
+  }
 
-    /* Desktop >= 1024px */
-    @media screen and (min-width: 1024px) {
-        body {
-            display: flex;
-        }
+  .body .container .kpis .card:nth-child(2) .ii {
+    background-color: var(--color-danger);
+  }
 
-        .body {
-            width: calc(100% - 8vw);
-            height: 100vh;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-        }
+  .body .container .kpis .card:nth-child(2) .number {
+    color: var(--color-danger);
+  }
 
-        .body .container {
-            padding: 2% 3.5%;
-        }
+  .body .container .kpis .card:nth-child(3) .ii {
+    background-color: var(--color-amber);
+  }
 
-        .body .container .title {
-            font-weight: bold;
-            background-color: var(--color-white);
-        }
+  .body .container .kpis .card:nth-child(3) .number {
+    color: var(--color-amber);
+  }
 
-        .body .container .title a {
-            text-decoration: none;
-            color: var(--color-purple);
-        }
+  .body .container .kpis .card:nth-child(4) .ii {
+    background-color: var(--color-orange);
+  }
 
-        .body .container .kpis {
-            display: flex;
-        }
+  .body .container .kpis .card:nth-child(4) .number {
+    color: var(--color-orange);
+  }
 
-        .body .container .kpis .card {
-            width: 20vw;
-            margin: 2% 2% 0 0;
-            border-radius: 25px;
-            background-color: var(--color-white);
-            padding: 25px;
-            height: fit-content;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
-            display: flex;
-            align-items: center;
-        }
+  .body .container .kpis .info {
+    display: flex;
+    flex-direction: column;
+  }
 
-        .body .container .kpis .card:nth-child(2) .ii {
-            background-color: var(--color-success);
-        }
+  .body .container .kpis .icon .i {
+    display: flex;
+    align-items: center;
+  }
 
-        .body .container .kpis .card:nth-child(2) .number {
-            color: var(--color-success);
-        }
+  .body .container .kpis .icon .ii {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-purple);
+  }
 
-        .body .container .kpis .card:nth-child(3) .ii {
-            background-color: var(--color-danger);
-        }
+  .body .container .kpis .number {
+    font-size: 3rem;
+    color: var(--color-deep-purple);
+    font-weight: bold;
+  }
 
-        .body .container .kpis .card:nth-child(3) .number {
-            color: var(--color-danger);
-        }
+  .body .container .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2%;
+  }
 
-        .body .container .kpis .card:nth-child(4) .ii {
-            background-color: var(--color-amber);
-        }
+  .body .container .kpis .desc {
+    font-size: 1rem;
+    color: var(--color-deep-purple);
+    font-weight: bold;
+    padding: 5px 0;
+  }
 
-        .body .container .kpis .card:nth-child(4) .number {
-            color: var(--color-amber);
-        }
+  .body .container .comparacao-grupo-alertas {
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    padding: 16px;
+    border-radius: 26px;
+    height: 100%;
+  }
 
-        .body .container .kpis .info {
-            display: flex;
-            flex-direction: column;
-        }
+  .body .container .comparacao-grupo-alertas canvas {
+    height: fit-content;
+  }
 
-        .body .container .kpis .icon .i {
-            display: flex;
-            align-items: center;
-        }
+  .body .container .sec2 {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 16px;
+  }
 
-        .body .container .kpis .icon .ii {
-            width: fit-content;
-            height: fit-content;
-            padding: 5px;
-            border-radius: 10px;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            background-color: var(--color-purple);
-        }
+  .body .container .mapa {
+    width: 100%;
+    height: 100%;
+  }
 
-        .body .container .kpis .number {
-            font-size: 3rem;
-            color: var(--color-deep-purple);
-            font-weight: bold;
-        }
+  .body .container .mapa #map {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    border-radius: 16px;
+    height: 60vh;
+    border: 1px solid var(--color-divider);
+  }
 
-        .body .container .kpis .desc {
-            font-size: 1rem;
-            color: var(--color-deep-purple);
-            font-weight: bold;
-            padding: 5px 0;
-        }
+  .body .container .sec2 .mapa .title {
+    padding: 10px 0;
+  }
 
-        /*Displays individuais*/
-        .body .content .kpis {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+  .body .container .sec2 .mapa .title span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-purple);
+  }
 
-        .body .content .kpis .card {
-            width: 17vw;
-            height: 22vh;
-            margin: 2% 2% 0 0;
-            border-radius: 25px;
-            background-color: var(--color-white);
-            padding: 25px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+  .body .container .kpis2 {
+    width: 100%;
+    border: 1px solid red;
+    border-radius: 16px;
 
-        .body .content .kpis .card p {
-            display: flex;
-            text-align: start;
-            margin-bottom: 2%;
-            margin-right: 53%;
-        }
-
-        .body .content .kpis .card:nth-child(1) .ii {
-            background-color: var(--color-danger);
-        }
-
-        .body .content .kpis .card .ii svg {
-            width: 50px;
-            height: 50px;
-        }
-
-        .body .content .kpis .card:nth-child(1) .number {
-            color: var(--color-danger);
-        }
-
-        .body .content .kpis .card:nth-child(2) .ii {
-            background-color: var(--color-amber);
-        }
-
-        .body .content .kpis .card:nth-child(2) .number {
-            color: var(--color-amber);
-        }
-
-        .body .content .kpis .card:nth-child(3) .ii {
-            background-color: var(--color-success);
-        }
-
-        .body .content .kpis .card:nth-child(3) .number {
-            color: var(--color-success);
-        }
-
-        .body .content .kpis .card:nth-child(4) .ii {
-            background-color: var(--color-purple);
-        }
-
-        .body .content .kpis .card:nth-child(4) .number {
-            color: var(--color-);
-        }
-
-        .body .content .kpis .info {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .body .content .kpis .icon .i {
-            display: flex;
-            align-items: center;
-        }
-
-        .body .content .kpis .icon .ii {
-            width: fit-content;
-            height: fit-content;
-            padding: 5px;
-            border-radius: 10px;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            background-color: var(--color-purple);
-        }
-
-        .body .content .kpis .number {
-            font-size: 3rem;
-            color: var(--color-deep-purple);
-            font-weight: bold;
-        }
-
-        .body .content .kpis .desc {
-            font-size: 1rem;
-            color: var(--color-deep-purple);
-            font-weight: bold;
-            padding: 5px 0;
-        }
-
-        .body .content .kpis .card:nth-child(1) .icon span {
-            color: var(--color-danger);
-            margin-top: 10px;
-        }
-
-        .body .content .kpis .card:nth-child(2) .icon span {
-            color: var(--color-amber);
-            margin-top: 10px;
-        }
-
-        .body .content .kpis .card:nth-child(3) .icon span {
-            color: var(--color-success);
-            margin-top: 10px;
-        }
-
-        .body .content .kpis .card:nth-child(4) .icon span {
-            color: var(--color-purple);
-            margin-top: 10px;
-        }
-
-        .body .content .kpis .card .info {
-            width: 100%;
-            display: flex;
-            justify-content: end;
-            align-items: flex-end;
-        }
-
-        .body .content .kpis .card .info .barra-container {
-            background-color: #e0e0e0;
-            border-radius: 999px;
-            height: 10px;
-            width: 90%;
-            margin-bottom: 15px;
-        }
-
-        .body .content .kpis .card .info .barra-preenchimento {
-            border-radius: 999px;
-            height: 100%;
-        }
-    }
+    height: 100%;
+  }
 }
