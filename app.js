@@ -16,7 +16,8 @@ const empresaRouter = require("./src/routes/empresa");
 const usuarioRouter = require("./src/routes/usuarios");
 const maquinaRouter = require("./src/routes/maquina");
 const componenteRouter = require("./src/routes/componente");
-const displayRouter = require("./src/routes/display")
+const displayRouter = require("./src/routes/display");
+const configRouter = require("./src/routes/config");
 
 app.use(cors());
 app.use(express.json());
@@ -29,6 +30,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/maquina", maquinaRouter);
 app.use("/componente", componenteRouter);
 app.use("/display", displayRouter);
+app.use("/config", configRouter);
 
 
 
