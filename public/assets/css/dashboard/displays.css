@@ -44,6 +44,7 @@
 
   .body .container .kpis {
     display: flex;
+    
   }
 
   .body .container .kpis .card {
@@ -59,19 +60,19 @@
   }
 
   .body .container .kpis .card:nth-child(2) .ii {
-    background-color: var(--color-success);
-  }
-
-  .body .container .kpis .card:nth-child(2) .number {
-    color: var(--color-success);
-  }
-
-  .body .container .kpis .card:nth-child(3) .ii {
     background-color: var(--color-danger);
   }
 
-  .body .container .kpis .card:nth-child(3) .number {
+  .body .container .kpis .card:nth-child(2) .number {
     color: var(--color-danger);
+  }
+
+  .body .container .kpis .card:nth-child(3) .ii {
+    background-color: var(--color-amber);
+  }
+
+  .body .container .kpis .card:nth-child(3) .number {
+    color: var(--color-amber);
   }
 
   .body .container .kpis .card:nth-child(4) .ii {
