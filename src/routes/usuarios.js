@@ -22,4 +22,10 @@ router.post("/cadastrarGestor", function (req, res) {
     usuarioController.cadastrarGestor(req, res);
 });
 
+router.post("/buscarUsuarios", function (req, res) {
+    usuarioController.buscarUsuarios(req, res);
+});
+
+
+
 module.exports = router;
