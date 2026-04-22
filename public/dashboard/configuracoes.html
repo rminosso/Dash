@@ -288,7 +288,7 @@
             </div>
 
             <div class="btn">
-              <button type="button" id="update-empresa">
+              <button type="button" id="update-empresa" onclick= "meuDialogo.showModal()">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g>
                     <path
@@ -354,6 +354,100 @@
       </div>
     </div>
   </div>
+
+  <dialog id="meuDialogo">
+      <div class="info-dialog">
+        <div class="info-tela">
+          <svg width="35" height="35" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path
+                d="M2.5 17.5L0 17.5C0 17.5 0 16.25 0 16.25C0 13.9202 1.59346 11.9625 3.75 11.4075M6.25 7.28662C4.79351 6.77187 3.75 5.38278 3.75 3.75001C3.75 2.11723 4.79351 0.728182 6.25 0.213394M25 17.5L27.5 17.5C27.5 17.5 27.5 16.25 27.5 16.25C27.5 13.9202 25.9065 11.9625 23.75 11.4075M21.25 0.213394C22.7065 0.728182 23.75 2.11723 23.75 3.75001C23.75 5.38278 22.7065 6.77187 21.25 7.28662M16.25 11.25C19.0114 11.25 21.25 13.4886 21.25 16.25C21.25 16.25 21.25 17.5 21.25 17.5L6.25 17.5C6.25 17.5 6.25 16.25 6.25 16.25C6.25 13.4886 8.48857 11.25 11.25 11.25C11.25 11.25 16.25 11.25 16.25 11.25ZM17.5 3.75C17.5 5.82106 15.8211 7.5 13.75 7.5C11.6789 7.5 10 5.82106 10 3.75C10 1.67894 11.6789 0 13.75 0C15.8211 0 17.5 1.67894 17.5 3.75Z"
+                fill="none" stroke-width="2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"
+                transform="translate(1.25 6.25)" />
+            </g>
+          </svg>
+          <p>Editar Informações</p>
+        </div>
+      </div>
+
+      <div class="input-dialog">
+        <div class="conjunto">
+          <p>CEP *</p>
+          <input placeholder="01414001" maxlength="8" type="text" name="" id="input_cep" />
+        </div>
+        <div class="conjunto">
+          <p>Logradouro *</p>
+          <input placeholder="Rua Haddock Lobo" type="text" name="" id="input_logradouro" />
+        </div>
+      </div>
+
+      <div class="input-dialog">
+        <div class="conjunto">
+          <p>Numero° *</p>
+          <input placeholder="595" type="text" name="" id="input_numeroEnd" />
+        </div>
+
+        <div class="conjunto">
+          <p>Bairro *</p>
+          <input placeholder="Cerqueira Cesar" type="text" name="" id="input_bairro" />
+        </div>
+      </div>
+
+      <div class="input-dialog">
+        <div class="conjunto">
+          <p>Cidade *</p>
+          <input placeholder="São Paulo" type="text" name="" id="input_cidade" />
+        </div>
+        <div class="conjunto">
+          <p>UF *</p>
+           <select name="" id="input_uf">
+            <option>AC</option>
+            <option>AL</option>
+            <option>AP</option>
+            <option>AM</option>
+            <option>BA</option>
+            <option>CE</option>
+            <option>DF</option>
+            <option>ES</option>
+            <option>GO</option>
+            <option>MA</option>
+            <option>MT</option>
+            <option>MS</option>
+            <option>MG</option>
+            <option>PA</option>
+            <option>PB</option>
+            <option>PR</option>
+            <option>PE</option>
+            <option>PI</option>
+            <option>RJ</option>
+            <option>RN</option>
+            <option>RS</option>
+            <option>RO</option>
+            <option>RR</option>
+            <option>SC</option>
+            <option>SP</option>
+            <option>SE</option>
+            <option>TO</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-dialog">
+        <div class="conjunto">
+          <p>Complemento *</p>
+          <input placeholder="Complemento" type="text" name="" id="input_complemento" />
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="button-white" onclick="document.getElementById('meuDialogo').close()">
+          Cancelar
+        </button>
+        <button class="button-purple" onclick="editarendereco()">
+          Confirmar
+        </button>
+      </div>
+    </dialog>
 
   <!--Sidebar-->
   <script src="../assets/javascript/sidebar.js"></script>
@@ -444,7 +538,8 @@
             console.log(JSON.stringify(json));
 
             var dados = json[0]
-
+            console.log(dados.idEndereco)
+            sessionStorage.ID_ENDERECO = dados.idEndereco
             cep_atual.innerHTML = dados.cep;
             logradouro_atual.innerHTML = dados.logradouro;
             numero_atual.innerHTML = dados.numero
@@ -452,7 +547,15 @@
             cidade_atual.innerHTML = dados.cidade
             estado_atual.innerHTML = dados.uf
             complemento_atual.innerHTML = dados.complemento
-            
+
+            document.getElementById("input_cep").value = dados.cep;
+            document.getElementById("input_logradouro").value = dados.logradouro;
+            document.getElementById("input_numeroEnd").value = dados.numero;
+            document.getElementById("input_bairro").value = dados.bairro;
+            document.getElementById("input_cidade").value = dados.cidade;
+            document.getElementById("input_uf").value = dados.uf;
+            document.getElementById("input_complemento").value = dados.complemento;
+     
           });
 
         } else {
@@ -492,6 +595,76 @@
 
             nome_empresa.innerHTML = dados.nomeEmpresa;
             cnpj_empresa.innerHTML = dados.cnpj;
+            
+          });
+
+        } else {
+          console.log("Houve um erro ao tentar buscar as informações!");
+
+          resposta.text().then(texto => {
+            console.error(texto);
+          });
+        }
+      }).catch(function (erro) {
+        console.log(erro);
+      })    
+  }
+
+  function editarendereco(){
+    var cepVar = input_cep.value;
+    var logVar =  input_logradouro.value;
+    var numVar = input_numeroEnd.value;
+    var bairroVar = input_bairro.value;
+    var cidadeVar  = input_cidade.value;
+    var ufVar = input_uf.value;
+    var complementoVar = input_complemento.value;
+
+    if (
+      cepVar == "" ||
+      logVar == "" ||
+      numVar == "" ||
+      bairroVar == "" ||
+      cidadeVar == "" ||
+      ufVar == ""  ||
+      complementoVar == ""
+    )
+
+    fetch("/config/editarendereco", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        fkEmpresa: sessionStorage.FKEMPRESA,
+        idEndereco:sessionStorage.ID_ENDERECO,
+        cep:cepVar,
+        logradouro:logVar,
+        numero: numVar,
+        bairro:bairroVar,
+        cidade:cidadeVar,
+        uf:ufVar,
+        complemento:complementoVar
+      })
+
+    })
+      .then(resposta => {
+        console.log("ESTOU NO THEN DO buscarendereco()!")
+        console.log(resposta)
+        if (resposta.ok) {
+
+          resposta.json().then((json) => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            var dados = json[0]
+
+            cep_atual.innerHTML = dados.cep;
+            logradouro_atual.innerHTML = dados.logradouro;
+            numero_atual.innerHTML = dados.numero
+            bairro_atual.innerHTML = dados.bairro
+            cidade_atual.innerHTML = dados.cidade
+            estado_atual.innerHTML = dados.uf
+            complemento_atual.innerHTML = dados.complemento
             
           });
 

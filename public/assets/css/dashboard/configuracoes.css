@@ -264,4 +264,177 @@
     display: flex;
     flex-direction: column;
   }
+
+   dialog {
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+    width: 60%;
+    height: 80vh;
+    border: none;
+    padding: 0;
+  }
+
+  dialog[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  dialog h3 {
+    color: var(--color-purple);
+  }
+
+  .info-dialog {
+    border-bottom: solid 1px;
+    border-color: #d3d3d3;
+    padding: 30px;
+  }
+
+  .info-tela {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+
+  .info-dialog svg {
+    background-color: var(--color-purple);
+    padding: 6px;
+    border-radius: 5px;
+  }
+
+  .info-dialog p {
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .input-dialog {
+    display: flex;
+    padding: 40px 20px 0 50px;
+    align-items: center;
+  }
+
+  .conjunto {
+    padding-right: 8.2vw;
+  }
+
+  .input-dialog p {
+    font-weight: bold;
+    color: var(--color-deep-purple);
+    padding-bottom: 1vh;
+  }
+
+  dialog input {
+    border-radius: 20px;
+    border: solid 2px transparent;
+    background-color: #ebebeb;
+    width: 20vw;
+    height: 6vh;
+    padding: 10px;
+    transition: 0.3s;
+    outline: none;
+  }
+
+  .button-white {
+    width: 12vw;
+    height: 7vh;
+    border-radius: 30px;
+    border: solid 2px;
+    border-color: var(--color-purple);
+    color: var(--color-purple);
+    background-color: var(--color-white);
+    font-weight: bold;
+    transition: 180ms ease-in-out;
+  }
+
+  .button-white svg {
+    margin: 0 5px;
+  }
+
+  .button-white:hover {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+  }
+
+  .button-white:hover > svg path {
+    fill: var(--color-white);
+    stroke: var(--color-white);
+  }
+
+  .button-purple {
+    height: 7vh;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: var(--color-purple);
+    font-weight: bold;
+    transition: 180ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .button-purple span {
+    margin-left: 10px;
+  }
+
+  .input-pesquisa .button-purple:hover {
+    background-color: var(--color-deep-purple);
+  }
+
+  dialog input:focus-within {
+    border: 2px solid #6d33ff;
+    box-shadow: 0 0 8px #6d33ff6b;
+    outline: none;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2vh 2vw 2vh 0;
+    gap: 1vw;
+    width: 100%;
+    border-top: solid 1px #d3d3d3;
+    margin-top: auto;
+  }
+
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 1vh;
+  }
+
+  .checkbox-item input {
+    width: 3vh;
+    height: 3vh;
+    accent-color: var(--color-deep-purple);
+  }
+
+  .checkbox-item i {
+    font-size: 0.9rem;
+    color: black;
+  }
+
+  .input-dialog select {
+    border-radius: 20px;
+    border: solid 2px transparent;
+    background-color: #ebebeb;
+    width: 20vw;
+    height: 6vh;
+    padding: 10px;
+    transition: 0.3s;
+    outline: none;
+    margin-bottom: 1rem;
+  }
+
+  
+
 }

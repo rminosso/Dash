@@ -20,16 +20,32 @@ function buscarempresa(fkEmpresa) {
 
 function buscarendereco(fkEmpresa) {
     var instrucaoSql = `
-            SELECT * FROM endereco WHERE fkEmpresa = ${fkEmpresa} and fkServidor is NULL;
+            SELECT * FROM endereco WHERE fkEmpresa = ${fkEmpresa} and fkDisplay is NULL;
         `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
     
 }
 
+function editarendereco(fkEmpresa, idEndereco, cep, logradouro, numero, complemento, bairro, cidade, uf) {
+    var instrucaoSql = `     
+         UPDATE endereco SET cep = ${cep},
+          logradouro = ${logradouro},
+           numero = ${numero},
+            complemento = ${complemento},
+             bairro = ${bairro},
+              cidade = ${cidade},
+               uf = ${uf},
+            WHERE idEndereco = ${idEndereco} and fkEmpresa = ${fkEmpresa}; 
+        `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+    
+}
 
 module.exports = {
     buscarinfo,
     buscarempresa,
-    buscarendereco
+    buscarendereco,
+    editarendereco
 };

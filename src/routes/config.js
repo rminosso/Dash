@@ -15,4 +15,8 @@ router.post("/buscarendereco", function (req, res) {
     configController.buscarendereco(req, res);
 });
 
+router.patch("/editarendereco", function (req, res) {
+    configController.editarendereco(req, res);
+});
+
 module.exports = router;
