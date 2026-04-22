@@ -13,7 +13,6 @@ new Chart(document.getElementById('graficoCpu'), {
       label: 'CPU (%)',
       data: dadosCpu,
       borderColor: 'blue',
-      tension: 0.3
     }]
   },
   options: {
@@ -67,7 +66,6 @@ new Chart(document.getElementById('graficoRam'), {
       label: 'RAM (%)',
       data: dadosRam,
       borderColor: '#8a63ff',
-      tension: 0.3
     }]
   },
   options: {
@@ -121,7 +119,6 @@ new Chart(document.getElementById('graficoDisco'), {
       label: 'RAM (%)',
       data: dadosDisco,
       backgroundColor: '',
-      tension: 0.3
     }]
   },
   options: {
@@ -167,7 +164,7 @@ new Chart(document.getElementById('graficoDisco'), {
 });
 
 // Rede
-/* new Chart(document.getElementById('graficoRede'), {
+new Chart(document.getElementById('graficoRede'), {
   type: 'line',
   data: {
     labels: labels,
@@ -177,14 +174,13 @@ new Chart(document.getElementById('graficoDisco'), {
         data: dadosUpload,
         borderColor: 'orange',
         backgroundColor: 'rgba(255, 99, 132, 0.12)',
-        tension: 0.3
       },
       {
         label: 'Download (MB)',
         data: dadosDownload,
         borderColor: '#36a2eb',
         backgroundColor: 'rgba(54, 162, 235, 0.12)',
-        tension: 0.3
+        
       }
     ]
   },
@@ -223,4 +219,4 @@ new Chart(document.getElementById('graficoDisco'), {
       }
     }
   }
-}); */
+}); 
