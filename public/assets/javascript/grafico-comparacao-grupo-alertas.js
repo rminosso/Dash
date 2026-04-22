@@ -1,5 +1,5 @@
 // Grupos
-const grupos = ["Grupo A", "Grupo B", "Grupo C", "Grupo D"];
+const grupos = ["CPU", "RAM", "DISCO", "REDE"];
 
 // Valores - 1CPU, 2[RAM], 3[RAM], 4[Rede]
 const valores = [
@@ -40,35 +40,31 @@ const config = {
   type: "bar",
   data: data,
   options: {
+    responsive: true,
     plugins: {
       legend: {
-        labels: {
-          color: "#1e0b36",
-        },
+        display: true
       },
       title: {
         display: true,
         text: "Comparação Grupo x Alertas de componentes",
-        align: "start",
-        color: "#6d33ff",
-        font: {
-          size: 18,
-        },
       },
     },
-    responsive: true,
     scales: {
       x: {
-        ticks: {
-          color: "#1e0b36",
-        },
         stacked: true,
+        title: {
+          display: true,
+          text: "Grupos",
+        },
       },
       y: {
-        ticks: {
-          color: "#1e0b36",
-        },
         stacked: true,
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: "Alertas",
+        },
       },
     },
   },
@@ -77,3 +73,49 @@ const config = {
 const chart = document.getElementById("comparacao-grupo-alertas");
 
 const chartJs = new Chart(chart, config, data);
+
+
+  const ctx = document.getElementById('graficoHardware');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['CPU', 'RAM', 'Disco', 'Rede'],
+      datasets: [{
+        label: 'Dados',
+        data: [36, 25, 6, 87],
+        backgroundColor: 'rgba(139, 92, 246, 0.45)',
+        borderColor: 'rgba(139, 92, 246, 1)',
+        borderWidth: 1.5
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      plugins: {
+        legend: {
+          display: true,
+          position: 'right'
+        },
+        title: {
+          display: true,
+          text: 'Quantidade de alertas por componentes'
+        }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          max: 100,
+          grid: {
+            color: '#e5e5e5'
+          }
+        },
+        y: {
+          grid: {
+            color: '#e5e5e5'
+          }
+        }
+      }
+    }
+  });

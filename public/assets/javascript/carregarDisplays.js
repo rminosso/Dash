@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <td class="status-container">
                 <div class="g-status">
                     <div class="status"></div>
-                    <span>Online</span>
+                    <span>Estável</span>
                 </div>
             </td>
         <td>100%</td>
@@ -64,4 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   template.innerHTML = html;
 
   referencia.after(template.content);
+
 });
+
+
