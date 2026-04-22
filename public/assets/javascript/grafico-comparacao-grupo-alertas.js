@@ -1,5 +1,6 @@
 // Grupos
-const grupos = ["CPU", "RAM", "DISCO", "REDE"];
+const grupos = ["GRUPO A", "GRUPO B", "GRUPO C", "GRUPO D"];
+const componentes = ["CPU", "RAM", "DISCO", "REDE"]
 
 // Valores - 1CPU, 2[RAM], 3[RAM], 4[Rede]
 const valores = [
@@ -14,22 +15,22 @@ const data = {
   labels: grupos,
   datasets: [
     {
-      label: grupos[0],
+      label: componentes[0],
       backgroundColor: "#fa2d37",
       data: valores[0],
     },
     {
-      label: grupos[1],
+      label: componentes[1],
       backgroundColor: "#36a2eb",
       data: valores[1],
     },
     {
-      label: grupos[2],
+      label: componentes[2],
       backgroundColor: "#ffce57",
       data: valores[2],
     },
     {
-      label: grupos[3],
+      label: componentes[3],
       backgroundColor: "#4bbfbf",
       data: valores[3],
     },
