@@ -167,7 +167,7 @@ new Chart(document.getElementById('graficoDisco'), {
 });
 
 // Rede
-new Chart(document.getElementById('graficoRede'), {
+/* new Chart(document.getElementById('graficoRede'), {
   type: 'line',
   data: {
     labels: labels,
@@ -223,4 +223,4 @@ new Chart(document.getElementById('graficoRede'), {
       }
     }
   }
-});
+}); */

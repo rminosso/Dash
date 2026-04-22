@@ -42,13 +42,11 @@
   }
 
   .body .container .kpis {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    height: 100%;
-    align-items: center;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: center;
+}
 
   .body .container .kpis .card {
     width: 18vw;
@@ -87,12 +85,12 @@
   }
 
   .body .container .kpis .card:nth-child(4) .ii {
-    background-color: var(--color-orange);
+    background-color: var(--color-purple);
   }
 
-  .body .container .kpis .card:nth-child(4) .number {
+  /* .body .container .kpis .card:nth-child(4) .number {
     color: var(--color-orange);
-  }
+  } */
 
   .body .container .kpis .info {
     display: flex;
@@ -130,6 +128,7 @@
     margin-top: 2%;
   }
 
+  
   .body .container .kpis .desc {
     font-size: 1rem;
     color: var(--color-deep-purple);
@@ -139,20 +138,20 @@
 
 
 
-  .body .container .comparacao-grupo-alertas {
+  .body .container .sec2 .kpis2 .grafico-card{
     width: 100%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
     padding: 16px;
     border-radius: 26px;
-    height: 100%;
+    height: 90%;
   }
 
-  .body .container .comparacao-grupo-alertas canvas {
+  .body .container .sec2 .kpis2 .grafico-card canvas {
     height: fit-content;
   }
 
   .body .container .sec2 {
-    margin-top: 5%;
+    margin-top: 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -162,12 +161,12 @@
 
   .body .container .mapa {
     width: 100%;
-    height: 100%;
+    height: 0.4%;
   }
 
   .body .container .mapa #map {
     width: 100%;
-    height: 100%;
+    height: 20%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
     border-radius: 16px;
     height: 60vh;
@@ -179,7 +178,7 @@
   }
 
   .body .container .sec2 .mapa .title span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--color-purple);
   }

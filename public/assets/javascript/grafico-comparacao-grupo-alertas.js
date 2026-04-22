@@ -41,6 +41,8 @@ const config = {
   data: data,
   options: {
     responsive: true,
+    maintainAspectRatio: false,
+
     plugins: {
       legend: {
         display: true
