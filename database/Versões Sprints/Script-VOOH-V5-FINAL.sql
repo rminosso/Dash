@@ -88,7 +88,7 @@ CREATE TABLE display (
     fkEmpresa INT NOT NULL,
 		CONSTRAINT chave_compostaServidor
 			PRIMARY KEY(idDisplay, fkEmpresa),
-	fkGrupo INT NOT NULL,
+	fkGrupo INT,
 	nome VARCHAR(45),
     numeroIdentificacao VARCHAR(45),
     sistemaOperacional VARCHAR(45),
@@ -227,3 +227,8 @@ select * from contato;
 select * from usuario;
 select * from display_componentes;
 select * from display;
+select * from endereco;
+
+INSERT INTO endereco VALUES (DEFAULT, 1, NULL, '04171000', 'Rua daora legal', 5, 'Sem Complemento', 'Vila Moraes', 'São Paulo', 'SP');
+
+SELECT * FROM endereco WHERE fkEmpresa = 1 and fkServidor = NULL;

@@ -29,14 +29,7 @@ function buscarendereco(fkEmpresa) {
 
 function editarendereco(fkEmpresa, idEndereco, cep, logradouro, numero, complemento, bairro, cidade, uf) {
     var instrucaoSql = `     
-         UPDATE endereco SET cep = ${cep},
-          logradouro = ${logradouro},
-           numero = ${numero},
-            complemento = ${complemento},
-             bairro = ${bairro},
-              cidade = ${cidade},
-               uf = ${uf},
-            WHERE idEndereco = ${idEndereco} and fkEmpresa = ${fkEmpresa}; 
+         UPDATE endereco SET cep = '${cep}',logradouro = '${logradouro}',numero = ${numero},complemento = '${complemento}',bairro = '${bairro}',cidade = '${cidade}', uf = '${uf}' WHERE idEndereco = ${idEndereco} and fkEmpresa =' ${fkEmpresa}'; 
         `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

@@ -77,9 +77,9 @@ function buscarinfo(req, res) {
     var uf = req.body.uf;
     var complemento = req.body.complemento;
 
-    configModel.editarendereco(fkEmpresa,idEndereco,cep,logradouro,numero,bairro,cidade,uf,complemento)
+    configModel.editarendereco(fkEmpresa, idEndereco, cep, logradouro, numero, complemento, bairro, cidade, uf)
         .then(function (resultadoBuscar) {
-            if (resultadoBuscar.length > 0) {
+            if (resultadoBuscar.affectedRows > 0) {
                 console.log("TUDO CERTO")
                 return res.status(200).json(resultadoBuscar)
 
