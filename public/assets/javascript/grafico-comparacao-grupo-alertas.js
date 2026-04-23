@@ -4,10 +4,10 @@ const componentes = ["CPU", "RAM", "DISCO", "REDE"]
 
 // Valores - 1CPU, 2[RAM], 3[RAM], 4[Rede]
 const valores = [
-  [10, 15, 22, 23],
-  [20, 25, 32, 35],
-  [30, 35, 52, 34],
-  [25, 30, 35, 18],
+  [2, 2, 2, 2],
+   [1, 0, 3, 3],
+   [2, 2, 1, 3],
+   [3, 1, 2, 2],
 ];
 
 // Dados

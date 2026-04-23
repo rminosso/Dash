@@ -2,7 +2,7 @@ const labels = ['10:00', '10:05', '10:10', '10:15', '10:20', '10:25'];
 
 const dadosCpu = [45, 52, 60, 75, 68, 80];
 const dadosRam = [55, 58, 62, 64, 67, 70];
-const dadosDisco = [78, 78, 79, 79, 80, 81];
+const dadosDisco = [40, 30, 25, 30, 35, 35];
 const dadosUpload = [2.1, 2.8, 3.2, 4.0, 3.5, 4.3];
 const dadosDownload = [5.4, 6.1, 7.0, 8.2, 7.6, 9.1];
 new Chart(document.getElementById('graficoCpu'), {

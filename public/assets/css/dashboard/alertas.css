@@ -57,11 +57,11 @@
 
 
   .body .container .kpis .card:nth-child(2) .ii {
-    background-color: var(--color-success);
+    background-color: var(--color-amber);
   }
 
   .body .container .kpis .card:nth-child(2) .number {
-    color: var(--color-success);
+    color: var(--color-amber);
   }
 
   .body .container .kpis .card:nth-child(3) .ii {
