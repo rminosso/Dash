@@ -1241,6 +1241,7 @@
 
   nav .links {
     display: flex;
+
   }
 
   nav .links li {
@@ -1249,15 +1250,43 @@
 
   nav .links li a {
     color: var(--color-white);
-    margin: 0 10px;
+    margin: 0 20px;
     text-decoration: none;
   }
 
-  nav .links li a:hover {
+   .nav-link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 5px;
+  }
+
+  .nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-purple);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link:hover {
+    color: var(--color-white);
+  }
+
+  /* nav .links li a:hover {
     text-decoration: underline;
     text-decoration-thickness: 5px;
     text-decoration-color: var(--color-purple);
-  }
+  } */
 
   nav .actions {
     display: flex;
