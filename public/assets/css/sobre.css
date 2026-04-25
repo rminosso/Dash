@@ -275,6 +275,7 @@
     margin: 0px 5px;
   }
 
+  /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
     border-radius: 25px 25px 0 0;
@@ -657,6 +658,7 @@
     margin: 0px 5px;
   }
 
+  /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
     border-radius: 25px 25px 0 0;
@@ -1241,7 +1243,6 @@
 
   nav .links {
     display: flex;
-
   }
 
   nav .links li {
@@ -1254,7 +1255,7 @@
     text-decoration: none;
   }
 
-   .nav-link {
+  .nav-link {
     text-decoration: none;
     color: var(--color-white);
     font-size: 0.95rem;
@@ -1270,7 +1271,9 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
+    transition:
+      width 0.3s ease,
+      left 0.3s ease;
     transform: translateX(-50%);
   }
 
