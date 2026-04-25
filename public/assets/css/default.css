@@ -32,20 +32,8 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-}
-
-body {
-  background-color: var(--color-white);
-}
-
-html {
   scroll-behavior: smooth;
-  scrollbar-color: var(--color-lemon) var(--color-deep-purple);
-  scrollbar-width: thin;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  scrollbar-color: var(--color-purple) var(--color-deep-purple);
 }
 
 ::selection {
