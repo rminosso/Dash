@@ -880,7 +880,8 @@
     color: var(--color-white);
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
+    top: 0;
   }
 
   nav .menu {
@@ -1002,16 +1003,74 @@
   .header-content {
     padding: 5%;
     position: relative;
+    margin: 1%;
   }
 
   .header-content .overlay {
-    content: "";
     position: absolute;
     height: 85vh;
     width: 90%;
-    background-color: #2c0b3690;
-    mix-blend-mode: multiply;
+    background-color: #2c0a40a3;
     border-radius: 25px;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-content .overlay .cta-a {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+  }
+
+  .header-content .overlay .arrow {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-content .overlay .arrow:hover {
+    cursor: pointer;
+  }
+
+  .header-content .overlay .cta-a a {
+    background-color: var(--color-purple);
+    padding: 12px 30px;
+    color: var(--color-white);
+    font-size: 1rem;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    transition: 180ms ease-in-out;
+  }
+
+  .header-content .overlay .cta-a a:hover {
+    background-color: var(--color-lemon);
+    color: var(--color-deep-purple);
+    cursor: pointer;
+  }
+
+  .header-content .overlay .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+    text-align: center;
+  }
+
+  .header-content .overlay .title h1 {
+    color: var(--color-lemon);
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-content .overlay .title span {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin: 1%;
+    font-weight: bold;
   }
 
   .header-content .video-container {
@@ -1026,6 +1085,7 @@
     object-fit: cover;
     border-radius: 25px;
     object-position: center;
+    mix-blend-mode: multiply;
   }
 
   /* Footer */
