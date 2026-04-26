@@ -199,6 +199,86 @@
     mix-blend-mode: multiply;
   }
 
+  /*Main Blog */
+  main .blog {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .blog .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    color: var(--color-white);
+    margin: 2% 0;
+  }
+
+  main .blog .card {
+    background-color: var(--color-deep-purple);
+    border-radius: 25px;
+    transition: 180ms ease-in-out;
+    cursor: pointer;
+  }
+
+  main .blog .card:hover {
+    background-color: var(--color-deep-purple);
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+  }
+
+  main .blog .card img {
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+  }
+
+  main .blog .card .text {
+    padding: 16px;
+  }
+
+  main .blog .more {
+    margin: 1% 0;
+  }
+
+  main .blog .more a {
+    color: var(--color-purple);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 180ms ease-in-out;
+  }
+
+  main .blog .more a:hover {
+    color: var(--color-light-purple);
+    text-decoration: underline;
+  }
+
+  main .blog .card .text span {
+    color: var(--color-lemon);
+    font-weight: bold;
+  }
+
+  main .blog .card .text p {
+    margin: 20px 0;
+  }
+
+  main .blog .title {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  main .blog .title h2 {
+    font-size: 2rem;
+    color: var(--color-deep-purple);
+  }
+
+  main .blog .title span {
+    font-size: 1.5rem;
+    color: var(--color-purple);
+    font-weight: bold;
+  }
+
   /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
@@ -605,6 +685,86 @@
     mix-blend-mode: multiply;
   }
 
+  /*Main Blog */
+  main .blog {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .blog .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    color: var(--color-white);
+    margin: 2% 0;
+  }
+
+  main .blog .card {
+    background-color: var(--color-deep-purple);
+    border-radius: 25px;
+    transition: 180ms ease-in-out;
+    cursor: pointer;
+  }
+
+  main .blog .card:hover {
+    background-color: var(--color-deep-purple);
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+  }
+
+  main .blog .card img {
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+  }
+
+  main .blog .card .text {
+    padding: 16px;
+  }
+
+  main .blog .more {
+    margin: 1% 0;
+  }
+
+  main .blog .more a {
+    color: var(--color-purple);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 180ms ease-in-out;
+  }
+
+  main .blog .more a:hover {
+    color: var(--color-light-purple);
+    text-decoration: underline;
+  }
+
+  main .blog .card .text span {
+    color: var(--color-lemon);
+    font-weight: bold;
+  }
+
+  main .blog .card .text p {
+    margin: 20px 0;
+  }
+
+  main .blog .title {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  main .blog .title h2 {
+    font-size: 3rem;
+    color: var(--color-deep-purple);
+  }
+
+  main .blog .title span {
+    font-size: 1.5rem;
+    color: var(--color-purple);
+    font-weight: bold;
+  }
+
   /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
@@ -801,7 +961,7 @@
     align-items: center;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
     top: 0;
   }
 
@@ -985,6 +1145,86 @@
     border-radius: 25px;
     object-position: center;
     mix-blend-mode: multiply;
+  }
+
+  /*Main Blog */
+  main .blog {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .blog .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    color: var(--color-white);
+    margin: 2% 0;
+  }
+
+  main .blog .card {
+    background-color: var(--color-deep-purple);
+    border-radius: 25px;
+    transition: 180ms ease-in-out;
+    cursor: pointer;
+  }
+
+  main .blog .card:hover {
+    background-color: var(--color-deep-purple);
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+  }
+
+  main .blog .card img {
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+  }
+
+  main .blog .card .text {
+    padding: 16px;
+  }
+
+  main .blog .more {
+    margin: 1% 0;
+  }
+
+  main .blog .more a {
+    color: var(--color-purple);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 180ms ease-in-out;
+  }
+
+  main .blog .more a:hover {
+    color: var(--color-light-purple);
+    text-decoration: underline;
+  }
+
+  main .blog .card .text span {
+    color: var(--color-lemon);
+    font-weight: bold;
+  }
+
+  main .blog .card .text p {
+    margin: 20px 0;
+  }
+
+  main .blog .title {
+    text-align: center;
+    margin: 25px 0;
+  }
+
+  main .blog .title h2 {
+    font-size: 3rem;
+    color: var(--color-deep-purple);
+  }
+
+  main .blog .title span {
+    font-size: 1.5rem;
+    color: var(--color-purple);
+    font-weight: bold;
   }
 
   /* Footer */
