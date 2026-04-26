@@ -139,7 +139,7 @@
     justify-content: center;
   }
 
-  .header-content .overlay .arrow:hover {
+  .header-content .overlay .arrow svg:hover {
     cursor: pointer;
   }
 
@@ -626,7 +626,7 @@
     justify-content: center;
   }
 
-  .header-content .overlay .arrow:hover {
+  .header-content .overlay .arrow svg:hover {
     cursor: pointer;
   }
 
@@ -1088,7 +1088,7 @@
     justify-content: center;
   }
 
-  .header-content .overlay .arrow:hover {
+  .header-content .overlay .arrow svg:hover {
     cursor: pointer;
   }
 
@@ -1622,7 +1622,7 @@
     justify-content: center;
   }
 
-  .header-content .overlay .arrow:hover {
+  .header-content .overlay .arrow svg:hover {
     cursor: pointer;
   }
 
@@ -1981,26 +1981,143 @@
     color: var(--color-deep-purple);
   }
 
+  .lia-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    right: 5%;
+    bottom: 5%;
+    z-index: 1000;
+  }
+
   .lia-container .chat-body {
     display: block;
     background-color: var(--color-white);
     border-radius: 25px;
-    padding: 10px;
+    width: 28vw;
+    position: relative;
+    top: 30px;
+    right: 15px;
+    height: 53vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
   }
 
   .lia-container .chat-body .header-chat {
-    border: 1px solid red;
-    padding: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-divider);
+  }
+
+  .lia-container .chat-body .header-chat .close {
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lia-container .chat-body .chat {
+    height: 30vh;
+  }
+
+  .lia-container .chat .scroll {
+    height: 100%;
+    margin: 0 10px;
+    overflow-y: auto;
+  }
+
+  .lia-container .chat .scroll .lia-box {
+    margin: 10px 0 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .lia-container .chat .scroll .you-box {
+    margin: 10px 0 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .lia-container .chat .scroll .lia-box .box-lia {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border-radius: 25px 25px 25px 0;
+    padding: 10px;
+  }
+
+  .lia-container .chat .scroll .you-box .box-you {
+    background-color: var(--color-deep-purple);
+    color: var(--color-white);
+    border-radius: 25px 25px 0 25px;
+    padding: 10px;
+  }
+
+  .lia-container .chat .scroll .lia-box span:nth-child(2) {
+    font-size: 12px;
+    color: var(--color-deep-purple);
+  }
+
+  .lia-container .chat .scroll .you-box span:nth-child(2) {
+    font-size: 12px;
+    color: var(--color-deep-purple);
+  }
+
+  .lia-container .box {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-top: 1px solid var(--color-divider);
+  }
+
+  .lia-container .box textarea {
+    width: 100%;
+    resize: vertical;
+    border-radius: 16px;
+    padding: 10px;
+    border: none;
+    background-color: #f1f1f1;
+    outline: none;
+    color: var(--color-deep-purple);
+  }
+
+  .lia-container .box textarea:focus {
+    outline: 1px solid var(--color-purple);
+    box-shadow: 0px 0px 10px var(--color-purple);
+  }
+
+  .lia-container .chat-body .header-chat span {
+    font-weight: bold;
+    color: var(--color-deep-purple);
+    margin-left: 10px;
+  }
+
+  .lia-container .chat-body .header-chat .profile-image {
+    height: 50px;
+    width: 50px;
+  }
+
+  .lia-container .chat-body .header-chat .profile-image img {
+    width: 100%;
+    height: 50px;
+    border-radius: 100px;
+    border: 3px solid var(--color-purple);
   }
 
   .lia-container .balls .baloon {
-    display: flex;
-    align-items: end;
-    flex-direction: column;
+    display: none;
   }
 
   .lia-container .balls .baloon .b {
-    border-radius: 16px;
+    border-radius: 20px;
     background-color: var(--color-white);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
     padding: 10px 20px;
@@ -2024,14 +2141,6 @@
 
   .lia-container .icon svg {
     border-radius: 100px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
-  }
-
-  .lia-container {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    right: 5%;
-    bottom: 5%;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.201);
   }
 }
