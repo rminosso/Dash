@@ -1974,11 +1974,64 @@
     font-weight: bold;
     border-radius: 25px;
     transition: 180ms ease-in-out;
-    cursor: pointer;
   }
 
   .cookies-container .banner-cookies button:hover {
     background-color: var(--color-lemon);
     color: var(--color-deep-purple);
+  }
+
+  .lia-container .chat-body {
+    display: block;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .lia-container .chat-body .header-chat {
+    border: 1px solid red;
+    padding: 5px;
+  }
+
+  .lia-container .balls .baloon {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+
+  .lia-container .balls .baloon .b {
+    border-radius: 16px;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    padding: 10px 20px;
+    margin: 1px 0;
+    cursor: pointer;
+  }
+
+  .lia-container .balls {
+    display: flex;
+    align-items: end;
+  }
+
+  .lia-container .icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    left: -10px;
+    cursor: pointer;
+  }
+
+  .lia-container .icon svg {
+    border-radius: 100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+  }
+
+  .lia-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 5%;
+    bottom: 5%;
   }
 }
