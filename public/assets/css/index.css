@@ -1385,4 +1385,65 @@
   footer .social2 {
     display: none;
   }
+
+  .cookies-container {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    z-index: 1000;
+    border: 1px solid red;
+  }
+
+  .cookies-container .banner-cookies {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 10px 50px;
+    border-radius: 25px;
+    margin: 0 20%;
+    opacity: 0;
+    transition: 700ms all ease-in-out;
+  }
+
+  .cookies-container .banner-cookies .text span {
+    color: var(--color-deep-purple);
+    font-weight: bold;
+  }
+
+  .cookies-container .banner-cookies .text a {
+    color: var(--color-purple);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 180ms ease-in-out;
+  }
+
+  .cookies-container .banner-cookies .text a:hover {
+    text-decoration: underline;
+    color: var(--color-ligth-purple);
+  }
+
+  .cookies-container .banner-cookies .icon {
+    margin-right: 10px;
+  }
+
+  .cookies-container .banner-cookies .btn {
+    margin-left: 10px;
+  }
+
+  .cookies-container .banner-cookies button {
+    background-color: var(--color-purple);
+    border: none;
+    padding: 12px 50px;
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 180ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .cookies-container .banner-cookies button:hover {
+    background-color: var(--color-lemon);
+    color: var(--color-deep-purple);
+  }
 }
