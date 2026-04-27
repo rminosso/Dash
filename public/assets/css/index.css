@@ -1512,6 +1512,7 @@
     color: var(--color-white);
     margin: 0 20px;
     text-decoration: none;
+    font-size: 1rem;
   }
 
   .nav-link {
@@ -1926,7 +1927,7 @@
     position: fixed;
     bottom: 5%;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .cookies-container .banner-cookies {
@@ -1987,12 +1988,12 @@
     flex-direction: column;
     align-items: end;
     right: 5%;
-    bottom: 5%;
+    bottom: 10%;
     z-index: 1000;
   }
 
   .lia-container .chat-body {
-    display: block;
+    display: none;
     background-color: var(--color-white);
     border-radius: 25px;
     width: 28vw;
@@ -2024,7 +2025,8 @@
   }
 
   .lia-container .chat-body .chat {
-    height: 30vh;
+    height: 35vh;
+    font-size: 0.8rem;
   }
 
   .lia-container .chat .scroll {
@@ -2041,7 +2043,7 @@
   }
 
   .lia-container .chat .scroll .you-box {
-    margin: 10px 0 5px 0;
+    margin: 10px 10px 5px 0;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -2052,13 +2054,22 @@
     color: var(--color-white);
     border-radius: 25px 25px 25px 0;
     padding: 10px;
+    display: inline-block;
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 5px 0;
+    overflow-wrap: break-word;
   }
-
   .lia-container .chat .scroll .you-box .box-you {
     background-color: var(--color-deep-purple);
     color: var(--color-white);
     border-radius: 25px 25px 0 25px;
     padding: 10px;
+    display: inline-block;
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 5px 0;
+    overflow-wrap: break-word;
   }
 
   .lia-container .chat .scroll .lia-box span:nth-child(2) {
@@ -2072,19 +2083,21 @@
   }
 
   .lia-container .box {
+    display: flex;
     width: 100%;
+    flex-direction: column;
     padding: 5px 10px;
-    margin: 5px 0;
     border-top: 1px solid var(--color-divider);
   }
 
   .lia-container .box textarea {
     width: 100%;
-    resize: vertical;
+    resize: none;
     border-radius: 16px;
-    padding: 10px;
+    padding: 10px 10px 10px 5px;
     border: none;
     background-color: #f1f1f1;
+    font-size: 0.8rem;
     outline: none;
     color: var(--color-deep-purple);
   }
@@ -2113,7 +2126,9 @@
   }
 
   .lia-container .balls .baloon {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
   }
 
   .lia-container .balls .baloon .b {
@@ -2123,11 +2138,31 @@
     padding: 10px 20px;
     margin: 1px 0;
     cursor: pointer;
+    width: fit-content;
   }
 
   .lia-container .balls {
     display: flex;
     align-items: end;
+  }
+
+  .box .send {
+    display: flex;
+    align-items: center;
+  }
+
+  .box .send button {
+    background-color: var(--color-purple);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: 180ms ease-in-out;
+  }
+
+  .box .send button:hover {
+    background-color: var(--color-light-purple);
   }
 
   .lia-container .icon {
@@ -2137,6 +2172,28 @@
     align-items: baseline;
     left: -10px;
     cursor: pointer;
+    bottom: -16px;
+  }
+
+  .lia-container .wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lia-container .error {
+    position: relative;
+    bottom: 16px;
+    font-size: 12px;
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    color: var(--color-danger);
+  }
+
+  .lia-container .error svg {
+    margin: 0 5px;
   }
 
   .lia-container .icon svg {

@@ -689,7 +689,7 @@
             />
           </div>
           <span>Chat com a LIA</span>
-          <div class="close" title="Fechar">
+          <div class="close" title="Fechar" id="close-chat">
             <svg
               width="25"
               height="25px"
@@ -701,7 +701,7 @@
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z"
-                fill="#000000"
+                fill="#1e0b36"
               />
             </svg>
           </div>
@@ -709,26 +709,45 @@
 
         <div class="chat">
           <div class="scroll">
-            <div class="lia-box">
+            <div class="lia-box" id="lia">
               <span class="box-lia">Olá, como posso te ajudar?</span>
               <span>26 de abril de 2026 às 14:05</span>
             </div>
 
-            <div class="you-box">
-              <span class="box-you"
-                >Olá!, Tenho uma dúvida sobre o que é DOOH.</span
-              >
-              <span>26 de abril de 2026 às 14:05</span>
-            </div>
+            <div class="you-box" id="you"></div>
+          </div>
+
+          <div class="error" id="error">
+            <svg
+              fill="#000000"
+              width="16px"
+              height="16px"
+              viewBox="-1.7 0 20.4 20.4"
+              xmlns="http://www.w3.org/2000/svg"
+              class="cf-icon-svg"
+            >
+              <path
+                d="M16.417 10.283A7.917 7.917 0 1 1 8.5 2.366a7.916 7.916 0 0 1 7.917 7.917zm-6.804.01 3.032-3.033a.792.792 0 0 0-1.12-1.12L8.494 9.173 5.46 6.14a.792.792 0 0 0-1.12 1.12l3.034 3.033-3.033 3.033a.792.792 0 0 0 1.12 1.119l3.032-3.033 3.033 3.033a.792.792 0 0 0 1.12-1.12z"
+                style="fill: rgb(250, 45, 55)"
+              />
+            </svg>
+
+            <span>Mensagem de erro</span>
           </div>
         </div>
 
         <div class="box">
-          <textarea
-            cols=""
-            rows=""
-            placeholder="Digite sua mensagem aqui"
-          ></textarea>
+          <div class="wrap">
+            <textarea
+              id="msg"
+              cols=""
+              rows="1"
+              placeholder="Digite sua mensagem aqui"
+            ></textarea>
+            <div class="send">
+              <button type="button" id="send-message">Enviar</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -745,7 +764,7 @@
           </div>
         </div>
 
-        <div class="icon">
+        <div class="icon" id="chat-icon">
           <svg
             width="60"
             height="60"
@@ -776,6 +795,9 @@
         </div>
       </div>
     </div>
+
+    <!--LIA-->
+    <script src="assets/javascript/lia.js"></script>
 
     <!--Cookies-->
     <script src="assets/javascript/cookies.js"></script>
