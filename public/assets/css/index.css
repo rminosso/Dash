@@ -2000,8 +2000,10 @@
     position: relative;
     top: 30px;
     right: 15px;
-    height: 53vh;
+    height: 70vh;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .lia-container .chat-body .header-chat {
@@ -2025,8 +2027,9 @@
   }
 
   .lia-container .chat-body .chat {
-    height: 35vh;
+    height: 100%;
     font-size: 0.8rem;
+    min-height: 0;
   }
 
   .lia-container .chat .scroll {
@@ -2086,7 +2089,8 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: 5px 10px;
+    padding: 10px;
+    height: max-content;
     border-top: 1px solid var(--color-divider);
   }
 
@@ -2183,7 +2187,7 @@
 
   .lia-container .error {
     position: relative;
-    bottom: 16px;
+    bottom: 30px;
     font-size: 12px;
     display: none;
     align-items: center;

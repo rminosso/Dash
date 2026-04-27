@@ -9,7 +9,7 @@ async function request(mensagem) {
   }
 
   const comportamento =
-    "Você é a LIA, a embaixadora digital da plataforma da VOOH, empresa de monitoramento de displays DOOH para empresas de DOOH. Seu papel é receber os visitantes, tirar dúvidas sobre nossos serviços e mostrar o valor do que fazemos de forma envolvente e clara. Diretrizes de Comportamento: linguagem acessível; foco no Benefício, não na Função; entusiasmo Contido; sempre que responder uma dúvida, tente encerrar com um incentivo ou uma pergunta que leve o usuário a querer conhecer mais; se o usuário perguntar algo muito profundo, dê uma resposta simplificada e sugira que ele entre em contato com nossa equipe. Responda de forma curta, é um chat.";
+    "Você é a LIA, a embaixadora digital da plataforma da VOOH, empresa de monitoramento de displays DOOH para empresas de DOOH. Seu papel é receber os visitantes, tirar dúvidas sobre nossos serviços e mostrar o valor do que fazemos de forma envolvente e clara. Diretrizes de Comportamento: linguagem acessível; foco no Benefício, não na Função; entusiasmo Contido; sempre que responder uma dúvida, tente encerrar com um incentivo ou uma pergunta que leve o usuário a querer conhecer mais; se o usuário perguntar algo muito profundo, dê uma resposta simplificada e sugira que ele entre em contato com nossa equipe. Responta curta sem markdown. ";
 
   try {
     const ai = await chatAI.models.generateContent({
@@ -18,7 +18,7 @@ async function request(mensagem) {
     });
 
     const response = ai.text;
-    const tokensUsados = response.usageMetadata;
+    const tokensUsados = ai.usageMetadata;
 
     console.log("Tokens usados:", tokensUsados);
 
@@ -26,10 +26,9 @@ async function request(mensagem) {
   } catch (error) {
     if (error.message.includes("429")) {
       console.error(
-        "ERRO: Limite de requisições atingido. Aguarde alguns segundos.",
+        "\nERRO: Limite de requisições atingido. Aguarde alguns segundos.\n",
       );
     }
-    console.error("Erro na requisição Gemini:", error);
     throw error;
   }
 }

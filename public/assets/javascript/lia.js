@@ -9,11 +9,11 @@ btnCloseChat.addEventListener("click", () => {
 });
 
 iconChat.addEventListener("click", () => {
-  if (chatBody.style.display === "block") {
+  if (chatBody.style.display === "flex") {
     chatBody.style.display = "none";
     baloons.style.display = "flex";
   } else {
-    chatBody.style.display = "block";
+    chatBody.style.display = "flex";
     baloons.style.display = "none";
   }
 });
@@ -38,28 +38,57 @@ function obterDataHora() {
   return dataHora;
 }
 
-function ultimaMensagem() {
-  const ultimaDiv = document.querySelector("#lia div:last-of-type");
-
-  if (ultimaDiv) {
-    ultimaDiv.innerHTML += "<p>Novo conteúdo aqui!</p>";
-  }
+function pegarUltimaMensagem() {
+  return document.querySelector(".scroll > div:last-of-type");
 }
 
 function usuario(msg) {
-  document.getElementById("you").innerHTML += `
+  let html = `
+  <div class="you-box">
   <span class="box-you">${msg}</span>
   <span>Você · ${obterDataHora()}</span>
+  </div>
   `;
+
+  const referencia = pegarUltimaMensagem();
+  const containerPrincipal = document.getElementById(".scroll");
+
+  if (referencia instanceof Element) {
+    referencia.insertAdjacentHTML("afterend", html);
+  } else {
+    containerPrincipal.insertAdjacentHTML("beforeend", html);
+  }
 }
 
 function lia(msg) {
-  document.getElementById("lia").innerHTML = `
+  let html = `
   <span class="box-lia">${msg}</span>
   <span>Lia · ${obterDataHora()}</span>
   `;
 
-  ultimaMensagem();
+  const referencia = pegarUltimaMensagem();
+  const containerPrincipal = document.getElementById("lia");
+
+  if (referencia) {
+    referencia.insertAdjacentHTML("afterend", html);
+  } else {
+    containerPrincipal.insertAdjacentHTML("beforeend", html);
+  }
+}
+
+function aguardar() {
+  const area = document.getElementById("msg");
+  const button = document.getElementById("send-message");
+  console.log("Aguarde 10s");
+
+  area.disabled = true;
+  button.disabled = true;
+
+  setTimeout(() => {
+    area.disabled = false;
+    button.disabled = false;
+    console.log("Input liberada e botão liberado");
+  }, 10000);
 }
 
 function erro(erro) {
@@ -73,9 +102,9 @@ function erro(erro) {
 
 // Enviar mensagem
 async function enviarMensagem() {
-  const mensagem = document.getElementById("msg").value.trim();
+  let mensagem = document.getElementById("msg").value.trim();
 
-  const input = document.getElementById("");
+  msg.value = "";
 
   if (mensagem == "" || mensagem == undefined) {
     erro("Mensagem está vazia!");
@@ -84,27 +113,39 @@ async function enviarMensagem() {
 
   usuario(mensagem, mensagem);
 
-  const response = await fetch("/lia/perguntar", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      mensagem: mensagem,
-    }),
-  });
+  try {
+    const response = await fetch("/lia/perguntar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        mensagem: mensagem,
+      }),
+    });
 
-  const data = await response.json();
+    const data = await response.json();
 
-  console.log("Resposta: ", data.resposta);
+    console.log("Resposta: ", data.resposta);
 
-  if (response.ok && data.resposta) {
-    document.getElementById("lia").appendChild(lia(data.resposta));
-  } else {
-    erro(data.erro || "Ocorreu um erro inesperado.");
+    if (response.ok && data.resposta) {
+      document
+        .getElementById(pegarUltimaMensagem())
+        .appendChild(lia(data.resposta));
+      aguardar();
+    }
+    {
+      throw new Error(data.error || data.resposta || "Erro no servidor");
+    }
+  } catch (error) {
+    console.log(error);
+    erro("Ocorreu um erro inesperado.");
   }
 }
 
 const btnSend = document.getElementById("send-message");
 
-btnSend.addEventListener("click", enviarMensagem);
+btnSend.onclick = async (e) => {
+  e.preventDefault();
+  await enviarMensagem();
+};
