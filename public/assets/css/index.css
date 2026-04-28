@@ -2333,6 +2333,66 @@
     mix-blend-mode: multiply;
   }
 
+  /*Benefícios*/
+  main .benefits {
+    padding: 1% 5%;
+  }
+
+  main .benefits .container {
+    background-color: var(--color-deep-purple);
+    border-radius: 25px;
+    padding: 2% 5%;
+    margin: 1%;
+  }
+
+  main .benefits .container .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5% 0;
+    grid-column-gap: 20px;
+  }
+
+  main .benefits .container .cards .card {
+    background-color: var(--color-white);
+    color: var(--color-deep-purple);
+    padding: 5%;
+    border-radius: 25px;
+    transition: 200ms ease-in-out;
+  }
+
+  main .benefits .container .cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 10px 0 var(--color-lemon);
+  }
+
+  main .benefits .container .cards .card .title {
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  main .benefits .container .cards .card .title span {
+    color: var(--color-purple);
+    text-align: left;
+  }
+
+  main .benefits .container > .title {
+    text-align: center;
+    margin: 0 5%;
+  }
+
+  main .benefits .container .title h2 {
+    font-weight: bold;
+    color: var(--color-lemon);
+    font-size: 2.5rem;
+    margin: 2% 0;
+  }
+
+  main .benefits .container .title span {
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
   /*Main Blog */
   main .blog {
     padding: 5%;
