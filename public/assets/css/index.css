@@ -1,6 +1,9 @@
 /*Estilos padrão*/
 @import url("default.css");
 
+/*Animações*/
+@import url("animations.css");
+
 /*Estilos para telas até 480px de largura (<= 30rem)*/
 @media screen and (max-width: 480px) {
   nav {
@@ -2574,6 +2577,64 @@
     color: var(--color-white);
     font-weight: bold;
     font-size: 1.5rem;
+  }
+
+  /*Slides*/
+  main .parceiros {
+    padding: 2% 0;
+    margin: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  main .parceiros .container-slides {
+    width: 100%;
+    background-color: var(--color-lemon);
+  }
+
+  main .parceiros .title-parcerias {
+    padding: 2% 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  main .parceiros .slides {
+    padding: 5%;
+    display: flex;
+    width: max-content;
+    animation: slide 50s linear infinite;
+  }
+
+  main .parceiros .slides .logos {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  main .parceiros .slides .logos .img {
+    margin: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 120px;
+  }
+
+  main .parceiros .slides .logos .img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  main .parceiros .title-parcerias h2 {
+    font-size: 2.5rem;
+    color: var(--color-deep-purple);
+  }
+
+  main .parceiros .title-parcerias h2 .emphase {
+    color: var(--color-purple);
   }
 
   /*Main Blog */
