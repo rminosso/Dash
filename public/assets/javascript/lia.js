@@ -62,8 +62,10 @@ function usuario(msg) {
 
 function lia(msg) {
   let html = `
+  <div class="lia-box" id="lia">
   <span class="box-lia">${msg}</span>
   <span>Lia · ${obterDataHora()}</span>
+  </div>
   `;
 
   const referencia = pegarUltimaMensagem();
@@ -111,7 +113,7 @@ async function enviarMensagem() {
     return;
   }
 
-  usuario(mensagem, mensagem);
+  usuario(mensagem);
 
   try {
     const response = await fetch("/lia/perguntar", {
@@ -129,12 +131,9 @@ async function enviarMensagem() {
     console.log("Resposta: ", data.resposta);
 
     if (response.ok && data.resposta) {
-      document
-        .getElementById(pegarUltimaMensagem())
-        .appendChild(lia(data.resposta));
+      lia(`${data.resposta}`);
       aguardar();
-    }
-    {
+    } else {
       throw new Error(data.error || data.resposta || "Erro no servidor");
     }
   } catch (error) {
