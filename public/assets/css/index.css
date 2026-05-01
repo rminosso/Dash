@@ -836,9 +836,19 @@
     margin: 0 5px;
   }
 
+  .lia-container .icon {
+    transition: transform 250ms ease;
+  }
+
   .lia-container .icon svg {
     border-radius: 100px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.201);
+    transition: transform 250ms ease;
+  }
+
+  .lia-container .icon:active,
+  .lia-container .icon svg:active {
+    transform: translate(2px, 5px);
   }
 }
 
@@ -1696,9 +1706,19 @@
     margin: 0 5px;
   }
 
+  .lia-container .icon {
+    transition: transform 250ms ease;
+  }
+
   .lia-container .icon svg {
     border-radius: 100px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.201);
+    transition: transform 250ms ease;
+  }
+
+  .lia-container .icon:active,
+  .lia-container .icon svg:active {
+    transform: translate(2px, 5px);
   }
 }
 
@@ -2581,9 +2601,19 @@
     margin: 0 5px;
   }
 
+  .lia-container .icon {
+    transition: transform 250ms ease;
+  }
+
   .lia-container .icon svg {
     border-radius: 100px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.201);
+    transition: transform 250ms ease;
+  }
+
+  .lia-container .icon:active,
+  .lia-container .icon svg:active {
+    transform: translate(2px, 5px);
   }
 }
 
@@ -3043,6 +3073,43 @@
     margin: 2% 0;
   }
 
+  main .how-to {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 6%;
+    border-radius: 25px;
+    background-color: var(--color-deep-purple);
+    border: 1px solid red;
+  }
+
+  main .title-how {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+  }
+
+  main .title-how h2 {
+    color: var(--color-deep-purple);
+    font-size: 2.5rem;
+  }
+
+  main .title-how h2 .emphase {
+    color: var(--color-purple);
+  }
+
+  main .how-to .diagrama {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  main .how-to .diagrama img {
+    width: 100%;
+    border-radius: 25px;
+  }
+
   /* Footer */
   footer {
     background-color: var(--color-deep-purple);
@@ -3482,8 +3549,18 @@
     margin: 0 5px;
   }
 
+  .lia-container .icon {
+    transition: transform 250ms ease;
+  }
+
   .lia-container .icon svg {
     border-radius: 100px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.201);
+    transition: transform 250ms ease;
+  }
+
+  .lia-container .icon:active,
+  .lia-container .icon svg:active {
+    transform: translate(2px, 5px);
   }
 }

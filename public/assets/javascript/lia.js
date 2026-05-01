@@ -3,6 +3,25 @@ const chatBody = document.querySelector(".chat-body");
 const iconChat = document.getElementById("chat-icon");
 const baloons = document.querySelector(".baloon");
 
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+  const baloes = document.querySelectorAll(".baloon .b");
+
+  const intervalo = 280;
+
+  baloes.forEach((balao, index) => {
+    const pontoDeAtivacao = index * intervalo;
+
+    if (currentScroll <= pontoDeAtivacao) {
+      balao.style.display = "flex";
+      balao.style.opacity = "1";
+    } else {
+      balao.style.display = "none";
+      balao.style.opacity = "0";
+    }
+  });
+});
+
 btnCloseChat.addEventListener("click", () => {
   chatBody.style.display = "none";
   baloons.style.display = "flex";
