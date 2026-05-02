@@ -658,6 +658,64 @@
     height: 100%;
   }
 
+  /*Relatórios*/
+  main .relatorios .container {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--color-purple);
+    margin: 5%;
+    border-radius: 25px;
+    height: 100%;
+  }
+
+  main .relatorios .container .side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--color-white);
+  }
+
+  main .relatorios .container .side:nth-child(1) {
+    padding: 5%;
+  }
+
+  main .relatorios .container .side h2 {
+    font-size: 2rem;
+  }
+
+  main .relatorios .container .side h4 {
+    color: var(--color-lemon);
+    margin: 2% 0;
+    font-size: 1.5rem;
+  }
+
+  main .relatorios .container .side .btn-a {
+    margin: 10% 0;
+  }
+
+  main .relatorios .container .side a {
+    margin: 2% 0;
+    color: var(--color-deep-purple);
+    padding: 16px 20px;
+    background-color: var(--color-lemon);
+    border-radius: 25px;
+    transition: 180ms ease-in-out;
+    text-decoration: none;
+  }
+
+  main .relatorios .container .side a:hover {
+    background-color: var(--color-deep-purple);
+    color: var(--color-white);
+  }
+
+  main .relatorios .container .side canvas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 2% 0;
+  }
+
   /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
@@ -1738,6 +1796,64 @@
     height: 100%;
   }
 
+  /*Relatórios*/
+  main .relatorios .container {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--color-purple);
+    margin: 5%;
+    border-radius: 25px;
+    height: 100%;
+  }
+
+  main .relatorios .container .side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--color-white);
+  }
+
+  main .relatorios .container .side:nth-child(1) {
+    padding: 5%;
+  }
+
+  main .relatorios .container .side h2 {
+    font-size: 2rem;
+  }
+
+  main .relatorios .container .side h4 {
+    color: var(--color-lemon);
+    margin: 2% 0;
+    font-size: 1.5rem;
+  }
+
+  main .relatorios .container .side .btn-a {
+    margin: 10% 0;
+  }
+
+  main .relatorios .container .side a {
+    margin: 2% 0;
+    color: var(--color-deep-purple);
+    padding: 16px 20px;
+    background-color: var(--color-lemon);
+    border-radius: 25px;
+    transition: 180ms ease-in-out;
+    text-decoration: none;
+  }
+
+  main .relatorios .container .side a:hover {
+    background-color: var(--color-deep-purple);
+    color: var(--color-white);
+  }
+
+  main .relatorios .container .side canvas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 2% 0;
+  }
+
   /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
@@ -2790,6 +2906,64 @@
     object-fit: cover;
     border-radius: 25px;
     height: 100%;
+  }
+
+  /*Relatórios*/
+  main .relatorios .container {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--color-purple);
+    margin: 5%;
+    border-radius: 25px;
+    height: 100%;
+  }
+
+  main .relatorios .container .side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--color-white);
+  }
+
+  main .relatorios .container .side:nth-child(1) {
+    padding: 5%;
+  }
+
+  main .relatorios .container .side h2 {
+    font-size: 2rem;
+  }
+
+  main .relatorios .container .side h4 {
+    color: var(--color-lemon);
+    margin: 2% 0;
+    font-size: 1.5rem;
+  }
+
+  main .relatorios .container .side .btn-a {
+    margin: 10% 0;
+  }
+
+  main .relatorios .container .side a {
+    margin: 2% 0;
+    color: var(--color-deep-purple);
+    padding: 16px 20px;
+    background-color: var(--color-lemon);
+    border-radius: 25px;
+    transition: 180ms ease-in-out;
+    text-decoration: none;
+  }
+
+  main .relatorios .container .side a:hover {
+    background-color: var(--color-deep-purple);
+    color: var(--color-white);
+  }
+
+  main .relatorios .container .side canvas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 2% 0;
   }
 
   /* Footer */
@@ -3944,12 +4118,12 @@
 
   main .relatorios .container .side h4 {
     color: var(--color-lemon);
-    margin: 2% 0;
+    margin: 5% 0;
     font-size: 1.5rem;
   }
 
   main .relatorios .container .side .btn-a {
-    margin-top: 2%;
+    margin: 2% 0;
   }
 
   main .relatorios .container .side a {
@@ -3971,7 +4145,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100%;
     padding: 2% 0;
   }
 
