@@ -171,3 +171,29 @@ btnSend.onclick = async (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   lia("Olá!, Como posso te ajudar?");
 });
+
+const baloesMensagem = document.querySelectorAll(".baloon .b");
+
+async function enviarRapido(id) {
+  mensagem = "";
+
+  if (id == 1) {
+    mensagem = "Contratar os serviços da VOOH";
+  } else if (id == 2) {
+    mensagem = "O que é a tecnologia DOOH?";
+  } else if (id == 3) {
+    mensagem = "Olá, tudo bem?";
+  }
+
+  if (chatBody.style.display === "flex") {
+    chatBody.style.display = "none";
+    baloons.style.display = "flex";
+  } else {
+    chatBody.style.display = "flex";
+    baloons.style.display = "none";
+  }
+
+  document.getElementById("msg").value = mensagem;
+
+  await enviarMensagem(mensagem);
+}
