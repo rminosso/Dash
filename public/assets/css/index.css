@@ -716,6 +716,101 @@
     padding: 2% 0;
   }
 
+  /*Contato*/
+  main .contato {
+    background-color: var(--color-deep-purple);
+  }
+
+  main .contato .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 25px;
+    padding: 5%;
+  }
+
+  main .contato .container .side {
+    color: var(--color-deep-purple);
+  }
+
+  main .contato .container .side:nth-child(1) > .text {
+    color: var(--color-lemon);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2% 0;
+    text-align: center;
+  }
+
+  main .contato .container .side form {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 5%;
+    border-radius: 25px;
+  }
+
+  main .contato .container .side form .ip-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  main .contato .container .side form .confirma {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  main .contato .container .side form .confirma a {
+    text-decoration: none;
+    color: var(--color-purple);
+  }
+
+  main .contato .container .side form .confirma a:hover {
+    text-decoration: underline;
+  }
+
+  main .contato .container .side form .confirma label {
+    margin: 0 5px;
+  }
+
+  main .contato .container .side form .ip-container input {
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    outline: 1px solid var(--color-light-gray);
+    background-color: var(--color-light-gray);
+    transition: 180ms ease-in-out;
+  }
+
+  main .contato .container .side form .ip-container label {
+    color: var(--color-deep-purple);
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  main .contato .container .side form .ip-container button {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+  }
+
+  main .contato .container .side form .ip-container label::after {
+    content: " *";
+    color: var(--color-purple);
+  }
+
+  main .contato .container .side form .ip-container input:focus {
+    outline: 1px solid var(--color-purple);
+    box-shadow: 0px 0px 5px var(--color-purple);
+  }
+
   /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
@@ -1854,6 +1949,101 @@
     padding: 2% 0;
   }
 
+  /*Contato*/
+  main .contato {
+    background-color: var(--color-deep-purple);
+  }
+
+  main .contato .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 25px;
+    padding: 5%;
+  }
+
+  main .contato .container .side {
+    color: var(--color-deep-purple);
+  }
+
+  main .contato .container .side:nth-child(1) > .text {
+    color: var(--color-lemon);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2% 0;
+    text-align: center;
+  }
+
+  main .contato .container .side form {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 5%;
+    border-radius: 25px;
+  }
+
+  main .contato .container .side form .ip-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  main .contato .container .side form .confirma {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  main .contato .container .side form .confirma a {
+    text-decoration: none;
+    color: var(--color-purple);
+  }
+
+  main .contato .container .side form .confirma a:hover {
+    text-decoration: underline;
+  }
+
+  main .contato .container .side form .confirma label {
+    margin: 0 5px;
+  }
+
+  main .contato .container .side form .ip-container input {
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    outline: 1px solid var(--color-light-gray);
+    background-color: var(--color-light-gray);
+    transition: 180ms ease-in-out;
+  }
+
+  main .contato .container .side form .ip-container label {
+    color: var(--color-deep-purple);
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  main .contato .container .side form .ip-container button {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+  }
+
+  main .contato .container .side form .ip-container label::after {
+    content: " *";
+    color: var(--color-purple);
+  }
+
+  main .contato .container .side form .ip-container input:focus {
+    outline: 1px solid var(--color-purple);
+    box-shadow: 0px 0px 5px var(--color-purple);
+  }
+
   /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
@@ -2964,6 +3154,109 @@
     justify-content: center;
     height: 100%;
     padding: 2% 0;
+  }
+
+  /*Contato*/
+  main .contato {
+    background-color: var(--color-deep-purple);
+  }
+
+  main .contato .container {
+    display: flex;
+    width: 100%;
+    border-radius: 25px;
+    padding: 5%;
+  }
+
+  main .contato .container .side {
+    color: var(--color-deep-purple);
+    width: 50%;
+  }
+
+  main .contato .container .side:nth-child(1) {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    background-image: url("../images/contato.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px 0 0 25px;
+  }
+
+  main .contato .container .side:nth-child(1) > .text {
+    display: none;
+  }
+
+  main .contato .container .side form {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 5%;
+    border-radius: 0 25px 25px 0;
+  }
+
+  main .contato .container .side form .ip-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  main .contato .container .side form .confirma {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  main .contato .container .side form .confirma a {
+    text-decoration: none;
+    color: var(--color-purple);
+  }
+
+  main .contato .container .side form .confirma a:hover {
+    text-decoration: underline;
+  }
+
+  main .contato .container .side form .confirma label {
+    margin: 0 5px;
+  }
+
+  main .contato .container .side form .ip-container input {
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    outline: 1px solid var(--color-light-gray);
+    background-color: var(--color-light-gray);
+    transition: 180ms ease-in-out;
+  }
+
+  main .contato .container .side form .ip-container label {
+    color: var(--color-deep-purple);
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  main .contato .container .side form .ip-container button {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-purple);
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+  }
+
+  main .contato .container .side form .ip-container label::after {
+    content: " *";
+    color: var(--color-purple);
+  }
+
+  main .contato .container .side form .ip-container input:focus {
+    outline: 1px solid var(--color-purple);
+    box-shadow: 0px 0px 5px var(--color-purple);
   }
 
   /* Footer */
@@ -4175,6 +4468,10 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 25px 0 0 25px;
+  }
+
+  main .contato .container .side:nth-child(1) > .text {
+    display: none;
   }
 
   main .contato .container .side form {
