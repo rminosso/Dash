@@ -494,12 +494,128 @@
 
       <!--Missão, Visão e Valores-->
       <section class="empresa">
-        <div class="">
-          <div class="">
-            <img src="assets/images/Logo.svg" alt="Logo" />
+        <div class="wrap">
+          <div class="side">
+            <div class="">
+              <img src="assets/images/Logo.svg" alt="Logo" />
+            </div>
+
+            <div class="title-side">
+              <h2>Somos referência em monitoramento de Displays DOOH</h2>
+
+              <p>
+                Conte com a nossa solução para desbloquear um novo patamar de
+                monitoramento
+              </p>
+            </div>
+          </div>
+
+          <!--Cards-->
+          <div class="cards">
+            <div class="cards-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <span>1. Monitoramento em Tempo Real</span>
+                  <p>
+                    Acompanhe o status de cada painel forma instantânea. Nossa
+                    interface exibe a saúde da rede permitindo identificar
+                    falhas de conectividade ou hardware antes mesmo que o
+                    cliente perceba.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <span>2. Alertas visuais multiplataforma </span>
+                  <p>
+                    Não fique preso à dashboard. Configure notificações
+                    automáticas via E-mail e Slack*. Receba alertas detalhados
+                    sobre o estado de cada equipamento.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <span>3. Geração de Relatórios </span>
+                  <p>
+                    Extraia relatórios dos dispositivos e saiba qual o próximo
+                    passo com uma análise detalhada do hardware de cada
+                    equipamento, tome as decisões certas.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class=""></div>
+
+        <!--Botões-->
+        <div class="btns">
+          <div class="">
+            <button type="button" onclick="mudarSlide(-1)">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 70 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g transform="matrix(0 1 -1 0 70 0)">
+                  <path
+                    d="M28 55.9999C43.4638 55.9999 56 43.4641 56 27.9999C56 12.536 43.4638 0 28 0C12.536 0 0 12.536 0 27.9999C0 43.4641 12.536 55.9999 28 55.9999Z"
+                    fill="none"
+                    stroke-width="3"
+                    stroke="#C6FF33"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(7 6.776)"
+                  />
+                  <path
+                    d="M22.4 0C22.4 0 14.364 8.568 14.364 8.568C13.9602 9.00424 13.4708 9.35144 12.9265 9.58944C12.3819 9.82744 11.7942 9.95036 11.2 9.95036C10.6058 9.95036 10.0181 9.82744 9.47352 9.58944C8.9292 9.35144 8.43976 9.00424 8.036 8.568C8.036 8.568 0 0 0 0"
+                    fill="none"
+                    stroke-width="3"
+                    stroke="#C6FF33"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(23.8 30.772)"
+                  />
+                </g>
+              </svg>
+            </button>
+
+            <button type="button" onclick="mudarSlide(1)">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 70 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g transform="matrix(0 -1 1 0 0 70)">
+                  <path
+                    d="M28 55.9999C43.4638 55.9999 56 43.4641 56 27.9999C56 12.536 43.4638 0 28 0C12.536 0 0 12.536 0 27.9999C0 43.4641 12.536 55.9999 28 55.9999Z"
+                    fill="none"
+                    stroke-width="3"
+                    stroke="#C6FF33"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(7 6.776)"
+                  />
+                  <path
+                    d="M22.4 0C22.4 0 14.364 8.568 14.364 8.568C13.9602 9.00424 13.4708 9.35144 12.9265 9.58944C12.3819 9.82744 11.7942 9.95036 11.2 9.95036C10.6058 9.95036 10.0181 9.82744 9.47352 9.58944C8.9292 9.35144 8.43976 9.00424 8.036 8.568C8.036 8.568 0 0 0 0"
+                    fill="none"
+                    stroke-width="3"
+                    stroke="#C6FF33"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(23.8 30.772)"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
 
       <!--Blog-->
@@ -931,10 +1047,7 @@
 
         <div class="chat">
           <div class="scroll">
-            <div class="lia-box" id="lia">
-              <span class="box-lia">Olá, como posso te ajudar?</span>
-              <span>26 de abril de 2026 às 14:05</span>
-            </div>
+            <div class="lia-box" id="lia"></div>
           </div>
 
           <div class="error" id="error">
@@ -1021,6 +1134,9 @@
 
     <!--Cookies-->
     <script src="assets/javascript/cookies.js"></script>
+
+    <!--Carousel-->
+    <script src="assets/javascript/carousel.js"></script>
 
     <!--Menu mobile-->
     <script src="assets/javascript/menu-mobile.js"></script>

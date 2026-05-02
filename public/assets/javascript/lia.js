@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
   baloes.forEach((balao, index) => {
     const pontoDeAtivacao = index * intervalo;
 
-    if (currentScroll <= pontoDeAtivacao) {
+    if (currentScroll <= pontoDeAtivacao && window.innerWidth >= 1024) {
       balao.style.display = "flex";
       balao.style.opacity = "1";
     } else {
@@ -167,3 +167,7 @@ btnSend.onclick = async (e) => {
   e.preventDefault();
   await enviarMensagem();
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  lia("Olá!, Como posso te ajudar?");
+});

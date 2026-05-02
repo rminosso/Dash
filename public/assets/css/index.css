@@ -105,7 +105,7 @@
   }
 
   header .header-content {
-    height: 85vh;
+    height: 80vh;
     position: relative;
     width: 100%;
     padding: 5%;
@@ -121,7 +121,7 @@
 
   .header-content .overlay {
     position: absolute;
-    height: 85vh;
+    height: 80vh;
     width: 90%;
     background-color: #2c0a40a3;
     border-radius: 25px;
@@ -190,7 +190,7 @@
   .header-content .video-container {
     width: 100%;
     display: flex;
-    height: 85vh;
+    height: 80vh;
     justify-content: center;
   }
 
@@ -439,6 +439,152 @@
     margin: 2% 0;
   }
 
+  /*Como funciona*/
+  main .how-to {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 6%;
+    border-radius: 25px;
+    background-color: var(--color-deep-purple);
+  }
+
+  main .title-how {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2% 0;
+  }
+
+  main .title-how h2 {
+    color: var(--color-deep-purple);
+    font-size: 2rem;
+  }
+
+  main .title-how h2 .emphase {
+    color: var(--color-purple);
+  }
+
+  main .how-to .diagrama {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  main .how-to .diagrama img {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  /*Empresa*/
+  main .empresa {
+    background-color: var(--color-deep-purple);
+    padding: 5%;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+  }
+
+  main .empresa .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .empresa .btns {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1%;
+    margin-left: 2%;
+  }
+
+  main .empresa .btns button {
+    border: none;
+    background-color: transparent;
+    transition: 500ms ease-in-out;
+  }
+
+  main .empresa .btns button:hover > svg {
+    opacity: 0.9;
+  }
+
+  main .empresa .title-side h2 {
+    color: var(--color-lemon);
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  main .empresa .title-side {
+    margin: 3% 0;
+  }
+
+  main .empresa .title-side p {
+    margin: 3% 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  main .empresa .side {
+    width: 100%;
+  }
+
+  main .empresa .side img {
+    display: none;
+  }
+
+  main .empresa .cards {
+    width: 100%;
+    overflow: hidden;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  main .empresa .cards-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+  }
+
+  main .empresa .cards .card {
+    min-width: 35vw;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  main .empresa .cards .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    min-height: 50vh;
+    max-height: 100vh;
+  }
+
+  main .empresa .cards .card span {
+    color: var(--color-purple);
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  main .empresa .cards .card p {
+    color: var(--color-deep-purple);
+    margin: 2% 0;
+    padding: 2% 0;
+    font-size: 1.2rem;
+  }
+
   /*Footer*/
   footer {
     background-color: var(--color-deep-purple);
@@ -642,7 +788,7 @@
     position: relative;
     top: 30px;
     right: 15px;
-    height: 70vh;
+    height: 50vh;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.201);
     flex-direction: column;
     justify-content: space-between;
@@ -779,6 +925,7 @@
 
   .lia-container .balls .baloon .b {
     display: none;
+    visibility: hidden;
   }
 
   .lia-container .balls {
@@ -789,6 +936,7 @@
   .box .send {
     display: flex;
     align-items: center;
+    margin-left: 5px;
   }
 
   .box .send button {
@@ -1307,6 +1455,141 @@
   main .atuacao .side .content p {
     font-size: 1.5rem;
     margin: 2% 0;
+  }
+
+  /*Como funciona*/
+  main .how-to {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 6%;
+    border-radius: 25px;
+    background-color: var(--color-deep-purple);
+  }
+
+  main .title-how {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+  }
+
+  main .title-how h2 {
+    color: var(--color-deep-purple);
+    font-size: 2.5rem;
+  }
+
+  main .title-how h2 .emphase {
+    color: var(--color-purple);
+  }
+
+  main .how-to .diagrama {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  main .how-to .diagrama img {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  /*Empresa*/
+  main .empresa {
+    background-color: var(--color-deep-purple);
+    padding: 5%;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+  }
+
+  main .empresa .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .empresa .btns {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1%;
+  }
+
+  main .empresa .btns button {
+    border: none;
+    background-color: transparent;
+    transition: 500ms ease-in-out;
+  }
+
+  main .empresa .btns button:hover > svg {
+    opacity: 0.9;
+  }
+
+  main .empresa .title-side h2 {
+    color: var(--color-lemon);
+    font-size: 2.5rem;
+  }
+
+  main .empresa .title-side {
+    margin: 3% 0;
+  }
+
+  main .empresa .title-side p {
+    margin: 3% 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  main .empresa .side {
+    width: 100%;
+  }
+
+  main .empresa .cards {
+    width: 100%;
+    overflow: hidden;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  main .empresa .cards-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 80%;
+  }
+
+  main .empresa .cards .card {
+    min-width: 35vw;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  main .empresa .cards .card .card-body {
+    padding: 5%;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    height: 100%;
+  }
+
+  main .empresa .cards .card span {
+    color: var(--color-purple);
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  main .empresa .cards .card p {
+    color: var(--color-deep-purple);
+    margin: 2% 0;
+    padding: 2% 0;
+    font-size: 1.2rem;
   }
 
   /*Footer*/
@@ -2153,6 +2436,141 @@
   main .atuacao .side .content p {
     font-size: 1.5rem;
     margin: 2% 0;
+  }
+
+  /*Como funciona*/
+  main .how-to {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 6%;
+    border-radius: 25px;
+    background-color: var(--color-deep-purple);
+  }
+
+  main .title-how {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+  }
+
+  main .title-how h2 {
+    color: var(--color-deep-purple);
+    font-size: 2.5rem;
+  }
+
+  main .title-how h2 .emphase {
+    color: var(--color-purple);
+  }
+
+  main .how-to .diagrama {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  main .how-to .diagrama img {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  /*Empresa*/
+  main .empresa {
+    background-color: var(--color-deep-purple);
+    padding: 5%;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+  }
+
+  main .empresa .wrap {
+    display: flex;
+  }
+
+  main .empresa .btns {
+    display: flex;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-top: 1%;
+  }
+
+  main .empresa .btns button {
+    border: none;
+    background-color: transparent;
+    transition: 500ms ease-in-out;
+  }
+
+  main .empresa .btns button:hover > svg {
+    opacity: 0.9;
+  }
+
+  main .empresa .title-side h2 {
+    color: var(--color-lemon);
+    font-size: 2.5rem;
+  }
+
+  main .empresa .title-side {
+    margin: 3% 0;
+  }
+
+  main .empresa .title-side p {
+    margin: 3% 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  main .empresa .side {
+    width: 50vw;
+  }
+
+  main .empresa .cards {
+    width: 50vw;
+    overflow: hidden;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  main .empresa .cards-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 80%;
+  }
+
+  main .empresa .cards .card {
+    min-width: 35vw;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  main .empresa .cards .card .card-body {
+    padding: 5%;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    height: 100%;
+  }
+
+  main .empresa .cards .card span {
+    color: var(--color-purple);
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  main .empresa .cards .card p {
+    color: var(--color-deep-purple);
+    margin: 2% 0;
+    padding: 2% 0;
+    font-size: 1.2rem;
   }
 
   /* Footer */
@@ -3073,6 +3491,7 @@
     margin: 2% 0;
   }
 
+  /*Como funciona*/
   main .how-to {
     display: flex;
     justify-content: center;
@@ -3080,7 +3499,6 @@
     margin: 0 6%;
     border-radius: 25px;
     background-color: var(--color-deep-purple);
-    border: 1px solid red;
   }
 
   main .title-how {
@@ -3108,6 +3526,104 @@
   main .how-to .diagrama img {
     width: 100%;
     border-radius: 25px;
+  }
+
+  /*Empresa*/
+  main .empresa {
+    background-color: var(--color-deep-purple);
+    padding: 5%;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+  }
+
+  main .empresa .wrap {
+    display: flex;
+  }
+
+  main .empresa .btns {
+    display: flex;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-top: 1%;
+  }
+
+  main .empresa .btns button {
+    border: none;
+    background-color: transparent;
+    transition: 500ms ease-in-out;
+  }
+
+  main .empresa .btns button:hover > svg {
+    opacity: 0.9;
+  }
+
+  main .empresa .title-side h2 {
+    color: var(--color-lemon);
+    font-size: 2.5rem;
+  }
+
+  main .empresa .title-side {
+    margin: 3% 0;
+  }
+
+  main .empresa .title-side p {
+    margin: 3% 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  main .empresa .side {
+    width: 50vw;
+  }
+
+  main .empresa .cards {
+    width: 50vw;
+    overflow: hidden;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  main .empresa .cards-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 80%;
+  }
+
+  main .empresa .cards .card {
+    min-width: 35vw;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  main .empresa .cards .card .card-body {
+    padding: 5%;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    height: 100%;
+  }
+
+  main .empresa .cards .card span {
+    color: var(--color-purple);
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  main .empresa .cards .card p {
+    color: var(--color-deep-purple);
+    margin: 2% 0;
+    padding: 2% 0;
+    font-size: 1.2rem;
   }
 
   /* Footer */
