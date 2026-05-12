@@ -206,7 +206,7 @@ CREATE TABLE display (
 	fk_endereco INT, -- FK do endereço
 	nome VARCHAR(45) NOT NULL, -- Nome do display
 	identificacao VARCHAR(45) NOT NULL, -- Identificação
-	os VARCHAR(10) NOT NULL, -- Sistema Operacional
+	so VARCHAR(10) NOT NULL, -- Sistema Operacional
 	ip VARCHAR(15) NOT NULL , -- Endereço IPV4
 	mac VARCHAR(20) NOT NULL, -- Endereço MAC
 	CONSTRAINT fkEmpresaDisplay
@@ -222,7 +222,7 @@ CREATE TABLE display (
 		ON DELETE CASCADE
         ON UPDATE CASCADE,
 	CONSTRAINT chkSistema
-		CHECK (os IN ('Windows', 'Linux'))
+		CHECK (so IN ('Windows', 'Linux'))
 );
 
 -- Associativa - Display-Componente
@@ -273,26 +273,25 @@ CREATE TABLE componente_display (
  
  CREATE TABLE alertas (
 	id INT PRIMARY KEY auto_increment,
-    fkDisplay INT,
-    fkEmpresa INT,
-    fkComponente INT,
+    fk_display INT,
+    fk_empresa INT,
+    fk_componente INT,
     tipo CHAR(11),
     status_alerta VARCHAR(20),
     data_hora_emissao DATETIME DEFAULT CURRENT_TIMESTAMP,
     data_hora_solucao DATETIME DEFAULT CURRENT_TIMESTAMP,
 		CONSTRAINT chkAlerta 
-			CHECK (nivelAlerta IN ('Crítico', 'Ateção')),
-	CONSTRAINT fkDisplayComponente
+			CHECK (tipo IN ('Crítico', 'Ateção')),
+	CONSTRAINT fkDisplay_Componente
 		FOREIGN KEY (fk_display) REFERENCES display (id)
 		ON DELETE CASCADE
         ON UPDATE CASCADE,
-	CONSTRAINT fkComponente
+	CONSTRAINT fk_Componente
 		FOREIGN KEY (fk_componente) REFERENCES componente (id)
 		ON DELETE CASCADE
         ON UPDATE CASCADE,
-	CONSTRAINT fkEmpresaComponente
+	CONSTRAINT fk_EmpresaComponente
 		FOREIGN KEY (fk_empresa) REFERENCES empresa (id)
 		ON DELETE CASCADE
-        ON UPDATE CASCADE,
-	PRIMARY KEY (id, fk_display, fk_componente, fk_empresa)
+        ON UPDATE CASCADE
 );
