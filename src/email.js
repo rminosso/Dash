@@ -51,7 +51,7 @@ async function enviar(fkEmpresa) {
 
     <p style="margin-bottom: 5px;"><strong>Código de Ativação:</strong></p>
     <div style="background-color: #eef2f7; padding: 25px; text-align: center; border-radius: 10px; font-size: 26px; font-weight: bold; color: #0056b3; border: 1px dashed #0056b3; margin: 10px 0 25px;">
-        <b>12345564TRE</b>
+        <b>982523FHK</b>
     </div>
 
     <p><strong>Passo a passo para começar:</strong></p>
