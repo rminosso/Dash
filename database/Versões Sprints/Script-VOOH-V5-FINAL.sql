@@ -156,6 +156,16 @@ CREATE TABLE display_componentes (
                 REFERENCES componentes(idComponente)
 );
 
+CREATE TABLE alertas (
+	idAlerta INT PRIMARY KEY auto_increment,
+    dataHora_emissao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    dataHora_solucao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    nivelAlerta CHAR(11),
+    tipoAlerta VARCHAR(20),
+		CONSTRAINT chkAlerta 
+			CHECK (nivelAlerta IN ('Crítico', 'Ateção'))
+);
+
 select * from usuario;
 select * from cadastroEmpresa;
 SELECT * from endereco;
