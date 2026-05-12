@@ -12,3 +12,6 @@ package-lock.json
 
 # Ignorar o .venv
 .venv
+
+# Ignorar o .idea/
+.idea

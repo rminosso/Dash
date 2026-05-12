@@ -1,5 +1,5 @@
-const ambiente_processo = 'desenvolvimento';
-const caminho_env = ambiente_processo === 'producao' ? '.env' : '.env.dev';
+const ambiente_processo = "desenvolvimento";
+const caminho_env = ambiente_processo === "producao" ? ".env" : ".env.dev";
 
 require("dotenv").config();
 
@@ -18,6 +18,7 @@ const maquinaRouter = require("./src/routes/maquina");
 const componenteRouter = require("./src/routes/componente");
 const displayRouter = require("./src/routes/display");
 const configRouter = require("./src/routes/config");
+const liaRouter = require("./src/routes/lia");
 
 app.use(cors());
 app.use(express.json());
@@ -31,22 +32,21 @@ app.use("/maquina", maquinaRouter);
 app.use("/componente", componenteRouter);
 app.use("/display", displayRouter);
 app.use("/config", configRouter);
-
-
+app.use("/lia", liaRouter);
 
 app.listen(PORTA_APP, function () {
- console.log(
-`
-     ___      ___         ________  ________  ___  ___     
-    |\\  \\    /  /|       |\\   __  \\|\\   __  \\|\\  \\|\\  \\    
-    \\ \\  \\  /  / /       \\ \\  \\|\\  \\ \\  \\|\\  \\ \\  \\\\\\  \\   
-     \\ \\  \\/  / /         \\ \\  \\\\\\  \\ \\  \\\\\\  \\ \\   __  \\  
-      \\ \\    / /           \\ \\  \\\\\\  \\ \\  \\\\\\  \\ \\  \\ \\  \\ 
-       \\ \\__/ /             \\ \\_______\\ \\_______\\ \\__\\ \\__\\
-        \\|__|/               \\|_______|\\|_______|\\|__|\\|__|
-                                                           
-                                                           
-                                                           
-    http://${HOST_APP}:${PORTA_APP} :. \n\n
-    Você está rodando sua aplicação em ambiente de ${process.env.AMBIENTE_PROCESSO}
-`)});
+  console.log(
+    `
+    ██     ██  ███████   ███████  ██     ██
+    ██     ██ ██     ██ ██     ██ ██     ██
+    ██     ██ ██     ██ ██     ██ ██     ██
+    ██     ██ ██     ██ ██     ██ █████████
+     ██   ██  ██     ██ ██     ██ ██     ██
+      ██ ██   ██     ██ ██     ██ ██     ██
+       ███     ███████   ███████  ██     ██
+
+
+    Aplicação executando em: http://${HOST_APP}:${PORTA_APP}\n
+    Você está no ambiente de ${process.env.AMBIENTE_PROCESSO}`,
+  );
+});
