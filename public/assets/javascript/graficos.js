@@ -1,186 +1,61 @@
-const labels = ['10:00', '10:05', '10:10', '10:15', '10:20', '10:25'];
+// grafico throughput
+const labels = ['29s', '24s', '19s', '14s', '9s', '4s'];
 
-const dadosCpu = [45, 52, 60, 75, 68, 80];
-const dadosRam = [55, 58, 62, 64, 67, 70];
-const dadosDisco = [40, 30, 25, 30, 35, 35];
-const dadosUpload = [2.1, 2.8, 3.2, 4.0, 3.5, 4.3];
-const dadosDownload = [5.4, 6.1, 7.0, 8.2, 7.6, 9.1];
-new Chart(document.getElementById('graficoCpu'), {
+const dlEth0 = [5.4, 6.1, 7.0, 8.2, 7.6, 9.1];
+const ulEth0 = [2.1, 2.8, 3.2, 4.0, 3.5, 4.3];
+const dlWlan = [4.2, 5.0, 4.8, 6.5, 5.9, 7.0];
+const ulWlan = [1.5, 2.0, 1.8, 2.5, 2.2, 3.0];
+
+// grafico conexoes
+const labelsConexoes = ['ESTABLISHED', 'LISTEN', 'TIME_WAIT', 'CLOSE_WAIT', 'SYN_SENT'];
+
+const Conexoes = [42, 12, 15, 5, 2];
+
+const CONN_COLORS = ['#6D33FF', '#3DD68C', '#FFB547', '#FF4D6A', '#4A9EFF'];
+
+
+new Chart(document.getElementById('graficoTp'), {
   type: 'line',
   data: {
     labels: labels,
-    datasets: [{
-      label: 'CPU (%)',
-      data: dadosCpu,
-      borderColor: 'blue',
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 100
-      }
-    },
-    plugins: {
-      annotation: {
-        annotations: {
-
-          linhaAlerta: {
-            type: 'line',
-            yMin: 75,
-            yMax: 75,
-            borderColor: 'yellow',
-            borderWidth: 2,
-            label: {
-              display: true,
-              position: 'end'
-            }
-          },
-
-          linhaCritica: {
-            type: 'line',
-            yMin: 90,
-            yMax: 90,
-            borderColor: 'red',
-            borderWidth: 2,
-            label: {
-              display: true,
-              position: 'end'
-            }
-          }
-        }
-      }
-    }
-  }
-});
-
-// RAM
-new Chart(document.getElementById('graficoRam'), {
-  type: 'line',
-  data: {
-    labels: labels,
-    datasets: [{
-      label: 'RAM (%)',
-      data: dadosRam,
-      borderColor: '#8a63ff',
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 100
-      }
-    },
-    plugins: {
-      annotation: {
-        annotations: {
-
-          linhaAlerta: {
-            type: 'line',
-            yMin: 75,
-            yMax: 75,
-            borderColor: 'yellow',
-            borderWidth: 2,
-            label: {
-              display: true,
-              position: 'end'
-            }
-          },
-
-          linhaCritica: {
-            type: 'line',
-            yMin: 90,
-            yMax: 90,
-            borderColor: 'red',
-            borderWidth: 2,
-            label: {
-              display: true,
-              position: 'end'
-            }
-          }
-        }
-      }
-    }
-  }
-});
-
-// Disco
-new Chart(document.getElementById('graficoDisco'), {
-  type: 'bar',
-  data: {
-    labels: labels,
-    datasets: [{
-      label: 'RAM (%)',
-      data: dadosDisco,
-      backgroundColor: '',
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 100
-      }
-    },
-    plugins: {
-      annotation: {
-        annotations: {
-
-          linhaAlerta: {
-            type: 'line',
-            yMin: 75,
-            yMax: 75,
-            borderColor: 'yellow',
-            borderWidth: 2,
-            label: {
-              display: true,
-              position: 'end'
-            }
-          },
-
-          linhaCritica: {
-            type: 'line',
-            yMin: 90,
-            yMax: 90,
-            borderColor: 'red',
-            borderWidth: 2,
-            label: {
-              display: true,
-              position: 'end'
-            }
-          }
-        }
-      }
-    }
-  }
-});
-
-// Rede
-new Chart(document.getElementById('graficoRede'), {
-  type: 'line',
-  data: {
-    labels: labels,
-    datasets: [
-      {
-        label: 'Upload (MB)',
-        data: dadosUpload,
-        borderColor: 'orange',
-        backgroundColor: 'rgba(255, 99, 132, 0.12)',
+    datasets: [{label: 'eth0 ↓',
+        data: dlEth0,
+        borderColor: '#6D33FF',
+        backgroundColor: '#6D33FF' + '14',
+        fill: true,
+        tension: 0.4, 
+        borderWidth: 1.8,
+        pointRadius: 0
       },
       {
-        label: 'Download (MB)',
-        data: dadosDownload,
-        borderColor: '#36a2eb',
-        backgroundColor: 'rgba(54, 162, 235, 0.12)',
-        
+        label: 'eth0 ↑',
+        data: ulEth0,
+        borderColor: '#4A9EFF',
+        borderDash: [5, 4], 
+        fill: false,
+        tension: 0.4,
+        borderWidth: 1.8,
+        pointRadius: 0
+      },
+      {
+        label: 'wlan0 ↓',
+        data: dlWlan,
+        borderColor: '#3DD68C',
+        backgroundColor: '#3DD68C' + '14',
+        fill: true,
+        tension: 0.4,
+        borderWidth: 1.8,
+        pointRadius: 0
+      },
+      {
+        label: 'wlan0 ↑',
+        data: ulWlan,
+        borderColor: '#FFB547',
+        borderDash: [5, 4],
+        fill: false,
+        tension: 0.4,
+        borderWidth: 1.8,
+        pointRadius: 0
       }
     ]
   },
@@ -188,35 +63,63 @@ new Chart(document.getElementById('graficoRede'), {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      annotation: {
-        annotations: {
+      legend: { display: true,
+        position: 'top',
+       }, 
+    },
+    scales: {
+      x: {
+        ticks: { color: '#9B9B9B', font: { size: 9 } },
+        grid: { color: 'rgba(0,0,0,0.05)' }
+      },
+      y: {
+        beginAtZero: true,
+        max: 14,
+        ticks: { 
+          color: '#9B9B9B', 
+          font: { size: 9 },
+          callback: (value) => value + ' MB/s' 
+        },
+        grid: { color: 'rgba(0,0,0,0.06)' }
+      }
+    }
+  }
+});
 
-          alerta: {
-            type: 'line',
-            yMin: 10,
-            yMax: 10,
-            borderColor: 'yellow',
-            borderWidth: 2,
-            label: {
-              display: true,             
-              position: 'end'
-            }
-          },
-
-          critico: {
-            type: 'line',
-            yMin: 5,
-            yMax: 5,
-            borderColor: 'red',
-            borderWidth: 2,
-            label: {
-              display: true,
-              position: 'end'
-            }
-          }
-
+// RAM
+new Chart(document.getElementById('graficoCon'), {
+  type: 'bar', 
+  data: {
+    labels: labelsConexoes,
+    datasets: [{
+      label: 'Conexões',
+      data: Conexoes,
+      backgroundColor: CONN_COLORS, 
+      borderRadius: 4,
+      barThickness: 12, 
+    }]
+  },
+ options: {
+    indexAxis: 'y', 
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false }
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        max: 50, 
+        grid: { color: 'rgba(0,0,0,0.05)' },
+        ticks: { color: '#9B9B9B', font: { size: 10 } }
+      },
+      y: {
+        grid: { display: false },
+        ticks: { 
+          color: '#4A4A4A', 
+          font: { size: 11, weight: '700' } 
         }
       }
     }
   }
-}); 
+});
